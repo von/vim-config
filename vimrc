@@ -179,6 +179,11 @@ nmap <leader>clean :1,$s/	/    /<cr>:1,$s/\s*$//<cr>
 " Make whitespace visible
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
+" Allow me to turn off indentation for pasting
+" Kudos: http://stackoverflow.com/a/2514520/197789
+nmap <leader>paste :set paste<cr>
+nmap <leader>nopaste :set nopaste<cr>
+
 " }}}
 "------------------------------------------------------------
 " Statusline configuration {{{
