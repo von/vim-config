@@ -67,6 +67,7 @@ set splitright
 map T <C-W>T
 " Create a new empty tab
 map <C-S-T> :tabnew<cr>
+nmap <leader>t :tabnew
 
 " Cycle through tabs with tab
 map <Tab>   :tabnext<cr>
