@@ -158,6 +158,9 @@ set nonumber
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
+" Keep this many lines on screen past cursor when scrolling
+set scrolloff=5
+
 " }}}
 "------------------------------------------------------------
 " Indentation and whitespace {{{
