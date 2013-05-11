@@ -251,9 +251,20 @@ au FileType vim setlocal foldmethod=marker
 silent !mkdir ~/.vim-local/views/ > /dev/null 2>&1
 set viewdir=~/.vim-local/views/
 
+set viewoptions-=options
+
+" Save and load without errors
+" Kudos: http://dotfiles.org/~tsukkee/.vimrc
+" via: https://ebonhand.wordpress.com/2011/03/30/automatically-save-and-load-vim-views-folds/
 augroup autoview
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
+    autocmd BufWritePost *
+    \   if expand('%') != '' && &buftype !~ 'nofile'
+    \|      mkview
+    \|  endif
+    autocmd BufRead *
+    \   if expand('%') != '' && &buftype !~ 'nofile'
+    \|      silent loadview
+    \|  endif
 augroup END
 
 " Spaces folds if on fold, else acts normally
