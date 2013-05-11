@@ -6,3 +6,4 @@ python.vim: http://www.vim.org/scripts/script.php?script_id=2462
 
 ini.vim: http://www.vim.org/scripts/script.php?script_id=2475
 
+snippets.vim: https://raw.github.com/SirVer/ultisnips/master/syntax/snippets.vim
