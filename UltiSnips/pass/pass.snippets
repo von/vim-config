@@ -1,0 +1,28 @@
+# Snippets for password-store files
+global !p
+import random
+import string
+
+def gen_password(length):
+    """Generate a password of given length."""
+    alphabet = string.letters + string.digits
+    # Remove look-alike characters
+    alphabet = alphabet.translate(
+                string.maketrans('', ''),  # For pre-2.6 compatability
+                '0O1l')  # Characters to delete
+    s = "".join([random.choice(alphabet) for i in xrange(length)])
+    return s
+
+endglobal
+
+snippet "passwd(\d*)" "Insert a random password with optional length" r
+`!p length = int(match.group(1)) if match.group(1) else 12
+snip.rv = gen_password(length) if not snip.c else snip.c`
+endsnippet
+
+snippet entry "Insert an entry" b
+${1:`!p snip.rv = gen_password(12) if not snip.c else snip.c`}
+Username: ${2}
+Notes: ${3}
+endsnippet
+
