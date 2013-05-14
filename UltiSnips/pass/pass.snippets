@@ -20,9 +20,10 @@ snippet "passwd(\d*)" "Insert a random password with optional length" r
 snip.rv = gen_password(length) if not snip.c else snip.c`
 endsnippet
 
-snippet entry "Insert an entry" b
-${1:`!p snip.rv = gen_password(12) if not snip.c else snip.c`}
-Username: ${2}
-Notes: ${3}
+snippet "^\s*entry(\d*)" "Insert an entry" r
+${1:`!p length = int(match.group(1)) if match.group(1) else 12
+snip.rv = gen_password(length) if not snip.c else snip.c`}
+${2:Username}
+${3:notes}
 endsnippet
 
