@@ -19,6 +19,9 @@ syntax on
 " Where we store all our local state
 silent !mkdir ~/.vim-local > /dev/null 2>&1
 
+" /bin/sh is an alias for bash
+let g:is_bash=1
+
 " }}}
 "----------------------------------------------------------------------
 " Key bindings {{{
@@ -260,6 +263,10 @@ set viewdir=~/.vim-local/views/
 
 set viewoptions-=options
 
+" Enable folding for shell scripts
+" Value is OR of functions (1), heredoc (2) and if/do/for (4)
+let g:sh_fold_enabled = 7 
+
 " Save and load without errors
 " Kudos: http://dotfiles.org/~tsukkee/.vimrc
 " via: https://ebonhand.wordpress.com/2011/03/30/automatically-save-and-load-vim-views-folds/
@@ -302,4 +309,11 @@ autocmd BufRead */.git/COMMIT_EDITMSG setl nomodeline
 autocmd BufRead */.git/COMMIT_EDITMSG autocmd! autoview
 
 " }}}
+
+" Shell {{{ "
+
+au FileType sh setlocal foldmethod=syntax
+
+" }}} Shell  "
+
 " }}}
