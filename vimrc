@@ -105,9 +105,6 @@ nmap <leader>ls :wa<cr>:source $HOME/.vim-local/sessions/
 "----------------------------------------------------------------------
 " Misc variables {{{
 
-" Prefix for wrapped lines
-set showbreak=↪
-
 " Prevents dark fonts
 set background=dark
 
@@ -193,6 +190,17 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 " Kudos: http://stackoverflow.com/a/2514520/197789
 nmap <leader>paste :set paste<cr>
 nmap <leader>nopaste :set nopaste<cr>
+
+" }}}
+"------------------------------------------------------------
+" Word wrap {{{
+
+" Prefix for wrapped lines
+" This interfers with cut'n'paste
+"set showbreak=↪
+
+" Allow for quick turning on and off of word wrap
+:noremap <leader>r :set nowrap! <CR>
 
 " }}}
 "------------------------------------------------------------
