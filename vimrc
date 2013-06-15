@@ -177,7 +177,8 @@ set tabstop=8
 
 " Whitespace cleanup
 " Convert tabs to 4 spaces, remove trailing whitespace
-nmap <leader>clean :1,$s/	/    /g<cr>:1,$s/\s*$//<cr>
+" (Uses register z to save and restore location)
+nmap <leader>clean mz:1,$s/	/    /ge<cr>:1,$s/\s*$//<cr>'z
 
 " Re-indent, whole file or selected area
 " Kudos: http://vim.wikia.com/wiki/Fix_indentation
