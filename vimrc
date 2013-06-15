@@ -213,6 +213,21 @@ set laststatus=2
 " Enable fugitive support with statline
 let g:statline_fugitive = 1
 
+" Status line colors for pane with focus
+hi StatusLine ctermfg=blue ctermbg=white cterm=none
+" Status line colors for panes without focus
+hi StatusLineNC ctermfg=black ctermbg=cyan cterm=none
+
+" statline colors (linking causes some inverse fields)
+" filename
+hi User1 ctermfg=blue ctermbg=white cterm=none
+" flags
+hi User2 ctermfg=blue ctermbg=white cterm=none
+" errors
+hi User3 ctermfg=Red ctermbg=white cterm=none
+" fugitive
+hi User4 ctermfg=blue ctermbg=white cterm=none
+
 " }}}
 "------------------------------------------------------------
 " Set title if we are in tmux {{{
