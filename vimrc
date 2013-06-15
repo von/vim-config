@@ -302,6 +302,19 @@ vnoremap <Space> zf
 " Python configuration: Use tab inserts 4 spaces
 au FileType python setlocal shiftwidth=4 softtabstop=4
 
+" python-mode configuration
+"
+" Disable run code plugin
+let g:pymode_run = 0
+
+nmap <leader>lint :PyLint<cr>
+
+" Disable pylint checking every save
+let g:pymode_lint_write = 0
+
+" Auto jump on first error
+let g:pymode_lint_jump = 1
+
 " TODO: http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
 
 " }}}
