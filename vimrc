@@ -314,6 +314,9 @@ augroup autoview
     \|  endif
 augroup END
 
+" Reload without loading view (or any other autocommand)
+map <leader>reload :noautocmd e<cr>
+
 " Spaces folds if on fold, else acts normally
 nnoremap <silent> <Space> za
 vnoremap <Space> zf
