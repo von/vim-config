@@ -200,8 +200,17 @@ nmap <leader>nopaste :set nopaste<cr>
 " This interfers with cut'n'paste
 "set showbreak=↪
 
-" Allow for quick turning on and off of word wrap
-:noremap <leader>r :set nowrap! <CR>
+" Wrap the current paragraph
+" (Uses register z to save and restore location)
+map <C-w> mzgq}'z
+nmap <leader>wrap mzgq}'z
+
+" Wrap the whole document
+" (Uses register z to save and restore location)
+nmap <leader>wrapall mzgqG'z
+
+" Allow for quick turning on and off soft wrapping of long lines
+:noremap <leader>nowrap :set nowrap!<CR>
 
 " }}}
 "------------------------------------------------------------
