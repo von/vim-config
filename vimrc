@@ -202,7 +202,6 @@ nmap <leader>nopaste :set nopaste<cr>
 
 " Wrap the current paragraph
 " (Uses register z to save and restore location)
-map <C-w> mzgq}'z
 nmap <leader>wrap mzgq}'z
 
 " Wrap the whole document
