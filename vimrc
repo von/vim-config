@@ -340,6 +340,9 @@ nmap <leader>lint :PyLint<cr>
 " Disable pylint checking every save
 let g:pymode_lint_write = 0
 
+" Don't automatically use unsed whitespace
+let g:pymode_utils_whitespaces = 0
+
 " Auto jump on first error
 let g:pymode_lint_jump = 1
 
