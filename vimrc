@@ -320,6 +320,9 @@ map <leader>reload :noautocmd e<cr>
 nnoremap <silent> <Space> za
 vnoremap <Space> zf
 
+" Open all folds
+nnoremap F zR
+
 " }}}
 "------------------------------------------------------------
 " Filetypes {{{
