@@ -348,6 +348,9 @@ let g:pymode_utils_whitespaces = 0
 " Auto jump on first error
 let g:pymode_lint_jump = 1
 
+" Don't load rope as it's C-c command interfer with my C-c to close window
+let g:pymode_rope = 0
+
 " TODO: http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
 
 " }}}
