@@ -194,6 +194,19 @@ nmap <leader>nopaste :set nopaste<cr>
 
 " }}}
 "------------------------------------------------------------
+" Searching {{{
+
+" Highlight search results
+set hlsearch
+
+" Clear last search pattern which clear highlighted results
+:map , :let @/ = ""<cr>
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" }}}
+"------------------------------------------------------------
 " Word wrap {{{
 
 " Prefix for wrapped lines
