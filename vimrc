@@ -367,13 +367,13 @@ nmap <leader>lint :PyLint<cr>
 " Disable pylint checking every save
 let g:pymode_lint_write = 0
 
-" Don't automatically use unsed whitespace
+" Don't automatically remove unused whitespace
 let g:pymode_utils_whitespaces = 0
 
 " Auto jump on first error
 let g:pymode_lint_jump = 1
 
-" Don't load rope as it's C-c command interfer with my C-c to close window
+" Don't load rope as it's C-c command interfers with my C-c to close window
 let g:pymode_rope = 0
 
 " TODO: http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
@@ -392,10 +392,10 @@ autocmd BufRead */.git/COMMIT_EDITMSG autocmd! autoview
 
 " }}}
 
-" Shell {{{ "
+" Shell {{{
 
 au FileType sh setlocal foldmethod=syntax
 
-" }}} Shell  "
+" }}} Shell
 
 " }}}
