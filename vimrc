@@ -13,7 +13,15 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Allow async command running for autocompletion
-NeoBundle 'Shougo/vimproc'
+" Kudos: https://github.com/joedicastro/dotfiles/blob/master/vim/vimrc
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
 " First time run ':NeoBundleInstall' to install bundles
 " Then run ':NeoBundleUpdate' to update.
