@@ -455,3 +455,10 @@ au FileType sh setlocal foldmethod=syntax
 " }}} Shell
 
 " }}}
+"------------------------------------------------------------
+" NeoBundleCheck {{{
+
+" Installation check.
+NeoBundleCheck
+
+" }}} NeoBundleCheck
