@@ -30,7 +30,6 @@ NeoBundle 'Shougo/vimproc', {
 "----------------------------------------------------------------------
 " Misc Bundles {{{
 
-NeoBundle 'bufexplorer.zip'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ciaranm/securemodelines'
 NeoBundle 'scrooloose/nerdcommenter'
