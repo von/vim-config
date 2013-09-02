@@ -1,3 +1,5 @@
 # Vim keeps creating bundle/bufexplorer-7.3.6/doc/tags
 # which causes submodule status to appear dirty
 tags
+# bundle/ is managed by NeoBundle
+bundle/*

@@ -2,6 +2,33 @@
 " Kudos: http://vim.wikia.com/wiki/Example_vimrc
 "
 "----------------------------------------------------------------------
+" NeoBundle {{{
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Allow async command running for autocompletion
+NeoBundle 'Shougo/vimproc'
+
+" First time run ':NeoBundleInstall' to install bundles
+" Then run ':NeoBundleUpdate' to update.
+
+" }}} NeoBundle
+"----------------------------------------------------------------------
+" Misc Bundles {{{
+
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ciaranm/securemodelines'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'SirVer/ultisnips'
+
+" }}} Misc Bundles
+"----------------------------------------------------------------------
 " High-level options {{{
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
@@ -108,7 +135,8 @@ map <Esc>[Z :tabprevious<cr>
 set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages,winsize,winpos
 
 " Save and load session
-" Uses obession.vim: https://github.com/tpope/vim-obsession
+NeoBundle 'tpope/vim-obsession'
+
 silent !mkdir ~/.vim-local/sessions/ > /dev/null 2>&1
 nmap <leader>ss :wa<cr>:Obsession $HOME/.vim-local/sessions/
 nmap <leader>ls :wa<cr>:source $HOME/.vim-local/sessions/
@@ -240,6 +268,8 @@ nmap <leader>wrapall mzgqG'z
 "------------------------------------------------------------
 " Statusline configuration {{{
 
+NeoBundle 'millermedeiros/vim-statline'
+
 " Always display the status line, even if only one window is displayed
 set laststatus=2
 
@@ -281,15 +311,10 @@ nmap <leader>vimrc :source $MYVIMRC<cr>
 
 " }}}
 "------------------------------------------------------------
-" Pathogen package manager {{{
-" https://github.com/tpope/vim-pathogen
-call pathogen#infect()
-call pathogen#helptags()
-
-" }}}
-"------------------------------------------------------------
 " NERDTree configuration {{{
 " :help NERD_tree.txt
+
+NeoBundle 'scrooloose/nerdtree'
 
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeQuitOnOpen=1
@@ -303,6 +328,8 @@ autocmd vimenter * if bufname("%") == "" | NERDTree | endif
 " }}}
 "------------------------------------------------------------
 " Fugitive configuration {{{
+
+NeoBundle 'tpope/vim-fugitive'
 
 " Delete fugitive buffers when leaving them
 " Kudos: http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
@@ -353,6 +380,8 @@ nnoremap F zR
 " Filetypes {{{
 
 " python {{{
+
+NeoBundle 'klen/python-mode'
 
 " Python configuration: Use tab inserts 4 spaces
 au FileType python setlocal shiftwidth=4 softtabstop=4
