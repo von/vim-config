@@ -383,6 +383,9 @@ vnoremap <Space> zf
 " Open all folds
 nnoremap F zR
 
+" Close all folds
+map <leader>fold zM
+
 " }}}
 "------------------------------------------------------------
 " Filetypes {{{
