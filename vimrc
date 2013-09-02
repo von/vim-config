@@ -38,6 +38,22 @@ NeoBundle 'SirVer/ultisnips'
 
 " }}} Misc Bundles
 "----------------------------------------------------------------------
+" Unite {{{
+
+NeoBundle 'Shougo/unite.vim'
+
+" Replace ctrlp functionality
+" Hmmm some files seem to be missing, so continue using ctrp for now.
+" nnoremap <C-p> :Unite -buffer-name=files -start-insert file_rec/async<cr>
+
+" Allow for buffer switching
+nnoremap <space>s :Unite -quick-match buffer<cr>
+
+" Grep interface
+nnoremap <space>/ :Unite grep:.<cr>
+
+" }}} Unite
+"----------------------------------------------------------------------
 " High-level options {{{
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
