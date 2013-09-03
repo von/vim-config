@@ -3,11 +3,26 @@
 "
 "----------------------------------------------------------------------
 " NeoBundle {{{
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+let g:pluginInstallDir = expand('~/.vim/bundle')
+let s:neobundleDir = g:pluginInstallDir . '/neobundle.vim'
+
+" Clone neobundle if not present
+" Kudos: https://bitbucket.org/slimane/vimlabo/wiki/.vimrc.neobundle
+
+if !isdirectory(g:pluginInstallDir)
+  execute 'silent! mkdir -p ' . g:pluginInstallDir
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+if !isdirectory(s:neobundleDir) && executable('git')
+  execute 'silent ! git clone https://github.com/Shougo/neobundle.vim ' . s:neobundleDir
+endif
+
+if has('vim_starting')
+  execute 'set runtimepath+=' . s:neobundleDir
+endif
+
+call neobundle#rc(g:pluginInstallDir)
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
