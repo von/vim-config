@@ -152,9 +152,12 @@ set splitright
 
 " Tear a pane out into a tab
 map T <C-W>T
+
 " Create a new empty tab
 map <C-S-T> :tabnew<cr>
-nmap <leader>t :tabnew<space>
+
+" Create a new tab opening a file
+map t :tabnew<space>
 
 " Cycle through tabs with tab
 map <Tab>   :tabnext<cr>
@@ -284,8 +287,8 @@ nmap <leader>nopaste :set nopaste<cr>
 " Highlight search results
 set hlsearch
 
-" Clear last search pattern which clear highlighted results
-:map , :let @/ = ""<cr>
+" Clear highlighted search results
+map <silent> <leader><cr> :noh<cr>
 
 " Makes search act like search in modern browsers
 set incsearch
