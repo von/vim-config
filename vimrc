@@ -420,12 +420,12 @@ augroup END
 " Reload without loading view (or any other autocommand)
 map <leader>reload :noautocmd e<cr>
 
-" Spaces folds if on fold, else acts normally
-nnoremap <silent> <Space> za
-vnoremap <Space> zf
+" Equal sign (=) folds if on fold, else acts normally
+nnoremap <silent> = za
+vnoremap = zf
 
 " Open all folds
-nnoremap F zR
+map <leader>unfold zR
 
 " Close all folds
 map <leader>fold zM
