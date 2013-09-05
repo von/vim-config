@@ -58,6 +58,13 @@ NeoBundle 'Valloric/YouCompleteMe'
 let g:ycm_key_list_select_completion=['<Down>']
 let g:ycm_key_list_previous_completion=['<Up>']
 
+NeoBundle 'kana/vim-scratch'
+map <leader>scr :ScratchOpen<cr>
+" Open scratch buffer automatically if no files given on commandline
+" Note this handles if vim is started with a session (-S) as well
+" Kudos: http://stackoverflow.com/a/15846999/197789
+autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
+
 " }}} Misc Bundles
 "----------------------------------------------------------------------
 " Unite {{{
@@ -369,11 +376,6 @@ NeoBundle 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
-
-" Enter NERDTree automatically if no files given on commandline
-" Note this handles if vim is started with a session (-S) as well
-" Kudos: http://stackoverflow.com/a/15846999/197789
-autocmd vimenter * if bufname("%") == "" | NERDTree | endif
 
 " }}}
 "------------------------------------------------------------
