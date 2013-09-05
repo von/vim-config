@@ -64,6 +64,8 @@ map <leader>scr :ScratchOpen<cr>
 " Note this handles if vim is started with a session (-S) as well
 " Kudos: http://stackoverflow.com/a/15846999/197789
 autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
+" Do the same if we close all files (and empty buffer)
+autocmd BufEnter * if bufname("%") == "" | ScratchOpen | endif
 
 " }}} Misc Bundles
 "----------------------------------------------------------------------
@@ -124,6 +126,12 @@ map <leader>unicode /[^ -~]<CR>
 
 " Bring up file explorer with ';'
 :map ; :NERDTreeToggle<cr>
+
+" Don't quit with ':q' just close current buffer
+nnoremap :q :bd<cr>
+
+" But do quit with ':Q'
+nnoremap :Q :qa<cr>
 
 " }}}
 "----------------------------------------------------------------------
