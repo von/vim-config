@@ -49,6 +49,8 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ciaranm/securemodelines'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'SirVer/ultisnips'
+" Note you need to build this after initial install
+" cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
 NeoBundle 'Valloric/YouCompleteMe'
 
 " Rebind YouCompleteMe to avoid conflict with Tab used by Ultisnips
