@@ -48,7 +48,11 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ciaranm/securemodelines'
 NeoBundle 'scrooloose/nerdcommenter'
+
 NeoBundle 'SirVer/ultisnips'
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 " Note you need to build this after initial install
 " cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
 NeoBundle 'Valloric/YouCompleteMe'
