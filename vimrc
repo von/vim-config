@@ -257,10 +257,6 @@ set visualbell
 " is unset, this does nothing.
 set t_vb=
 
-" Enable use of the mouse for all modes
-" Disabled because it interfers with cut'n'paste.
-"set mouse=a
-
 " Display line numbers on the left
 set nonumber
 
@@ -269,6 +265,17 @@ set notimeout ttimeout ttimeoutlen=200
 
 " Keep this many lines on screen past cursor when scrolling
 set scrolloff=5
+
+" }}}
+"------------------------------------------------------------
+" Mouse configuration {{{
+
+" Enable use of the mouse for all modes
+set mouse=a
+
+" Use Mac system clipboard
+" Kudos: http://vim.wikia.com/wiki/Mac_OS_X_clipboard_sharing
+set clipboard=unnamed
 
 " }}}
 "------------------------------------------------------------
