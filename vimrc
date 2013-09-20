@@ -439,9 +439,10 @@ augroup END
 " Reload without loading view (or any other autocommand)
 map <leader>reload :noautocmd e<cr>
 
-" Equal sign (=) folds if on fold, else acts normally
-nnoremap <silent> = za
-vnoremap = zf
+" 'F' folds if on fold, else acts normally
+" Normally does reverse of 'f'
+nnoremap <silent> F za
+vnoremap F zf
 
 " Open all folds
 map <leader>unfold zR
