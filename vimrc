@@ -82,10 +82,10 @@ NeoBundle 'Shougo/unite.vim'
 " nnoremap <C-p> :Unite -buffer-name=files -start-insert file_rec/async<cr>
 
 " Allow for buffer switching
-nnoremap <space>s :Unite -quick-match buffer<cr>
+nnoremap <leader>buf :Unite -quick-match buffer<cr>
 
-" Grep interface
-nnoremap <space>/ :Unite grep:.<cr>
+" erep interface
+nnoremap <leader>grep :Unite grep:.<cr>
 
 " }}} Unite
 "----------------------------------------------------------------------
