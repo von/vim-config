@@ -38,6 +38,9 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
+" Show buffers 
+NeoBundle 'bling/vim-bufferline'
+
 " First time run ':NeoBundleInstall' to install bundles
 " Then run ':NeoBundleUpdate' to update.
 
