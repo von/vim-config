@@ -7,6 +7,7 @@
 " Use ~/.vim-bundle to keep bundles out of git repo
 " This is needed in part because YCM used submodules
 let g:pluginInstallDir = expand('~/.vim-bundle')
+
 let s:neobundleDir = g:pluginInstallDir . '/neobundle.vim'
 
 " Clone neobundle if not present
@@ -39,9 +40,6 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-
-" Show buffers 
-NeoBundle 'bling/vim-bufferline'
 
 " First time run ':NeoBundleInstall' to install bundles
 " Then run ':NeoBundleUpdate' to update.
@@ -77,6 +75,12 @@ map <leader>scr :ScratchOpen<cr>
 autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
 " Do the same if we close all files (and empty buffer)
 autocmd BufEnter * if bufname("%") == "" | ScratchOpen | endif
+
+" Show buffers 
+NeoBundle 'bling/vim-bufferline'
+
+" scrolling with fixed current buffer position
+let g:bufferline_rotate = 1
 
 " }}} Misc Bundles
 "----------------------------------------------------------------------
