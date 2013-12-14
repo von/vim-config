@@ -144,6 +144,9 @@ map <leader>unicode /[^ -~]<CR>
 " Bring up file explorer with ';'
 :map ; :NERDTreeToggle<cr>
 
+" Close buffer without exiting
+nnoremap :q :bd<cr>
+
 " Quit all buffers with ':Q'
 nnoremap :Q :qa<cr>
 
