@@ -76,13 +76,15 @@ autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
 " Do the same if we close all files (and empty buffer)
 autocmd BufEnter * if bufname("%") == "" | ScratchOpen | endif
 
-" Show buffers 
+" }}} Misc Bundles
+"----------------------------------------------------------------------
+" Bufferline
 NeoBundle 'bling/vim-bufferline'
 
 " scrolling with fixed current buffer position
 let g:bufferline_rotate = 1
 
-" }}} Misc Bundles
+" }}} Bufferline
 "----------------------------------------------------------------------
 " Unite {{{
 
