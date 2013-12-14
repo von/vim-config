@@ -3,6 +3,9 @@
 "
 "----------------------------------------------------------------------
 " NeoBundle {{{
+"
+" First time run ':NeoBundleInstall' to install bundles
+" Then run ':NeoBundleUpdate' to update.
 
 " Use ~/.vim-bundle to keep bundles out of git repo
 " This is needed in part because YCM used submodules
@@ -40,9 +43,6 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-
-" First time run ':NeoBundleInstall' to install bundles
-" Then run ':NeoBundleUpdate' to update.
 
 " }}} NeoBundle
 "----------------------------------------------------------------------
