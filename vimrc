@@ -4,7 +4,9 @@
 "----------------------------------------------------------------------
 " NeoBundle {{{
 
-let g:pluginInstallDir = expand('~/.vim/bundle')
+" Use ~/.vim-bundle to keep bundles out of git repo
+" This is needed in part because YCM used submodules
+let g:pluginInstallDir = expand('~/.vim-bundle')
 let s:neobundleDir = g:pluginInstallDir . '/neobundle.vim'
 
 " Clone neobundle if not present
