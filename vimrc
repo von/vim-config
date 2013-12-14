@@ -163,29 +163,24 @@ set splitright
 
 " }}}
 "----------------------------------------------------------------------
-" Tab manipulation {{{
-" Kudos:
-" http://robots.thoughtbot.com/post/48275867281/vim-splits-move-faster-and-more-naturally
-" http://www.linux.com/learn/tutorials/442422-vim-tips-using-tabs
-" http://www.techrepublic.com/blog/opensource/use-tabs-to-open-multiple-files-in-vim/678
-" http://vim.wikia.com/wiki/Alternative_tab_navigation
+" Buffer manipulation {{{
 
-" Tear a pane out into a tab
-map T <C-W>T
-
-" Create a new empty tab
-map <C-S-T> :tabnew<cr>
-
-" Create a new tab opening a file
-map t :tabnew<space>
+" One of the most important options to activate. Allows you to switch from an
+" unsaved buffer without saving it first. Also allows you to keep an undo
+" history for multiple files. Vim will complain if you try to quit without
+" saving, and swap files will keep you safe if your computer crashes.
+set hidden
 
 " Cycle through tabs with tab
-map <Tab>   :tabnext<cr>
+map <Tab>   :bnext<cr>
 " Cycle the other way with shift-tab
-map <Esc>[Z :tabprevious<cr>
+map <Esc>[Z :bprev<cr>
 
-" Customize tabbar
+" }}}
+"----------------------------------------------------------------------
+" Customize tabbar {{{
 " http://stackoverflow.com/a/7238163/197789
+"
 " Active label
 :hi TabLineSel   guifg=Yellow guibg=DarkBlue gui=bold ctermfg=Yellow ctermbg=DarkBlue cterm=bold,underline
 " Inactive labels
@@ -215,12 +210,6 @@ nmap <leader>ls :wa<cr>:source $HOME/.vim-local/sessions/
 
 " Prevents dark fonts
 set background=dark
-
-" One of the most important options to activate. Allows you to switch from an
-" unsaved buffer without saving it first. Also allows you to keep an undo
-" history for multiple files. Vim will complain if you try to quit without
-" saving, and swap files will keep you safe if your computer crashes.
-set hidden
 
 " Better command-line completion
 set wildmenu
