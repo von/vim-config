@@ -73,8 +73,6 @@ map <leader>scr :ScratchOpen<cr>
 " Note this handles if vim is started with a session (-S) as well
 " Kudos: http://stackoverflow.com/a/15846999/197789
 autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
-" Do the same if we close all files (and empty buffer)
-autocmd BufEnter * if bufname("%") == "" | ScratchOpen | endif
 
 " }}} Misc Bundles
 "----------------------------------------------------------------------
@@ -146,6 +144,10 @@ map <leader>unicode /[^ -~]<CR>
 
 " Close buffer without exiting
 nnoremap :q :bd<cr>
+
+" Exit if we just closed last buffer
+" Kudos: http://superuser.com/a/668612/128341
+autocmd BufDelete * if len(filter(range(1, bufnr('$')), 'empty(bufname(v:val)) && buflisted(v:val)')) == 1 | quit | endif
 
 " Quit all buffers with ':Q'
 nnoremap :Q :qa<cr>
