@@ -154,6 +154,16 @@ nnoremap :Q :qa<cr>
 
 " }}}
 "----------------------------------------------------------------------
+" Persistent undo {{{
+" Kudos: http://stackoverflow.com/questions/5700389/using-vims-persistent-undoo
+
+silent !mkdir ~/.vim-local/undo/ > /dev/null 2>&1
+
+set undodir=~/.vim-local/undo/
+set undofile
+
+" }}}
+"----------------------------------------------------------------------
 " Splitting panes {{{
 
 " Kudos: http://robots.thoughtbot.com/post/48275867281/vim-splits-move-faster-and-more-naturally
