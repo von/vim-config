@@ -6,3 +6,7 @@ nmap <leader>lint :PymodeLint<cr>
 " Next and previous error in location list (pylint errors/warnings)
 map ]n :lne<cr>
 map [p :lp<cr>
+
+" Python configuration: Use tab inserts 4 spaces
+setlocal shiftwidth=4 softtabstop=4
+

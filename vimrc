@@ -1,6 +1,9 @@
 " vimrc (use doube quotes for comments)
 " Kudos: http://vim.wikia.com/wiki/Example_vimrc
 "
+" Also see the ftplugins/ directory for filetype-specific stuff:
+" http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
+"
 "----------------------------------------------------------------------
 " NeoBundle {{{
 "
@@ -474,20 +477,10 @@ map <leader>fold zM
 
 " }}}
 "------------------------------------------------------------
-" Filetypes {{{
-"
-" Also see the ftplugins/ directory, see:
-" http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
-
-" python {{{
+" python-mode {{{
 
 NeoBundle 'klen/python-mode'
 
-" Python configuration: Use tab inserts 4 spaces
-au FileType python setlocal shiftwidth=4 softtabstop=4
-
-" python-mode configuration
-"
 " Disable run code plugin
 let g:pymode_run = 0
 
@@ -503,10 +496,6 @@ let g:pymode_lint_jump = 1
 
 " Don't load rope as it's C-c command interfers with my C-c to close window
 let g:pymode_rope = 0
-
-" TODO: http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
-
-" }}}
 
 " }}}
 "------------------------------------------------------------
