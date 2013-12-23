@@ -7,3 +7,9 @@ setlocal nomodeline
 
 " Disable saving/loading views for GIT commits
 autocmd! autoview
+
+" Disable backups
+setlocal nobackup
+
+" Disable saving of undo information
+setlocal noundofile
