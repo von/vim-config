@@ -508,18 +508,6 @@ let g:pymode_rope = 0
 
 " }}}
 
-" GIT commits {{{
-
-" Disable modelines in GIT commits to parsing commit messages with
-" 'git --amend'
-" Kudos: http://www.dreamind.de/cgi-bin/gitweb.cgi?p=configurations.git;a=commitdiff_plain;h=8bfd2c81b8bbcf79dec9771daf7ac2cb57fe12ce
-autocmd BufRead */.git/COMMIT_EDITMSG setl nomodeline
-
-" Disable saving/loading views for GIT commits
-autocmd BufRead */.git/COMMIT_EDITMSG autocmd! autoview
-
-" }}}
-
 " }}}
 "------------------------------------------------------------
 " NeoBundleCheck {{{
