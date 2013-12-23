@@ -520,12 +520,6 @@ autocmd BufRead */.git/COMMIT_EDITMSG autocmd! autoview
 
 " }}}
 
-" Shell {{{
-
-au FileType sh setlocal foldmethod=syntax
-
-" }}} Shell
-
 " }}}
 "------------------------------------------------------------
 " NeoBundleCheck {{{
