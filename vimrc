@@ -490,9 +490,9 @@ let g:pymode_run = 0
 
 nmap <leader>lint :PyLint<cr>
 
-" Disable pylint checking every save
+" Enable pylint checking every save
 " Use ':PymodeLint' to run manually
-let g:pymode_lint_on_write = 0
+let g:pymode_lint_on_write = 1
 
 " Don't automatically remove unused whitespace
 let g:pymode_utils_whitespaces = 0
