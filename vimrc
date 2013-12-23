@@ -475,6 +475,9 @@ map <leader>fold zM
 " }}}
 "------------------------------------------------------------
 " Filetypes {{{
+"
+" Also see the ftplugins/ directory, see:
+" http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
 
 " python {{{
 
@@ -487,8 +490,6 @@ au FileType python setlocal shiftwidth=4 softtabstop=4
 "
 " Disable run code plugin
 let g:pymode_run = 0
-
-nmap <leader>lint :PyLint<cr>
 
 " Enable pylint checking every save
 " Use ':PymodeLint' to run manually
