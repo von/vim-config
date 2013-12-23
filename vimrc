@@ -434,9 +434,6 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 "------------------------------------------------------------
 " Folding {{{
 
-" vimrc uses markers
-au FileType vim setlocal foldmethod=marker
-
 " Save and restore fold state automatically
 silent !mkdir ~/.vim-local/views/ > /dev/null 2>&1
 set viewdir=~/.vim-local/views/
