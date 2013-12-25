@@ -481,6 +481,9 @@ NeoBundle 'klen/python-mode'
 " Disable run code plugin
 let g:pymode_run = 0
 
+" pylint uses https://github.com/klen/pylama
+" Use '# noqa' to skip a line
+
 " Enable pylint checking every save
 " Use ':PymodeLint' to run manually
 let g:pymode_lint_on_write = 1
