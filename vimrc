@@ -316,6 +316,10 @@ set softtabstop=2
 set expandtab
 set tabstop=8
 
+" Allow me to turn tabs on and off
+nmap <leader>tabs :set noexpandtab<cr>
+nmap <leader>notabs :set expandtab<cr>
+
 " Whitespace cleanup
 " Convert tabs to 4 spaces, remove trailing whitespace
 " (Uses register z to save and restore location)
