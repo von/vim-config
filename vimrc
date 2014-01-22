@@ -381,20 +381,55 @@ set laststatus=2
 " Enable fugitive support with statline
 let g:statline_fugitive = 1
 
-" Status line colors for pane with focus
-hi StatusLine ctermfg=blue ctermbg=white cterm=none
-" Status line colors for panes without focus
-hi StatusLineNC ctermfg=black ctermbg=cyan cterm=none
+function! StatusLineInsertEnter(mode)
+  " Mode is 'i' for insert, 'r' for replace or 'v' for virtual insert
+  " But we are ignoring it
 
-" statline colors (linking causes some inverse fields)
-" filename
-hi User1 ctermfg=blue ctermbg=white cterm=none
-" flags
-hi User2 ctermfg=blue ctermbg=white cterm=none
-" errors
-hi User3 ctermfg=Red ctermbg=white cterm=none
-" fugitive
-hi User4 ctermfg=blue ctermbg=white cterm=none
+  " Status line colors for pane with focus
+  hi StatusLine ctermfg=blue ctermbg=yellow cterm=none
+
+  " Status line colors for panes without focus
+  hi StatusLineNC ctermfg=black ctermbg=cyan cterm=none
+
+  " statline colors (linking causes some inverse fields)
+  " filename
+  hi User1 ctermfg=blue ctermbg=yellow cterm=none
+  " flags
+  hi User2 ctermfg=blue ctermbg=yellow cterm=none
+  " errors
+  hi User3 ctermfg=Red ctermbg=yellow cterm=none
+  " fugitive
+  hi User4 ctermfg=blue ctermbg=yellow cterm=none
+endfunction
+
+function! StatusLineInsertLeave(mode)
+  " mode as with StatusLineInsertEnter() - again ignored
+
+  " Status line colors for pane with focus
+  hi StatusLine ctermfg=blue ctermbg=white cterm=none
+
+  " Status line colors for panes without focus
+  hi StatusLineNC ctermfg=black ctermbg=cyan cterm=none
+
+  " statline colors (linking causes some inverse fields)
+  " filename
+  hi User1 ctermfg=blue ctermbg=white cterm=none
+  " flags
+  hi User2 ctermfg=blue ctermbg=white cterm=none
+  " errors
+  hi User3 ctermfg=Red ctermbg=white cterm=none
+  " fugitive
+  hi User4 ctermfg=blue ctermbg=white cterm=none
+endfunction
+
+" set up to change based on being in insert mode
+if version >= 700
+  au InsertEnter * call StatusLineInsertEnter(v:insertmode)
+  au InsertLeave * call StatusLineInsertLeave(v:insertmode)
+
+  " Set up initial colors
+  call StatusLineInsertLeave(v:insertmode)
+endif
 
 " }}}
 "------------------------------------------------------------
