@@ -79,7 +79,7 @@ autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
 
 " }}} Misc Bundles
 "----------------------------------------------------------------------
-" Bufferline
+" Bufferline {{{
 NeoBundle 'bling/vim-bufferline'
 
 " scrolling with fixed current buffer position
