@@ -346,6 +346,11 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 nmap <leader>paste :set paste<cr>
 nmap <leader>nopaste :set nopaste<cr>
 
+" Have < and > keep visual selection active
+" Kudos: http://stackoverflow.com/a/3702781/197789
+vnoremap < <gv
+vnoremap > >gv
+
 " }}}
 "------------------------------------------------------------
 " Searching {{{
