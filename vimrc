@@ -337,6 +337,8 @@ nnoremap <leader>clean mz:1,$s/	/    /ge<cr>:1,$s/\s*$//<cr>:noh<cr>'z
 " Re-indent, whole file or selected area
 " Kudos: http://vim.wikia.com/wiki/Fix_indentation
 nnoremap <leader>indent mzgg=G`z<cr>
+" ALternative to above is use '==' to re-indent current line or selection,
+" or '<n>==' (e.g. '5==') to re-indent <n> lines
 
 " Make whitespace visible
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
