@@ -54,6 +54,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ciaranm/securemodelines'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'surround.vim'
 
 NeoBundle 'SirVer/ultisnips'
 let g:UltiSnipsJumpForwardTrigger="<tab>"
