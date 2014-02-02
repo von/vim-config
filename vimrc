@@ -153,10 +153,6 @@ map <leader>unicode /[^ -~]<CR>
 " Close buffer without exiting
 nnoremap :q :bd<cr>
 
-" Exit if we just closed last buffer
-" Kudos: http://superuser.com/a/668612/128341
-autocmd BufDelete * if len(filter(range(1, bufnr('$')), 'empty(bufname(v:val)) && buflisted(v:val)')) == 1 | quit | endif
-
 " Quit all buffers with ':Q'
 nnoremap :Q :qa<cr>
 
@@ -243,6 +239,10 @@ map <Tab>   :call NextBuffer()<cr>
 
 " Cycle the other way with shift-tab
 map <Esc>[Z :call PrevBuffer()<cr>
+
+" Exit if we just closed last buffer
+" Kudos: http://superuser.com/a/668612/128341
+autocmd BufDelete * if len(filter(range(1, bufnr('$')), 'empty(bufname(v:val)) && buflisted(v:val)')) == 1 | quit | endif
 
 " }}}
 "----------------------------------------------------------------------
