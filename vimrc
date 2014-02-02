@@ -222,10 +222,27 @@ set splitright
 " saving, and swap files will keep you safe if your computer crashes.
 set hidden
 
+" Step through buffers skipping quickfix buffers
+" TODO: make list of buffers to skip configurable
+function! NextBuffer()
+  execute ":bnext"
+  if &buftype ==# 'quickfix'
+    execute ":bnext"
+  endif
+endfunction
+
+function! PrevBuffer()
+  execute ":bprev"
+  if &buftype ==# 'quickfix'
+    execute ":bprev"
+  endif
+endfunction
+
 " Cycle through tabs with tab
-map <Tab>   :bnext<cr>
+map <Tab>   :call NextBuffer()<cr>
+
 " Cycle the other way with shift-tab
-map <Esc>[Z :bprev<cr>
+map <Esc>[Z :call PrevBuffer()<cr>
 
 " }}}
 "----------------------------------------------------------------------
