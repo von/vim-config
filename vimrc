@@ -165,6 +165,11 @@ nnoremap :Q :qa<cr>
 " gr: swap with word to right keeping cursor with word
 :nnoremap <silent> gr "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR><c-l>:noh<cr>
 
+" Run tig with T to do my git stuff
+"   silent turns off request for enter when tig is done, that requires
+"   refresh supplied by redraw.
+:map T :silent !tig status<cr>:redraw!<cr>
+
 " }}}
 "----------------------------------------------------------------------
 " Persistent undo {{{
