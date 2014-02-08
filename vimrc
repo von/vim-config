@@ -372,6 +372,8 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 " Allow me to turn off indentation for pasting
 " Kudos: http://stackoverflow.com/a/2514520/197789
+" No longer needed due to code in Pasting section that does this
+" automatically.
 nmap <leader>paste :set paste<cr>
 nmap <leader>nopaste :set nopaste<cr>
 
@@ -379,6 +381,36 @@ nmap <leader>nopaste :set nopaste<cr>
 " Kudos: http://stackoverflow.com/a/3702781/197789
 vnoremap < <gv
 vnoremap > >gv
+
+" }}}
+"------------------------------------------------------------
+" Pasting {{{
+" Automatically enter and leave paste mode when pasting
+" Kudos: https://coderwall.com/p/if9mda
+
+" Note that if you use Vim inside of a Tmux session then you need 
+" to double escape the codes in tSI/tEI. 
+function! WrapForTmux(s)
+  if !exists('$TMUX')
+    return a:s
+  endif
+
+  let tmux_start = "\<Esc>Ptmux;"
+  let tmux_end = "\<Esc>\\"
+
+  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+endfunction
+
+let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " }}}
 "------------------------------------------------------------
