@@ -390,8 +390,6 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 " Allow me to turn off indentation for pasting
 " Kudos: http://stackoverflow.com/a/2514520/197789
-" No longer needed due to code in Pasting section that does this
-" automatically.
 nmap <leader>paste :set paste<cr>
 nmap <leader>nopaste :set nopaste<cr>
 
