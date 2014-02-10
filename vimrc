@@ -240,10 +240,10 @@ function! PrevBuffer()
 endfunction
 
 " Cycle through tabs with tab
-map <Tab>   :call NextBuffer()<cr>
+nmap <Tab>   :call NextBuffer()<cr>
 
 " Cycle the other way with shift-tab
-map <Esc>[Z :call PrevBuffer()<cr>
+nmap <Esc>[Z :call PrevBuffer()<cr>
 
 " Exit if we just closed last buffer
 " Kudos: http://superuser.com/a/668612/128341
