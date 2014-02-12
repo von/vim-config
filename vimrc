@@ -170,6 +170,10 @@ nnoremap :Q :qa<cr>
 "   refresh supplied by redraw.
 :map T :silent !tig status<cr>:redraw!<cr>
 
+" Apply last action to visual selection
+" Kudos: http://www.danielmiessler.com/study/vim/
+vnoremap . :norm.<CR>
+
 " }}}
 "----------------------------------------------------------------------
 " Persistent undo {{{
