@@ -148,9 +148,6 @@ map <leader>unicode /[^ -~]<CR>
 " Map C-r to back-screen because C-b is used by tmux
 :map <C-r> <C-B>
 
-" Bring up file explorer with ';'
-:map ; :NERDTreeToggle<cr>
-
 " Close buffer without exiting
 nnoremap :q :bd<cr>
 
