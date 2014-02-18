@@ -53,6 +53,8 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ciaranm/securemodelines'
+" Following request ctags-exuberant from ctags.sourceforge.net
+"   (On mac: brew install ctags-exuberant)
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
