@@ -53,6 +53,7 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ciaranm/securemodelines'
+NeoBundle 'majutsushi/tagbar'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'surround.vim'
