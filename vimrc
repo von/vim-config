@@ -330,8 +330,14 @@ set t_vb=
 " Display line numbers on the left
 set nonumber
 
-" Quickly time out on keycodes, but never time out on mappings
-set notimeout ttimeout ttimeoutlen=200
+" Timeout on mappings and key codes
+set timeout ttimeout
+
+" Mapping delay
+set timeoutlen=500
+
+" Key code delay
+set ttimeoutlen=200
 
 " Keep this many lines on screen past cursor when scrolling
 set scrolloff=5
