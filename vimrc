@@ -56,6 +56,7 @@ NeoBundle 'ciaranm/securemodelines'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'surround.vim'
+NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
 
 " Allows definiton of arbitrary objects (prereusite of following)
