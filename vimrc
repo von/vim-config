@@ -57,6 +57,12 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'surround.vim'
 
+" Allows definiton of arbitrary objects (prereusite of following)
+NeoBundle 'kana/vim-textobj-user'
+" vim-textobj-entire adds text object of 'ae' for entire buffer
+" ('ie' excludes leading and trailing whitespace)
+NeoBundle 'kana/vim-textobj-entire'
+
 NeoBundle 'SirVer/ultisnips'
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
