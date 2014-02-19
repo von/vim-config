@@ -115,7 +115,7 @@ NeoBundle 'Shougo/unite.vim'
 " Allow for buffer switching
 nnoremap <leader>buf :Unite -quick-match buffer<cr>
 
-" erep interface
+" grep interface
 nnoremap <leader>grep :Unite grep:.<cr>
 
 " }}} Unite
