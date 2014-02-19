@@ -53,9 +53,6 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ciaranm/securemodelines'
-" Following request ctags-exuberant from ctags.sourceforge.net
-"   (On mac: brew install ctags-exuberant)
-NeoBundle 'majutsushi/tagbar'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'surround.vim'
@@ -119,6 +116,18 @@ nnoremap <leader>buf :Unite -quick-match buffer<cr>
 nnoremap <leader>grep :Unite grep:.<cr>
 
 " }}} Unite
+"----------------------------------------------------------------------
+" Tags {{{
+" Use C-] to jump to tag under cursor
+
+" Following request ctags-exuberant from ctags.sourceforge.net
+"   (On mac: brew install ctags-exuberant)
+NeoBundle 'majutsushi/tagbar'
+
+" Look for tags in current directory or parent (and on up)
+set tags=./tags;/
+
+" }}}
 "----------------------------------------------------------------------
 " High-level options {{{
 
