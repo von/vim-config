@@ -341,7 +341,8 @@ set visualbell
 set t_vb=
 
 " Display line numbers on the left
-set nonumber
+set number
+hi LineNr         ctermfg=darkblue ctermbg=darkgrey
 
 " Timeout on mappings and key codes
 set timeout ttimeout
