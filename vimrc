@@ -350,7 +350,7 @@ set timeout ttimeout
 set timeoutlen=500
 
 " Key code delay
-set ttimeoutlen=200
+set ttimeoutlen=500
 
 " Keep this many lines on screen past cursor when scrolling
 set scrolloff=5
