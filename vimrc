@@ -383,7 +383,7 @@ endif
 
 " Not that after changing back to normal mode, because <Esc> has
 " other bindings, one has to press another key before the change
-" completes.
+" completes or wait for ttimeoutlen to pass.
 "
 " }}}
 "------------------------------------------------------------
