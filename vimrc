@@ -342,7 +342,8 @@ set t_vb=
 
 " Display line numbers on the left
 set number
-hi LineNr         ctermfg=darkblue ctermbg=darkgrey
+" Line numbers are blue with dark grey background
+hi LineNr         ctermfg=021 ctermbg=234
 
 " Timeout on mappings and key codes
 set timeout ttimeout
