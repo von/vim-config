@@ -233,11 +233,9 @@ map -       <C-W>s<C-W><Down>
 " Close pane control-c
 map <C-c>   <C-W>c
 
-" Allow one-keystroke navigation between split panes
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" Allow one-keystroke navigation between vi panes and tmux panes
+" C-h/j/k/l as expected plus C-\ to switch to last pane
+NeoBundle 'christoomey/vim-tmux-navigator'
 
 " Open new split panes to right and bottom, which feels more natural than
 " Vim’s default
