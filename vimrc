@@ -638,6 +638,9 @@ map <leader>unfold zR
 " Close all folds
 map <leader>fold zM
 
+" Make folds blue on grey (same as line numbers)
+hi Folded ctermfg=021 ctermbg=234
+
 " }}}
 "------------------------------------------------------------
 " python-mode {{{
