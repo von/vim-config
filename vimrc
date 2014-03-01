@@ -154,6 +154,24 @@ let g:is_bash=1
 
 " }}}
 "----------------------------------------------------------------------
+" Support functions {{{ "
+
+" :call Preserve(): save last search, and cursor position.
+" Not command must be an ex command (e.g., ":norm gg=G")
+" Kudos: https://github.com/nelstrom/dotfiles/blob/master/vimrc
+function! Preserve(command)
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+" }}} Support functions "
+"----------------------------------------------------------------------"}}}
 " Unicode/Non-ascii {{{
 " Kudos: http://stackoverflow.com/a/16988346
 syntax match nonascii "[^\x00-\x7F]"
@@ -424,11 +442,11 @@ nmap <leader>notabs :set expandtab<cr>
 " Whitespace cleanup
 " Convert tabs to 4 spaces, remove trailing whitespace
 " (Uses register z to save and restore location)
-nnoremap <leader>clean mz:1,$s/	/    /ge<cr>:1,$s/\s*$//<cr>:noh<cr>'z
+nnoremap <leader>clean :call Preserve(":1,$s/	/    /ge")<cr>:call Preserve(":1,$s/\s*$//")<cr>
 
 " Re-indent, whole file or selected area
 " Kudos: http://vim.wikia.com/wiki/Fix_indentation
-nnoremap <leader>indent mzgg=G`z<cr>
+nnoremap <leader>indent :call Preserve(":normal gg=G")<cr>
 " ALternative to above is use '==' to re-indent current line or selection,
 " or '<n>==' (e.g. '5==') to re-indent <n> lines
 
@@ -498,11 +516,11 @@ set incsearch
 
 " Wrap the current paragraph
 " (Uses register z to save and restore location)
-nmap <leader>wrap mzgq}'z
+nmap <leader>wrap :call Preserve(":normal gq}")<cr>
 
 " Wrap the whole document
 " (Uses register z to save and restore location)
-nmap <leader>wrapall mzgqG'z
+nmap <leader>wrapall :call Preserve(":normal gqG")<cr>
 
 " Allow for quick turning on and off soft wrapping of long lines
 :noremap <leader>nowrap :set nowrap!<CR>
