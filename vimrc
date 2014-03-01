@@ -184,20 +184,11 @@ nnoremap :Q :qa<cr>
 " Kudos: https://github.com/nelstrom/dotfiles/blob/master/vimrc 
 xnoremap . :normal .<CR>
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
 function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
-"----------------------------------------------------------------------
-" Persistent undo {{{
-" Kudos: http://stackoverflow.com/questions/5700389/using-vims-persistent-undoo
-silent !mkdir ~/.vim-local/undo/ > /dev/null 2>&1
-set undodir=~/.vim-local/undo/
-set undofile
-
-" }}}
-"----------------------------------------------------------------------
-
 
 " }}}
 "----------------------------------------------------------------------
