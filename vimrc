@@ -61,6 +61,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'surround.vim'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-fugitive'
 
 " Allows definiton of arbitrary objects (prereusite of following)
 NeoBundle 'kana/vim-textobj-user'
@@ -616,15 +617,6 @@ let NERDTreeIgnore=['\.pyc', '\~$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 
-" }}}
-"------------------------------------------------------------
-" Fugitive configuration {{{
-
-NeoBundle 'tpope/vim-fugitive'
-
-" Delete fugitive buffers when leaving them
-" Kudos: http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
-autocmd BufReadPost fugitive://* set bufhidden=delete
 " }}}
 "------------------------------------------------------------
 " Folding {{{
