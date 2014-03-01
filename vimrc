@@ -4,6 +4,9 @@
 " Also see the ftplugins/ directory for filetype-specific stuff:
 " http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
 "
+" Assumes 256 colors:
+" http://vim.wikia.com/wiki/256_colors_in_vim
+"
 "----------------------------------------------------------------------
 " NeoBundle {{{
 "
