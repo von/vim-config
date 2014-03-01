@@ -157,16 +157,6 @@ let g:is_bash=1
 "----------------------------------------------------------------------
 " Key bindings {{{
 
-if &term =~ '^screen'
-    " tmux will send xterm-style keys when its xterm-keys option is on
-    " This make <S-arrow> keys work.
-    " Kudos: http://superuser.com/a/402084/128341
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
-endif
-
 " Map C-r to back-screen because C-b is used by tmux
 :map <C-r> <C-B>
 
