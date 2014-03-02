@@ -253,32 +253,9 @@ let NERDTreeShowHidden=1
 "------------------------------------------------------------
 " Folding {{{
 
-" Save and restore fold state automatically
-silent !mkdir ~/.vim-local/views/ > /dev/null 2>&1
-set viewdir=~/.vim-local/views/
-
-set viewoptions-=options
-
 " Enable folding for shell scripts
 " Value is OR of functions (1), heredoc (2) and if/do/for (4)
 let g:sh_fold_enabled = 7 
-
-" Save and load without errors
-" Kudos: http://dotfiles.org/~tsukkee/.vimrc
-" via: https://ebonhand.wordpress.com/2011/03/30/automatically-save-and-load-vim-views-folds/
-augroup autoview
-    autocmd BufWritePost *
-    \   if expand('%') != '' && &buftype !~ 'nofile'
-    \|      mkview
-    \|  endif
-    autocmd BufRead *
-    \   if expand('%') != '' && &buftype !~ 'nofile'
-    \|      silent loadview
-    \|  endif
-augroup END
-
-" Reload without loading view (or any other autocommand)
-map <leader>reload :noautocmd e<cr>
 
 " 'F' folds if on fold, else acts normally
 " Normally does reverse of 'f'
