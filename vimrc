@@ -166,16 +166,6 @@ nnoremap :Q :qa<cr>
 "   refresh supplied by redraw.
 :map T :silent !tig status<cr>:redraw!<cr>
 
-" Visual line repeat
-" Kudos: https://github.com/nelstrom/dotfiles/blob/master/vimrc 
-xnoremap . :normal .<CR>
-xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
-
-function! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
-  execute ":'<,'>normal @".nr2char(getchar())
-endfunction
-
 " }}}
 "----------------------------------------------------------------------
 " Misc variables {{{
