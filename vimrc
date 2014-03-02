@@ -139,11 +139,6 @@ set tags=./tags;/
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-filetype indent plugin on
-
 " Syntax highlighting
 syntax on
 
@@ -190,9 +185,6 @@ set wildmenu
 
 " Show partial commands in the last line of the screen
 set showcmd
-
-" Allow backspacing over autoindent, line breaks and start of insert action
-set backspace=indent,eol,start
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
@@ -261,75 +253,15 @@ endif
 "
 " }}}
 "------------------------------------------------------------
-" Indentation and whitespace {{{
-
-" When opening a new line and no filetype-specific indenting is enabled, keep
-" the same indent as the line you're currently on. Useful for READMEs, etc.
-set autoindent
-
-" Indentation settings for using 2 spaces instead of tabs.
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set tabstop=8
-
-" Allow me to turn tabs on and off
-nmap <leader>tabs :set noexpandtab<cr>
-nmap <leader>notabs :set expandtab<cr>
+" Whitespace {{{
 
 " Whitespace cleanup
 " Convert tabs to 4 spaces, remove trailing whitespace
 " (Uses register z to save and restore location)
 nnoremap <leader>clean :call Preserve(":1,$s/	/    /ge")<cr>:call Preserve(":1,$s/\s*$//")<cr>
 
-" Re-indent, whole file or selected area
-" Kudos: http://vim.wikia.com/wiki/Fix_indentation
-nnoremap <leader>indent :call Preserve(":normal gg=G")<cr>
-" ALternative to above is use '==' to re-indent current line or selection,
-" or '<n>==' (e.g. '5==') to re-indent <n> lines
-
 " Make whitespace visible
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-
-" Allow me to turn off indentation for pasting
-" Kudos: http://stackoverflow.com/a/2514520/197789
-nmap <leader>paste :set paste<cr>
-nmap <leader>nopaste :set nopaste<cr>
-
-" Have < and > keep visual selection active
-" Kudos: http://stackoverflow.com/a/3702781/197789
-vnoremap < <gv
-vnoremap > >gv
-
-" }}}
-"------------------------------------------------------------
-" Pasting {{{
-" Automatically enter and leave paste mode when pasting
-" Kudos: https://coderwall.com/p/if9mda
-
-" Note that if you use Vim inside of a Tmux session then you need 
-" to double escape the codes in tSI/tEI. 
-function! WrapForTmux(s)
-  if !exists('$TMUX')
-    return a:s
-  endif
-
-  let tmux_start = "\<Esc>Ptmux;"
-  let tmux_end = "\<Esc>\\"
-
-  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
-endfunction
-
-let &t_SI .= WrapForTmux("\<Esc>[?2004h")
-let &t_EI .= WrapForTmux("\<Esc>[?2004l")
-
-function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
-  set paste
-  return ""
-endfunction
-
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " }}}
 "------------------------------------------------------------
