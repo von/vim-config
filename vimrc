@@ -55,6 +55,9 @@ NeoBundle 'Shougo/vimproc', {
 " Misc Bundles {{{
 
 NeoBundle 'kien/ctrlp.vim'
+" Allow one-keystroke navigation between vi panes and tmux panes
+" C-h/j/k/l as expected plus C-\ to switch to last pane
+NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ciaranm/securemodelines'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -62,6 +65,7 @@ NeoBundle 'surround.vim'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-obsession'
 
 " Allows definiton of arbitrary objects (prereusite of following)
 NeoBundle 'kana/vim-textobj-user'

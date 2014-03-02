@@ -5,9 +5,7 @@
 
 set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages,winsize,winpos
 
-" Save and load session
-NeoBundle 'tpope/vim-obsession'
-
+" Save and load session using Obsession
 silent !mkdir ~/.vim-local/sessions/ > /dev/null 2>&1
 nmap <leader>ss :wa<cr>:Obsession $HOME/.vim-local/sessions/
 nmap <leader>ls :wa<cr>:source $HOME/.vim-local/sessions/
