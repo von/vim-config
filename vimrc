@@ -2,7 +2,11 @@
 " Kudos: http://vim.wikia.com/wiki/Example_vimrc
 "
 " Also see the ftplugins/ directory for filetype-specific stuff:
-" http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
+" http://vim.wikia.com/wiki/Keep_cour_vimrc_file_clean
+"
+" And plugins/ for other automatically loaded configuration
+" These are loaded after this file.
+" http://vimdoc.sourceforge.net/htmldoc/starting.html#initialization
 "
 " Assumes 256 colors:
 " http://vim.wikia.com/wiki/256_colors_in_vim
