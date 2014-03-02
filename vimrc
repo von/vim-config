@@ -150,24 +150,6 @@ let g:is_bash=1
 
 " }}}
 "----------------------------------------------------------------------
-" Key bindings {{{
-
-" Map C-r to back-screen because C-b is used by tmux
-:map <C-r> <C-B>
-
-" Close buffer without exiting
-nnoremap :q :bd<cr>
-
-" Quit all buffers with ':Q'
-nnoremap :Q :qa<cr>
-
-" Run tig with T to do my git stuff
-"   silent turns off request for enter when tig is done, that requires
-"   refresh supplied by redraw.
-:map T :silent !tig status<cr>:redraw!<cr>
-
-" }}}
-"----------------------------------------------------------------------
 " Misc variables {{{
 
 " Better command-line completion
@@ -199,15 +181,6 @@ set t_vb=
 
 " Display line numbers on the left
 set number
-
-" Timeout on mappings and key codes
-set timeout ttimeout
-
-" Mapping delay
-set timeoutlen=500
-
-" Key code delay
-set ttimeoutlen=500
 
 " Keep this many lines on screen past cursor when scrolling
 set scrolloff=5
