@@ -63,23 +63,13 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'kien/ctrlp.vim'
+
 " Allow one-keystroke navigation between vi panes and tmux panes
 " C-h/j/k/l as expected plus C-\ to switch to last pane
 NeoBundle 'christoomey/vim-tmux-navigator'
+
 NeoBundle 'ciaranm/securemodelines'
-
-" Following requires ctags-exuberant from ctags.sourceforge.net
-"   (On mac: brew install ctags-exuberant)
-NeoBundle 'majutsushi/tagbar'
-
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'surround.vim'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-obsession'
+NeoBundle 'kana/vim-scratch'
 
 " Allows definiton of arbitrary objects (prereusite of following)
 NeoBundle 'kana/vim-textobj-user'
@@ -87,9 +77,23 @@ NeoBundle 'kana/vim-textobj-user'
 " ('ie' excludes leading and trailing whitespace)
 NeoBundle 'kana/vim-textobj-entire'
 
+NeoBundle 'klen/python-mode'
+
+" Following requires ctags-exuberant from ctags.sourceforge.net
+"   (On mac: brew install ctags-exuberant)
+NeoBundle 'majutsushi/tagbar'
+
+NeoBundle 'millermedeiros/vim-statline'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'SirVer/ultisnips'
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+NeoBundle 'surround.vim'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-obsession'
 
 " Note you need to build this after initial install
 " cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
@@ -97,19 +101,14 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " export EXTRA_CMAKE_ARGS=-DPYTHON_LIBRARY=/usr/lib/python2.7/config-i386-linux-gnu/libpthon2.7.so
 NeoBundle 'Valloric/YouCompleteMe'
 
-" Rebind YouCompleteMe to avoid conflict with Tab used by Ultisnips
-" It's tempting to use C-tab here, but iTerm grabs it.
-let g:ycm_key_list_select_completion=['<Down>']
-let g:ycm_key_list_previous_completion=['<Up>']
-
-NeoBundle 'kana/vim-scratch'
-map <leader>scr :ScratchOpen<cr>
-" Open scratch buffer automatically if no files given on commandline
-" Note this handles if vim is started with a session (-S) as well
-" Kudos: http://stackoverflow.com/a/15846999/197789
-autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
-
 " }}} Misc Bundles
+"------------------------------------------------------------
+" NeoBundleCheck {{{
+
+" Installation check.
+NeoBundleCheck
+
+" }}} NeoBundleCheck
 "----------------------------------------------------------------------
 " High-level options {{{
 
@@ -182,8 +181,6 @@ set clipboard=unnamed
 "------------------------------------------------------------
 " Statusline configuration {{{
 
-NeoBundle 'millermedeiros/vim-statline'
-
 " Always display the status line, even if only one window is displayed
 set laststatus=2
 
@@ -191,46 +188,3 @@ set laststatus=2
 let g:statline_fugitive = 1
 
 " }}}
-"------------------------------------------------------------
-" NERDTree configuration {{{
-" :help NERD_tree.txt
-
-NeoBundle 'scrooloose/nerdtree'
-
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=1
-
-" }}}
-"------------------------------------------------------------
-" python-mode {{{
-
-NeoBundle 'klen/python-mode'
-
-" Disable run code plugin
-let g:pymode_run = 0
-
-" pylint uses https://github.com/klen/pylama
-" Use '# noqa' to skip a line
-
-" Enable pylint checking every save
-" Use ':PymodeLint' to run manually
-let g:pymode_lint_on_write = 1
-
-" Don't automatically remove unused whitespace
-let g:pymode_utils_whitespaces = 0
-
-" Auto jump on first error
-let g:pymode_lint_jump = 1
-
-" Don't load rope as it's C-c command interfers with my C-c to close window
-let g:pymode_rope = 0
-
-" }}}
-"------------------------------------------------------------
-" NeoBundleCheck {{{
-
-" Installation check.
-NeoBundleCheck
-
-" }}} NeoBundleCheck
