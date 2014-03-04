@@ -12,7 +12,7 @@
 " http://vim.wikia.com/wiki/256_colors_in_vim
 "
 "----------------------------------------------------------------------
-" NeoBundle {{{
+" NeoBundle setup {{{
 "
 " First time run ':NeoBundleInstall' to install bundles
 " Then run ':NeoBundleUpdate' to update.
@@ -56,7 +56,7 @@ NeoBundle 'Shougo/vimproc', {
 
 " }}} NeoBundle
 "----------------------------------------------------------------------
-" Misc Bundles {{{
+" Load Bundles {{{
 "
 " Note that bundles apparently need to be in vimrc (as opposed to
 " in a plugin).
