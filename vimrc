@@ -66,6 +66,7 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ciaranm/securemodelines'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
@@ -101,33 +102,6 @@ map <leader>scr :ScratchOpen<cr>
 autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
 
 " }}} Misc Bundles
-"----------------------------------------------------------------------
-" Bufferline {{{
-
-" scrolling with fixed current buffer position
-let g:bufferline_rotate = 1
-
-" Buffers to exclude.
-" Quickfix buffers have no title ('^$')
-let g:bufferline_excludes = ['^$']
-
-" }}} Bufferline
-"----------------------------------------------------------------------
-" Unite {{{
-
-NeoBundle 'Shougo/unite.vim'
-
-" Replace ctrlp functionality
-" Hmmm some files seem to be missing, so continue using ctrp for now.
-" nnoremap <C-p> :Unite -buffer-name=files -start-insert file_rec/async<cr>
-
-" Allow for buffer switching
-nnoremap <leader>buf :Unite -quick-match buffer<cr>
-
-" grep interface
-nnoremap <leader>grep :Unite grep:.<cr>
-
-" }}} Unite
 "----------------------------------------------------------------------
 " Tags {{{
 " Use C-] to jump to tag under cursor
