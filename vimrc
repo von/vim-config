@@ -110,7 +110,14 @@ NeoBundleCheck
 
 " }}} NeoBundleCheck
 "----------------------------------------------------------------------
-" High-level options {{{
+" Set up ~/.vim-local {{{ "
+
+" Where we store all our local state
+silent !mkdir ~/.vim-local > /dev/null 2>&1
+
+" }}} Set up ~/.vim-local "
+"----------------------------------------------------------------------
+" Options {{{
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
@@ -119,15 +126,8 @@ set nocompatible
 " Syntax highlighting
 syntax on
 
-" Where we store all our local state
-silent !mkdir ~/.vim-local > /dev/null 2>&1
-
 " /bin/sh is an alias for bash
 let g:is_bash=1
-
-" }}}
-"----------------------------------------------------------------------
-" Misc variables {{{
 
 " Better command-line completion
 set wildmenu
@@ -140,21 +140,9 @@ set showcmd
 " coming from other editors would expect.
 set nostartofline
 
-" Display the cursor position on the last line of the screen or in the status
-" line of a window
-set ruler
-
 " Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
 set confirm
-
-" Use visual bell instead of beeping when doing something wrong
-set visualbell
-
-" And reset the terminal code for the visual bell. If visualbell is set, and
-" this line is also included, vim will neither flash nor beep. If visualbell
-" is unset, this does nothing.
-set t_vb=
 
 " Display line numbers on the left
 set number
@@ -166,10 +154,6 @@ set scrolloff=5
 " Use C-] to jump to tag under cursor
 set tags=./tags;/
 
-" }}}
-"------------------------------------------------------------
-" Mouse configuration {{{
-
 " Enable use of the mouse for all modes
 set mouse=a
 
@@ -178,11 +162,27 @@ set mouse=a
 set clipboard=unnamed
 
 " }}}
+"----------------------------------------------------------------------
+" Turn off bell and visual bell {{{ "
+
+" Use visual bell instead of beeping when doing something wrong
+set visualbell
+
+" And reset the terminal code for the visual bell. If visualbell is set, and
+" this line is also included, vim will neither flash nor beep. If visualbell
+" is unset, this does nothing.
+set t_vb=
+
+" }}} Turn off bell and visual bell "
 "------------------------------------------------------------
 " Statusline configuration {{{
 
 " Always display the status line, even if only one window is displayed
 set laststatus=2
+
+" Display the cursor position on the last line of the screen or in the status
+" line of a window
+set ruler
 
 " Enable fugitive support with statline
 let g:statline_fugitive = 1
