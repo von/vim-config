@@ -192,12 +192,6 @@ let g:statline_fugitive = 1
 
 " }}}
 "------------------------------------------------------------
-" Allow for reload of vimrc {{{
-
-nmap <leader>vimrc :source $MYVIMRC<cr>
-
-" }}}
-"------------------------------------------------------------
 " NERDTree configuration {{{
 " :help NERD_tree.txt
 
