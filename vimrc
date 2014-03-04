@@ -57,6 +57,9 @@ NeoBundle 'Shougo/vimproc', {
 " }}} NeoBundle
 "----------------------------------------------------------------------
 " Misc Bundles {{{
+"
+" Note that bundles apparently need to be in vimrc (as opposed to
+" in a plugin).
 
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'kien/ctrlp.vim'
