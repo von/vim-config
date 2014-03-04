@@ -64,6 +64,11 @@ NeoBundle 'kien/ctrlp.vim'
 " C-h/j/k/l as expected plus C-\ to switch to last pane
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ciaranm/securemodelines'
+
+" Following requires ctags-exuberant from ctags.sourceforge.net
+"   (On mac: brew install ctags-exuberant)
+NeoBundle 'majutsushi/tagbar'
+
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Shougo/unite.vim'
@@ -102,18 +107,6 @@ map <leader>scr :ScratchOpen<cr>
 autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
 
 " }}} Misc Bundles
-"----------------------------------------------------------------------
-" Tags {{{
-" Use C-] to jump to tag under cursor
-
-" Following request ctags-exuberant from ctags.sourceforge.net
-"   (On mac: brew install ctags-exuberant)
-NeoBundle 'majutsushi/tagbar'
-
-" Look for tags in current directory or parent (and on up)
-set tags=./tags;/
-
-" }}}
 "----------------------------------------------------------------------
 " High-level options {{{
 
@@ -166,6 +159,10 @@ set number
 
 " Keep this many lines on screen past cursor when scrolling
 set scrolloff=5
+
+" Look for tags in current directory or parent (and on up)
+" Use C-] to jump to tag under cursor
+set tags=./tags;/
 
 " }}}
 "------------------------------------------------------------
