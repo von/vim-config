@@ -58,6 +58,7 @@ NeoBundle 'Shougo/vimproc', {
 "----------------------------------------------------------------------
 " Misc Bundles {{{
 
+NeoBundle 'bling/vim-bufferline'
 NeoBundle 'kien/ctrlp.vim'
 " Allow one-keystroke navigation between vi panes and tmux panes
 " C-h/j/k/l as expected plus C-\ to switch to last pane
@@ -102,7 +103,6 @@ autocmd vimenter * if bufname("%") == "" | ScratchOpen | endif
 " }}} Misc Bundles
 "----------------------------------------------------------------------
 " Bufferline {{{
-NeoBundle 'bling/vim-bufferline'
 
 " scrolling with fixed current buffer position
 let g:bufferline_rotate = 1
