@@ -136,6 +136,9 @@ set wildmenu
 " Show partial commands in the last line of the screen
 set showcmd
 
+" Show matching bracket when closing
+set showmatch
+
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
 " coming from other editors would expect.
