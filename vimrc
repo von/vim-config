@@ -84,6 +84,7 @@ NeoBundle 'klen/python-mode'
 NeoBundle 'majutsushi/tagbar'
 
 NeoBundle 'millermedeiros/vim-statline'
+NeoBundle 'moll/vim-bbye'  " For BDelete
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
