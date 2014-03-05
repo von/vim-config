@@ -9,6 +9,8 @@ nnoremap :q :bd<cr>
 " Quit all buffers with ':Q'
 nnoremap :Q :qa<cr>
 
+:nmap R :redo<cr>
+
 " Run tig with T to do my git stuff
 "   silent turns off request for enter when tig is done, that requires
 "   refresh supplied by redraw.
