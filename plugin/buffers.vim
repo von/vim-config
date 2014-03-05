@@ -8,7 +8,10 @@ set hidden
 
 " Exit if we just closed last buffer
 " Kudos: http://superuser.com/a/668612/128341
-autocmd BufDelete * if len(filter(range(1, bufnr('$')), 'empty(bufname(v:val)) && buflisted(v:val)')) == 1 | quit | endif
+augroup ScrNotExit
+  autocmd!
+  autocmd BufDelete * if len(filter(range(1, bufnr('$')), 'empty(bufname(v:val)) && buflisted(v:val)')) == 1 | quit | endif
+augroup END
 
 "----------------------------------------------------------------------
 " NextBuffer and PrevBuffer functions {{{
@@ -43,6 +46,9 @@ nmap <S-Left> :call PrevBuffer()<cr>
 "------------------------------------------------------------
 " Make current directory the one holding the current file {{{
 " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-autocmd BufEnter * silent! lcd %:p:h
+augroup BufEnterLCD
+  autocmd!
+  autocmd BufEnter * silent! lcd %:p:h
+augroup END
 
 " }}}

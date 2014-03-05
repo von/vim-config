@@ -10,14 +10,15 @@ set viewoptions-=options
 " Kudos: http://dotfiles.org/~tsukkee/.vimrc
 " via: https://ebonhand.wordpress.com/2011/03/30/automatically-save-and-load-vim-views-folds/
 augroup autoview
-    autocmd BufWritePost *
-    \   if expand('%') != '' && &buftype !~ 'nofile'
-    \|      mkview
-    \|  endif
-    autocmd BufRead *
-    \   if expand('%') != '' && &buftype !~ 'nofile'
-    \|      silent loadview
-    \|  endif
+  autocmd!
+  autocmd BufWritePost *
+        \   if expand('%') != '' && &buftype !~ 'nofile'
+        \|      mkview
+        \|  endif
+  autocmd BufRead *
+        \   if expand('%') != '' && &buftype !~ 'nofile'
+        \|      silent loadview
+        \|  endif
 augroup END
 
 " Reload without loading view (or any other autocommand)
