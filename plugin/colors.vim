@@ -39,7 +39,7 @@ function! StatusLineInsertEnter(mode)
   " But we are ignoring it
 
   " Status line colors for pane with focus
-  hi StatusLine ctermfg=blue ctermbg=yellow cterm=none
+  hi StatusLine ctermfg=black ctermbg=yellow cterm=none
 
   " Status line colors for panes without focus
   hi StatusLineNC ctermfg=black ctermbg=cyan cterm=none
@@ -48,18 +48,18 @@ function! StatusLineInsertEnter(mode)
   " filename
   hi User1 ctermfg=blue ctermbg=yellow cterm=none
   " flags
-  hi User2 ctermfg=blue ctermbg=yellow cterm=none
+  hi User2 ctermfg=black ctermbg=yellow cterm=none
   " errors
   hi User3 ctermfg=Red ctermbg=yellow cterm=none
   " fugitive
-  hi User4 ctermfg=blue ctermbg=yellow cterm=none
+  hi User4 ctermfg=black ctermbg=yellow cterm=none
 endfunction
 
 function! StatusLineInsertLeave(mode)
   " mode as with StatusLineInsertEnter() - again ignored
 
   " Status line colors for pane with focus
-  hi StatusLine ctermfg=blue ctermbg=white cterm=none
+  hi StatusLine ctermfg=black ctermbg=white cterm=none
 
   " Status line colors for panes without focus
   hi StatusLineNC ctermfg=black ctermbg=cyan cterm=none
@@ -68,11 +68,11 @@ function! StatusLineInsertLeave(mode)
   " filename
   hi User1 ctermfg=blue ctermbg=white cterm=none
   " flags
-  hi User2 ctermfg=blue ctermbg=white cterm=none
+  hi User2 ctermfg=black ctermbg=white cterm=none
   " errors
   hi User3 ctermfg=Red ctermbg=white cterm=none
   " fugitive
-  hi User4 ctermfg=blue ctermbg=white cterm=none
+  hi User4 ctermfg=black ctermbg=white cterm=none
 endfunction
 
 " set up to change based on being in insert mode
