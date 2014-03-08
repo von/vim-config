@@ -4,6 +4,15 @@
 set background=dark
 
 "----------------------------------------------------------------------
+" CursorLine {{{ "
+
+:set cursorline
+
+" Medium-grey background for line cursor is on
+:hi CursorLine   cterm=NONE ctermbg=236 ctermfg=None
+
+" }}} CursorLine "
+"----------------------------------------------------------------------
 " Customize tabbar {{{
 " http://stackoverflow.com/a/7238163/197789
 "
