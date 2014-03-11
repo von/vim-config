@@ -1,11 +1,18 @@
 " Unite plugin configuration
-
-" Replace ctrlp functionality
-" Hmmm some files seem to be missing, so continue using ctrp for now.
-" nnoremap <C-p> :Unite -buffer-name=files -start-insert file_rec/async<cr>
-
-" Allow for buffer switching
-nnoremap <leader>buf :Unite -quick-match buffer<cr>
+" Kudos: http://www.reinteractive.net/posts/166-awesome-vim-plugins
 
 " grep interface
 nnoremap <leader>grep :Unite grep:.<cr>
+
+" Recently edited files
+nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>k
+
+" Open buffers
+nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+
+" CtrlP search
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#custom#source('file_rec/async','sorters','sorter_rank')
+" replacing unite with ctrl-p
+nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
