@@ -9,12 +9,6 @@
 " Map C-r to back-screen because C-b is used by tmux
 :map <C-r> <C-B>
 
-" Close buffer without exiting (uses moll/vim-bbye)
-nnoremap :q :Bdelete<cr>
-
-" Quit all buffers with ':Q'
-nnoremap :Q :qa<cr>
-
 :nmap R :redo<cr>
 
 " Run tig with T to do my git stuff
