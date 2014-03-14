@@ -9,6 +9,7 @@
 " Map C-r to back-screen because C-b is used by tmux
 :map <C-r> <C-B>
 
+" And C-r used to be redo, so bind R to that
 :nmap R :redo<cr>
 
 " Run tig with T to do my git stuff
