@@ -37,6 +37,10 @@ vnoremap > >gv
 " Automatically enter and leave paste mode when pasting
 " Kudos: https://coderwall.com/p/if9mda
 
+" Note this makes using Esc in insert mode trickier since vim has to wait and
+" see what your intent it. You can use C-c instead to exit insert mode.
+" Kudos: http://stackoverflow.com/a/1278813/197789
+
 " Note that if you use Vim inside of a Tmux session then you need 
 " to double escape the codes in tSI/tEI. 
 function! WrapForTmux(s)
