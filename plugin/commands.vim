@@ -8,3 +8,6 @@
 
 " Quit all buffers with ':Q'
 :cabbrev Q qa
+
+" Redraw with ':R'
+:cabbrev R redraw!
