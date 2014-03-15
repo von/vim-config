@@ -2,7 +2,7 @@
 " Kudos: http://www.reinteractive.net/posts/166-awesome-vim-plugins
 
 " grep interface
-nnoremap <leader>grep :Unite grep:.<cr>
+nnoremap <leader>g :Unite grep:.<cr>
 
 " Recently edited files
 nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>k
