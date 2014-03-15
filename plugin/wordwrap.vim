@@ -5,12 +5,10 @@
 "set showbreak=↪
 
 " Wrap the current paragraph
-" (Uses register z to save and restore location)
-nmap <leader>wrap :call Preserve(":normal gq}")<cr>
+cabbrev wrap call Preserve(':normal gq}')
 
 " Wrap the whole document
-" (Uses register z to save and restore location)
-nmap <leader>wrapall :call Preserve(":normal gqG")<cr>
+cabbrev wrapall call Preserve(':normal gqG')
 
 " Allow for quick turning on and off soft wrapping of long lines
-:noremap <leader>nowrap :set nowrap!<CR>
+cabbrev nowrap :set nowrap!

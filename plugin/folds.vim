@@ -9,8 +9,8 @@ let g:sh_fold_enabled = 7
 nnoremap <silent> F za
 vnoremap F zf
 
-" Open all folds
-map <leader>unfold zR
+" Open all folds with ':unfold'
+cabbrev unfold norm zR
 
-" Close all folds
-map <leader>fold zM
+" Close all folds with ':fold'
+cabbrev fold norm zM

@@ -22,4 +22,4 @@ augroup autoview
 augroup END
 
 " Reload without loading view (or any other autocommand)
-map <leader>reload :noautocmd e<cr>
+cabbrev reload noautocmd e
