@@ -11,3 +11,6 @@
 
 " Redraw with ':R'
 :cabbrev R redraw!
+
+" Source current file with ':S'
+:cabbrev S source %
