@@ -1,4 +1,7 @@
 " Configuration related to colors
+" For list of colors see $VIMRUNTIME/rgb.txt
+" To see all colors, run the following:
+" :runtime syntax/colortest.vim
 
 " Prevents dark fonts
 set background=dark
