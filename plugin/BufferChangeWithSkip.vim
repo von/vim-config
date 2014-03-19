@@ -20,7 +20,6 @@ function! BufferChangeWithSkip(cmd)
       break
     endif
     for ex in g:skip_buffers
-      echo "Checking match with " . ex . " and " . bufname("%")
       if match(bufname("%"), ex) > -1
         continue
       endif
