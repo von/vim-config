@@ -3,7 +3,7 @@
 " To see key mappings and their source, use ':verbose map'
 " Kudos: http://stackoverflow.com/a/7644189/197789
 "
-" To see default vim key bindings, use ':index'
+" To see default vim key bindings, use ':help index'
 " Kudos: http://stackoverflow.com/a/2484137/197789
 
 " Map C-s to back-screen because C-b is used by tmux
