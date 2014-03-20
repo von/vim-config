@@ -6,11 +6,10 @@
 " To see default vim key bindings, use ':index'
 " Kudos: http://stackoverflow.com/a/2484137/197789
 
-" Map C-r to back-screen because C-b is used by tmux
-:map <C-r> <C-B>
-
-" And C-r used to be redo, so bind R to that
-:nmap R :redo<cr>
+" Map C-s to back-screen because C-b is used by tmux
+" Note this requires terminal to ignore C-s
+" http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
+:map <C-s> <C-B>
 
 " Run tig with T to do my git stuff
 "   silent turns off request for enter when tig is done, that requires
