@@ -11,10 +11,10 @@
 " http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
 :map <C-s> <C-B>
 
-" Run tig with T to do my git stuff
+" Run tig with 'gt' to do my git stuff
 "   silent turns off request for enter when tig is done, that requires
 "   refresh supplied by redraw.
-:map T :silent !tig status<cr>:redraw!<cr>
+:map gt :silent !tig status<cr>:redraw!<cr>
 
 " Timeouts {{{ "
 
