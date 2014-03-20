@@ -152,6 +152,9 @@ set confirm
 " Display line numbers on the left
 set number
 
+" Display an indicator in the 80th column
+set colorcolumn=80
+
 " Keep this many lines on screen past cursor when scrolling
 set scrolloff=5
 
