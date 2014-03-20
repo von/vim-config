@@ -16,6 +16,8 @@
 "   refresh supplied by redraw.
 :map gt :silent !tig status<cr>:redraw!<cr>
 
+:map gu :GundoToggle<cr>
+
 " Timeouts {{{ "
 
 " Timeout on mappings and key codes
