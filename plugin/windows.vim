@@ -7,8 +7,6 @@
 map <Bar>   <C-W>v<C-W><Right>
 " Split horizontally with '-'
 map -       <C-W>s<C-W><Down>
-" Close pane control-c
-map <C-c>   <C-W>c
 
 " Open new split panes to right and bottom, which feels more natural than
 " Vim’s default
