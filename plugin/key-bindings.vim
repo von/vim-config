@@ -6,21 +6,25 @@
 " To see default vim key bindings, use ':help index'
 " Kudos: http://stackoverflow.com/a/2484137/197789
 
+" Leader bindings {{{ "
+
 " Use space as leader
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 let mapleader = "\<Space>"
+
+" Run tig to do my git stuff
+"   silent turns off request for enter when tig is done, that requires
+"   refresh supplied by redraw.
+:map <leader>t :silent !tig status<cr>:redraw!<cr>
+
+:map <leader>u :GundoToggle<cr>
+
+" }}} Leader bindings
 
 " Map C-s to back-screen because C-b is used by tmux
 " Note this requires terminal to ignore C-s
 " http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
 :map <C-s> <C-B>
-
-" Run tig with 'gt' to do my git stuff
-"   silent turns off request for enter when tig is done, that requires
-"   refresh supplied by redraw.
-:map gt :silent !tig status<cr>:redraw!<cr>
-
-:map gu :GundoToggle<cr>
 
 " Timeouts {{{ "
 
