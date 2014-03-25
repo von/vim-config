@@ -6,6 +6,10 @@
 " To see default vim key bindings, use ':help index'
 " Kudos: http://stackoverflow.com/a/2484137/197789
 
+" Use space as leader
+" Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+let mapleader = "\<Space>"
+
 " Map C-s to back-screen because C-b is used by tmux
 " Note this requires terminal to ignore C-s
 " http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
