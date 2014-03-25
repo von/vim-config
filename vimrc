@@ -86,8 +86,6 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'millermedeiros/vim-statline'
 NeoBundle 'moll/vim-bbye'  " For BDelete
 NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'sjl/gundo.vim'
