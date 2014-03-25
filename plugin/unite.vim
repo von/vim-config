@@ -5,10 +5,10 @@
 nnoremap <silent> <leader>g :Unite grep:.<cr>
 
 " Recently edited files
-nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>k
+nnoremap <silent> <leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>k
 
 " Open buffers
-nnoremap <silent> <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+nnoremap <silent> <leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
 
 " CtrlP search
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
