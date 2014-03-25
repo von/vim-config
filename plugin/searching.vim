@@ -4,7 +4,7 @@
 set hlsearch
 
 " Clear highlighted search results
-map <silent> <leader><cr> :noh<cr>
+map <silent> <leader>c :noh<cr>
 
 " Makes search act like search in modern browsers
 set incsearch
