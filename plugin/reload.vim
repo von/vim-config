@@ -3,4 +3,9 @@
 " See following for autocmd guards
 " http://stackoverflow.com/questions/15353988/progressively-slower-reloading-time-of-vimrc
 
-cabbrev vimrc source $MYVIMRC
+function! ReloadVIMRC()
+  source $MYVIMRC
+  redraw!
+endfunction
+
+cabbrev vimrc call ReloadVIMRC()
