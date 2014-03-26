@@ -15,6 +15,20 @@
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 let mapleader = "\<Space>"
 
+" See also unite.vim for <leader>b, <leader>g, <leader>m
+
+" Close buffer without exiting (uses moll/vim-bbye)
+:map <leader>q :Bdelete<cr>
+
+" Quit all buffers with 'Q'
+:map <leader>Q :qa<cr>
+
+" Redraw with 'R'
+:map <leader>R :redraw!<cr>
+
+" Source current file with ':S'
+:map <leader>S :source %<cr>
+
 " Run tig to do my git stuff
 "   silent turns off request for enter when tig is done, that requires
 "   refresh supplied by redraw.

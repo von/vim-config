@@ -8,14 +8,4 @@
 " Note they take effect anywherein the command (including arguments).
 " http://stackoverflow.com/a/3879737/197789
 
-" Close buffer without exiting (uses moll/vim-bbye)
-:cabbrev q Bdelete
-
-" Quit all buffers with ':Q'
-:cabbrev Q qa
-
-" Redraw with ':R'
-:cabbrev R redraw!
-
-" Source current file with ':S'
-:cabbrev S source %
+" This file is currently empty.
