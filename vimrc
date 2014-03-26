@@ -91,11 +91,11 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-rsi' " readline-like key bindings in insert mode
+NeoBundle 'tpope/vim-unimpaired'
 
 " Note you need to build this after initial install
 " cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
