@@ -1,5 +1,7 @@
 " Key bindings and related configuration
 "
+" See also commands.vim
+"
 " To see key mappings and their source, use ':verbose map'
 " Kudos: http://stackoverflow.com/a/7644189/197789
 "
@@ -7,6 +9,7 @@
 " Kudos: http://stackoverflow.com/a/2484137/197789
 
 " Leader bindings {{{ "
+" My strategy is to use <leader> for commonly-used one-stroke commands.
 
 " Use space as leader
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
