@@ -22,4 +22,4 @@ augroup autoview
 augroup END
 
 " Reload without loading view (or any other autocommand)
-cabbrev reload noautocmd e
+CommandCabbr reload noautocmd<space>e

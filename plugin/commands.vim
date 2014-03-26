@@ -9,4 +9,4 @@
 " Note they take effect anywherein the command (including arguments).
 " http://stackoverflow.com/a/3879737/197789
 
-:command VIMRC :call ReloadVIMRC()
+CommandCabbr vimrc call<space>ReloadVIMRC()

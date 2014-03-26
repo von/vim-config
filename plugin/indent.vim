@@ -19,12 +19,12 @@ set tabstop=8
 set backspace=indent,eol,start
 
 " Allow me to turn tabs on and off
-cabbrev tabs set noexpandtab
-cabbrev notabs set expandtab
+CommandCabbr tabs set<space>noexpandtab
+CommandCabbr notabs set<space>expandtab
 
 " Re-indent, whole file or selected area
 " Kudos: http://vim.wikia.com/wiki/Fix_indentation
-cabbrev indent call Preserve(":normal gg=G")
+CommandCabbr indent call<space>Preserve(':normal<space>gg=G')
 " ALternative to above is use '==' to re-indent current line or selection,
 " or '<n>==' (e.g. '5==') to re-indent <n> lines
 
@@ -67,7 +67,7 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " Allow me to turn off indentation for pasting
 " Kudos: http://stackoverflow.com/a/2514520/197789
-cabbrev paste set paste
-cabbrev nopaste set nopaste
+CommandCabbr paste set<space>paste
+CommandCabbr nopaste set<space>nopaste
 
 " }}}

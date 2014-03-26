@@ -5,10 +5,10 @@
 "set showbreak=↪
 
 " Wrap the current paragraph
-cabbrev wrap call Preserve(':normal gq}')
+CommandCabbr wrap call<space>Preserve(':normal<space>gq}')
 
 " Wrap the whole document
-cabbrev wrapall call Preserve(':normal gqG')
+CommandCabbr wrapall call<space>Preserve(':normal<space>gqG')
 
 " Allow for quick turning on and off soft wrapping of long lines
-cabbrev nowrap :set nowrap!
+CommandCabbr nowrap :set<space>nowrap!

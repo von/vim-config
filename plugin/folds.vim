@@ -5,7 +5,7 @@
 let g:sh_fold_enabled = 7 
 
 " Open all folds with ':unfold'
-cabbrev unfold norm zR
+CommandCabbr unfold norm<space>zR
 
 " Close all folds with ':fold'
-cabbrev fold norm zM
+CommandCabbr fold norm<space>zM

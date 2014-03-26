@@ -11,7 +11,7 @@ function! WhitespaceClean()
 endfunction
 " }}} WhitespaceClean "
 
-cabbrev clean call WhitespaceClean()
+CommandCabbr clean call<space>WhitespaceClean()
 
 " Make whitespace visible
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅

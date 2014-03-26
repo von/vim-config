@@ -7,4 +7,4 @@ highlight nonascii guibg=Red gui=bold ctermbg=Red cterm=bold,underline
 
 " Find unicode
 " Kudos: http://vim.1045645.n5.nabble.com/highlighting-weird-characters-tp1160262p1160268.html
-cabbrev unicode norm /[^ -~]
+CommandCabbr unicode norm<space>/[^<space>-~]
