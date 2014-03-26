@@ -46,6 +46,14 @@ let mapleader = "\<Space>"
 " http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
 :map <C-s> <C-B>
 
+" Bindings for vim-expand-region {{{
+
+" Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+" }}} Bindings for vim-expand-region
+
 " Timeouts {{{ "
 
 " Timeout on mappings and key codes
