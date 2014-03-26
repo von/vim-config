@@ -95,6 +95,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-obsession'
+NeoBundle 'tpope/vim-rsi' " readline-like key bindings in insert mode
 
 " Note you need to build this after initial install
 " cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
