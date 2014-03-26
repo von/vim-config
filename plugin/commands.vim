@@ -9,4 +9,4 @@
 " Note they take effect anywherein the command (including arguments).
 " http://stackoverflow.com/a/3879737/197789
 
-" This file is currently empty.
+:command VIMRC :call ReloadVIMRC()

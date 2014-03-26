@@ -7,5 +7,3 @@ function! ReloadVIMRC()
   source $MYVIMRC
   redraw!
 endfunction
-
-cabbrev vimrc call ReloadVIMRC()
