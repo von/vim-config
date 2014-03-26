@@ -46,6 +46,13 @@ let mapleader = "\<Space>"
 " http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
 :map <C-s> <C-B>
 
+" Type 12<Enter> to go to line 12
+" Hit Enter to go to end of file.
+" Hit Backspace to go to beginning of file.
+" Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+nnoremap <CR> G
+nnoremap <BS> gg
+
 " Bindings for vim-expand-region {{{
 
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
