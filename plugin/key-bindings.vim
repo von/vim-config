@@ -19,6 +19,9 @@ let mapleader = "\<Space>"
 
 :map <leader>u :GundoToggle<cr>
 
+" Save with <leader>w
+:map <leader>w :w<cr>
+
 " }}} Leader bindings
 
 " Map C-s to back-screen because C-b is used by tmux
