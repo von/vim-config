@@ -17,6 +17,8 @@ let mapleader = "\<Space>"
 
 " See also unite.vim for <leader>b, <leader>g, <leader>m
 
+:map <leader>B :Gblame<cr>
+
 " Close buffer without exiting (uses moll/vim-bbye)
 :map <leader>q :Bdelete<cr>
 
