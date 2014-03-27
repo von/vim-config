@@ -19,6 +19,9 @@ let mapleader = "\<Space>"
 
 :map <leader>B :Gblame<cr>
 
+" Open file explorer
+:map <leader>o :Explore<cr>
+
 " Close buffer without exiting (uses moll/vim-bbye)
 :map <leader>q :Bdelete<cr>
 
