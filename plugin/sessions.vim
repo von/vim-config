@@ -18,7 +18,7 @@ function! SessionLoad(name)
 endfunction
 " }}} SessionLoad() "
 
-command -nargs=1 SLoad call SessionLoad("<args>")
+command! -nargs=1 SLoad call SessionLoad("<args>")
 
 " SessionSave() {{{ "
 function! SessionSave(name)
@@ -28,4 +28,4 @@ function! SessionSave(name)
 endfunction
 " }}} SessionSave() "
 
-command -nargs=1 SSave call SessionSave("<args>")
+command! -nargs=1 SSave call SessionSave("<args>")
