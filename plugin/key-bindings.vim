@@ -31,8 +31,8 @@ let mapleader = "\<Space>"
 " Redraw with 'R'
 :map <leader>R :redraw!<cr>
 
-" Source current file with ':S'
-:map <leader>S :source %<cr>
+" Source current file with 'S'
+:map <leader>S :source %<cr>:redraw!<cr>
 
 " Run tig to do my git stuff
 "   silent turns off request for enter when tig is done, that requires
