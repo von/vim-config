@@ -8,7 +8,7 @@ set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,
 " Save and load session using Obsession
 let s:sessions="~/.vim-local/sessions/"
 
-silent !mkdir s:sessions > /dev/null 2>&1
+execute 'silent !mkdir ' . s:sessions . ' > /dev/null 2>&1'
 
 " SessionLoad() {{{ "
 function! SessionLoad(name)
