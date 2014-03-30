@@ -169,6 +169,9 @@ set mouse=a
 " Kudos: http://vim.wikia.com/wiki/Mac_OS_X_clipboard_sharing
 set clipboard=unnamed
 
+" Use blowfish instead of zip with vim's native encryption (see ':X')
+set cryptmethod=blowfish
+
 " }}}
 "----------------------------------------------------------------------
 " Turn off bell and visual bell {{{ "
