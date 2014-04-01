@@ -3,3 +3,4 @@
 tags
 # bundle/ is managed by NeoBundle
 bundle/*
+.netrwhist
