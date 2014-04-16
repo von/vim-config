@@ -1,4 +1,4 @@
-" vimrc (use doube quotes for comments)
+" vimrc (use double quotes for comments)
 " Kudos: http://vim.wikia.com/wiki/Example_vimrc
 "
 " Also see the ftplugins/ directory for filetype-specific stuff:
