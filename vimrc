@@ -2,7 +2,7 @@
 " Kudos: http://vim.wikia.com/wiki/Example_vimrc
 "
 " Also see the ftplugins/ directory for filetype-specific stuff:
-" http://vim.wikia.com/wiki/Keep_cour_vimrc_file_clean
+" http://vim.wikia.com/wiki/keep_your_vimrc_file_clean
 "
 " And plugins/ for other automatically loaded configuration
 " These are loaded after this file.
