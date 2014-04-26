@@ -61,6 +61,7 @@ NeoBundle 'Shougo/vimproc', {
 " Note that bundles apparently need to be in vimrc (as opposed to
 " in a plugin).
 
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'kien/ctrlp.vim'
 
@@ -152,6 +153,9 @@ set confirm
 
 " Display line numbers on the left
 set number
+
+" Do not have git-gutten highlight lines
+let g:gitgutter_highlight_lines = 0
 
 " Display an indicator in the 80th column
 set colorcolumn=80

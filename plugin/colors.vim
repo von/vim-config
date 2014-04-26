@@ -34,6 +34,16 @@ set background=dark
 hi LineNr         ctermfg=021 ctermbg=234
 
 " }}} Linenumbers
+
+"----------------------------------------------------------------------
+" SignColumn {{{
+
+" For git-gutter
+" Clear so we use LineNr
+highlight clear SignColumn
+
+" }}} SignColumn
+
 "----------------------------------------------------------------------
 " Statusline {{{ "
 
