@@ -18,3 +18,6 @@ let g:pymode_lint_jump = 1
 
 " Don't load rope as it's C-c command interfers with my C-c to close window
 let g:pymode_rope = 0
+
+" Rebind from "<leader> b" which conflicts with changing buffers
+let g:pymode_breakpoint_bind = "<leader>P"
