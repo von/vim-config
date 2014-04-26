@@ -21,5 +21,17 @@ augroup autoview
         \|  endif
 augroup END
 
-" Reload without loading view (or any other autocommand)
-CommandCabbr reload noautocmd<space>e
+" FixView {{{
+function! FixView()
+  " Fix view by reloading file without loading view...
+  " (This will prompt to save file if need be)
+  noautocmd edit
+  " Then save view...
+  mkview
+  " And reloading file.
+  edit
+endfunction
+
+CommandCabbr review call<space>FixView()
+
+" }}} FixView
