@@ -6,7 +6,7 @@ set viewdir=~/.vim-local/views/
 
 set viewoptions-=options
 
-" Save and load without errors
+" Save and load without errors {{{
 " Kudos: http://dotfiles.org/~tsukkee/.vimrc
 " via: https://ebonhand.wordpress.com/2011/03/30/automatically-save-and-load-vim-views-folds/
 augroup autoview
@@ -20,6 +20,7 @@ augroup autoview
         \|      silent loadview
         \|  endif
 augroup END
+" }}} Save and load without errors
 
 " FixView {{{
 function! FixView()
