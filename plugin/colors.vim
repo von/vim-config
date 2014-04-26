@@ -34,7 +34,6 @@ set background=dark
 hi LineNr         ctermfg=021 ctermbg=234
 
 " }}} Linenumbers
-
 "----------------------------------------------------------------------
 " SignColumn {{{
 
@@ -43,7 +42,6 @@ hi LineNr         ctermfg=021 ctermbg=234
 highlight clear SignColumn
 
 " }}} SignColumn
-
 "----------------------------------------------------------------------
 " Statusline {{{ "
 
