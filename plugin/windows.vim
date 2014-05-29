@@ -14,3 +14,19 @@ map -       <C-W>s<C-W><Down>
 " Vim’s default
 set splitbelow
 set splitright
+
+" Move to windows and maximize {{{
+" Kudos: https://github.com/tommcdo/vimfiles/blob/master/config/windows.vim
+
+" Maximize current window
+nnoremap g. <C-W>_<C-W><Bar>
+
+" Move down and maximze
+nnoremap gj <C-W>j<C-W>_
+
+" Move up and maximze
+nnoremap gk <C-W>k<C-W>_
+
+" Note 'gl' is used by word-swap.vim
+
+" }}}
