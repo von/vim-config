@@ -30,8 +30,9 @@ set background=dark
 "----------------------------------------------------------------------
 " Linenumbers {{{
 "
-" Line numbers are blue with dark grey background
-hi LineNr         ctermfg=021 ctermbg=234
+" Line numbers are light blue with dark grey background.
+" This also controls the line numbers for pylint errors.
+hi LineNr         ctermfg=050 ctermbg=234
 
 " }}} Linenumbers
 "----------------------------------------------------------------------
