@@ -11,3 +11,6 @@ command! -nargs=+ CommandCabbr call CommandCabbr(<f-args>)
 
 " Use it on itself to define a simpler abbreviation for itself.
 CommandCabbr ccab CommandCabbr
+
+" Restore ':p' for previous buffer
+CommandCabbr p prev
