@@ -4,8 +4,9 @@
 
 " WhitespaceClean {{{ "
 function! WhitespaceClean()
-  " Convert tabs to 4 spaces
-  call Preserve(':%s/	/    /ge')
+  " Convert tabs to spaces (number as specified by tabstop)
+  let s:spaces = strpart('                ', 0, &tabstop)
+  call Preserve(':%s/	/' . s:spaces . '/ge')
   " Remove trailing whitespace
   call Preserve(':%s/\v\s+$//e')
 endfunction
