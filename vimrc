@@ -38,7 +38,7 @@ if has('vim_starting')
   execute 'set runtimepath+=' . s:neobundleDir
 endif
 
-call neobundle#rc(g:pluginInstallDir)
+call neobundle#begin(g:pluginInstallDir)
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -104,6 +104,8 @@ NeoBundle 'tpope/vim-unimpaired'
 " For Ubuntu, prefix with:
 " export EXTRA_CMAKE_ARGS=-DPYTHON_LIBRARY=/usr/lib/python2.7/config-i386-linux-gnu/libpthon2.7.so
 NeoBundle 'Valloric/YouCompleteMe'
+
+call neobundle#end()
 
 " }}} Misc Bundles
 "------------------------------------------------------------
