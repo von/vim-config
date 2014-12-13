@@ -41,6 +41,8 @@ let mapleader = "\<Space>"
 
 :map <leader>u :GundoToggle<cr>
 
+:map <leader>v :silent !vifm<cr>:redraw!<cr>
+
 " Save with <leader>w
 :map <leader>w :w<cr>
 
