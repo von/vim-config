@@ -7,9 +7,6 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " Recently edited files
 nnoremap <silent> <leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>k
 
-" Open buffers
-nnoremap <silent> <leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
-
 " CtrlP search
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])

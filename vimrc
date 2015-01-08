@@ -70,6 +70,10 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
 
 NeoBundle 'ciaranm/securemodelines'
+
+let g:buffergator_suppress_keymaps=1  " Do this in key-bindings.vim
+NeoBundle 'jeetsukumaran/vim-buffergator'
+
 NeoBundle 'kana/vim-scratch'
 
 " Allows definiton of arbitrary objects (prereusite of following)

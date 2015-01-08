@@ -15,7 +15,10 @@
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 let mapleader = "\<Space>"
 
-" See also unite.vim for <leader>b, <leader>g, <leader>m
+" See also unite.vim for <leader>g, <leader>m
+
+" <leader>b opens buffer list in vim-buffergator
+:map <leader>b :BuffergatorOpen<cr>
 
 :map <leader>B :Gblame<cr>
 
