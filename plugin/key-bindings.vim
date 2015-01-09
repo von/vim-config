@@ -22,6 +22,9 @@ let mapleader = "\<Space>"
 
 :map <leader>B :Gblame<cr>
 
+" Toggle folder open/close
+:map <leader>f za
+
 " Open file explorer
 :map <leader>o :Explore<cr>
 
@@ -51,6 +54,12 @@ let mapleader = "\<Space>"
 
 " Save with <leader>w
 :map <leader>w :w<cr>
+
+" Close all folds with <leader>z
+:map <leader>z zM
+
+" Open all folds with <leader>Z
+:map <leader>Z zR
 
 " }}} Leader bindings
 
