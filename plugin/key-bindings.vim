@@ -62,6 +62,12 @@ let mapleader = "\<Space>"
 " Open all folds with <leader>Z
 :map <leader>Z zR
 
+" Window resizing
+nnoremap <silent> <Leader><Up> <C-W>-
+nnoremap <silent> <Leader><Down> <C-W>+
+nnoremap <silent> <Leader><Right> <C-W>>
+nnoremap <silent> <Leader><Left> <C-W><
+
 " }}} Leader bindings
 
 " Map C-s to back-screen because C-b is used by tmux
