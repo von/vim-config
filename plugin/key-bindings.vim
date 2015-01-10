@@ -40,14 +40,14 @@ let mapleader = "\<Space>"
 " Source current file with 'S'
 :map <leader>S :source %<cr>:redraw!<cr>
 
-" Toggle ctags
-:map <leader>T :TagbarToggle<cr>
-
 " Run tig to do my git stuff
 "   silent turns off request for enter when tig is done, that requires
 "   refresh supplied by redraw.
 "   Call to GitGutter refreshes its symbols.
 :map <leader>t :silent !tig status<cr>:GitGutter<cr>:redraw!<cr>
+
+" Toggle ctags
+:map <leader>T :TagbarToggle<cr>
 
 :map <leader>u :GundoToggle<cr>
 
