@@ -1,9 +1,9 @@
-" Fold functions for enabling folds for files using has for comments
+" Fold functions for files using hashes for comments
 "
-" Use '#######+" followed by fold title to indicate first-level fold
-" Use '######" followed by fold title to indicate second-level fold
-" Use '#------+' to close all folds
-" Use '#-----' to close second-level fol
+" Use '#######+" (7+ hashes) followed by title to indicate first-level fold
+" Use '######" (6 hashes) followed by title to indicate second-level fold
+" Use '#------+' (hash followed by 6+ dashes) to close all folds
+" Use '#-----' (hash followed by 5 dashes) to close second-level fold
 
 function! HashFoldExpr()
   let thisline = getline(v:lnum)
