@@ -75,6 +75,19 @@ nnoremap <silent> <Leader><CR> <C-W>_<C-W><Bar>
 
 " }}} Leader bindings
 
+" Window splitting {{{ "
+"
+" Kudos: http://codeincomplete.com/posts/2011/3/4/my_vimrc_file/
+" Split vertically with '|' and open file explorer
+map <Bar>   :vsplit .<cr>
+
+" Split horizontally with '-'
+" Don't open file explorer since I'm more likely to be doing a horizontal
+" split to get two views on the current file.
+map -       <C-W>s<C-W><Down>
+
+" }}} Window splitting
+
 " Map C-s to back-screen because C-b is used by tmux
 " Note this requires terminal to ignore C-s
 " http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
