@@ -67,6 +67,11 @@ nnoremap <silent> <Leader><Up> <C-W>-
 nnoremap <silent> <Leader><Down> <C-W>+
 nnoremap <silent> <Leader><Right> <C-W>>
 nnoremap <silent> <Leader><Left> <C-W><
+" Balance windows
+nnoremap <silent> <Leader>= <C-W>=
+" Maximize current window
+nnoremap <silent> <Leader><CR> <C-W>_<C-W><Bar>
+
 
 " }}} Leader bindings
 
