@@ -100,6 +100,14 @@ map -       <C-W>s<C-W><Down>
 nnoremap <CR> G
 nnoremap <BS> gg
 
+" Allow use of semi-colon to enter command mode
+" Kudos: http://blog.unixphilosopher.com/2015/02/five-weird-vim-tricks.html
+nnoremap ; :
+
+" Run a command with '!'
+" Kudos: http://blog.unixphilosopher.com/2015/02/five-weird-vim-tricks.html
+nnoremap ! :!
+
 " Bindings for vim-expand-region {{{
 
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
