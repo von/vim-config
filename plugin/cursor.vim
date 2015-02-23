@@ -1,6 +1,6 @@
 " Cursor configuration
 
-" Set cursor for inset and normal mode in tmux
+" Set cursor for insert and normal mode in tmux
 " Kudos: https://gist.github.com/andyfowler/1195581
 
 if exists('$TMUX')
