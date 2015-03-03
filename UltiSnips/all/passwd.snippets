@@ -1,4 +1,4 @@
-# Snippets for password-store files
+# Snippets for generating a passwd
 global !p
 import random
 import string
@@ -19,11 +19,3 @@ snippet "passwd(\d*)" "Insert a random password with optional length" r
 `!p length = int(match.group(1)) if match.group(1) else 12
 snip.rv = gen_password(length) if not snip.c else snip.c`
 endsnippet
-
-snippet "^\s*entry(\d*)" "Insert an entry" r
-${1:`!p length = int(match.group(1)) if match.group(1) else 12
-snip.rv = gen_password(length) if not snip.c else snip.c`}
-${2:Username}
-${3:notes}
-endsnippet
-
