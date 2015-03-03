@@ -3,13 +3,13 @@ global !p
 import random
 import string
 
-def gen_password(length):
+def gen_password(length, remove_lookalike=True):
     """Generate a password of given length."""
     alphabet = string.letters + string.digits
-    # Remove look-alike characters
-    alphabet = alphabet.translate(
-                string.maketrans('', ''),  # For pre-2.6 compatability
-                '0O1l')  # Characters to delete
+    if remove_lookalike:
+        alphabet = alphabet.translate(
+                    string.maketrans('', ''),  # For pre-2.6 compatability
+                    '0O1l')  # Characters to delete
     s = "".join([random.choice(alphabet) for i in xrange(length)])
     return s
 
