@@ -22,7 +22,7 @@ let mapleader = "\<Space>"
 
 :map <leader>B :Gblame<cr>
 
-" Toggle folder open/close
+" Toggle fold open/close
 :map <leader>f za
 
 " Open file explorer
