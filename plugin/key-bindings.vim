@@ -17,10 +17,11 @@ let mapleader = "\<Space>"
 
 " See also unite.vim for <leader>g, <leader>m
 
-" <leader>b opens buffer list in vim-buffergator
-:map <leader>b :BuffergatorOpen<cr>
+" Switch to previous buffer
+:map <leader>b :e #<cr>
 
-:map <leader>B :Gblame<cr>
+" Open buffer list in vim-buffergator
+:map <leader>B :BuffergatorOpen<cr>
 
 " Toggle fold open/close
 :map <leader>f za
