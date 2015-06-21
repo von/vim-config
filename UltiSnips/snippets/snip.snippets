@@ -1,0 +1,8 @@
+# Snippet for creating snippets
+# Kudos: https://github.com/honza/vim-snippets/blob/master/UltiSnips/snippets.snippets
+
+snippet snip "Snippet for Ultisips snipprt" b
+`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:b}
+$0
+`!p snip.rv = "endsnippet"`
+endsnippet
