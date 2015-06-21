@@ -17,3 +17,5 @@ various file types. A special filetype is all, e.g.  >
    all/a.snippets
 which contains snippets that are always expanded, no matter what file type is
 defined.
+
+For lots of example snippets see: https://github.com/honza/vim-snippets
