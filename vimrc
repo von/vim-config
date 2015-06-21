@@ -103,12 +103,6 @@ NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-rsi' " readline-like key bindings in insert mode
 NeoBundle 'tpope/vim-unimpaired'
 
-" Note you need to build this after initial install
-" cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
-" For Ubuntu, prefix with:
-" export EXTRA_CMAKE_ARGS=-DPYTHON_LIBRARY=/usr/lib/python2.7/config-i386-linux-gnu/libpthon2.7.so
-NeoBundle 'Valloric/YouCompleteMe'
-
 call neobundle#end()
 
 " }}} Misc Bundles
