@@ -93,6 +93,7 @@ NeoBundle 'moll/vim-bbye'  " For BDelete
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'  " Snippets for ultisnips
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'terryma/vim-expand-region'
