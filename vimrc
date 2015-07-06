@@ -100,8 +100,8 @@ NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-rsi' " readline-like key bindings in insert mode
+NeoBundle 'mhinz/vim-startify'
 NeoBundle 'tpope/vim-unimpaired'
 
 call neobundle#end()
@@ -191,6 +191,13 @@ set visualbell
 set t_vb=
 
 " }}} Turn off bell and visual bell "
+"------------------------------------------------------------
+" startify configuration {{{
+" See plugin/sessions.vim for startify session configuration
+
+let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks']
+
+" }}}
 "------------------------------------------------------------
 " Statusline configuration {{{
 
