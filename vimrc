@@ -62,7 +62,7 @@ NeoBundle 'Shougo/vimproc', {
 " in a plugin).
 
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'bling/vim-bufferline'
+NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 
 " Allow one-keystroke navigation between vi panes and tmux panes
@@ -205,19 +205,5 @@ let g:startify_list_order = [
   \ ['Bookmarks'],
   \ 'bookmarks',
   \ ]
-
-" }}}
-"------------------------------------------------------------
-" Statusline configuration {{{
-
-" Always display the status line, even if only one window is displayed
-set laststatus=2
-
-" Display the cursor position on the last line of the screen or in the status
-" line of a window
-set ruler
-
-" Enable fugitive support with statline
-let g:statline_fugitive = 1
 
 " }}}
