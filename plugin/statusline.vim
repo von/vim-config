@@ -14,6 +14,11 @@ let g:statline_fugitive = 1
 " Show whitespace errors
 let g:airline#extensions#whitespace#enabled = 1
 
+" Set airline theme
+" Kudos: http://choorucode.com/2015/03/18/how-to-use-themes-in-airline/
+" Other contendors: behelit, hybridline
+let g:airline_theme='raven'
+
 " {{{ Use unicode symbols in airline
 "
 if !exists('g:airline_symbols')
