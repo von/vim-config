@@ -63,6 +63,7 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'danro/rename.vim'
 NeoBundle 'kien/ctrlp.vim'
 
 " Allow one-keystroke navigation between vi panes and tmux panes
