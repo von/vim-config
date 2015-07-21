@@ -33,16 +33,3 @@ if has('persistent_undo') && has('autocmd')
             \ setlocal noundofile
     augroup END
 endif
-
-" Don't keep viminfo for files in temp directories or shm
-if has('viminfo')
-    if has('autocmd')
-        augroup viminfoskip
-            autocmd!
-            silent! autocmd BufNewFile,BufReadPre
-                \ s:passtmp
-                \ setlocal viminfo=
-        augroup END
-    endif
-endif
-
