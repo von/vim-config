@@ -23,6 +23,8 @@ let mapleader = "\<Space>"
 " Open buffer list in vim-buffergator
 :map <leader>B :BuffergatorOpen<cr>
 
+:map <leader>C :NeoCompleteToggle<cr>
+
 " Toggle fold open/close
 :map <leader>f za
 
