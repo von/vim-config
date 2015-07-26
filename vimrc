@@ -89,6 +89,10 @@ NeoBundle 'klen/python-mode'
 "   (On mac: brew install ctags-exuberant)
 NeoBundle 'majutsushi/tagbar'
 
+" Requires lau
+" E.g. brew install macvim --with-cscope --with-lua --HEAD
+NeoBundle 'Shougo/neocomplete'
+
 NeoBundle 'millermedeiros/vim-statline'
 NeoBundle 'moll/vim-bbye'  " For BDelete
 NeoBundle 'plasticboy/vim-markdown'
