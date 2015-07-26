@@ -127,7 +127,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 inoremap <expr> <S-TAB> pumvisible() ? neocomplete#close_popup() : "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>"
 
 " }}}
-"
+
 " Timeouts {{{ "
 
 " Timeout on mappings and key codes
