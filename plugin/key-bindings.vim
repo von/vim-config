@@ -128,6 +128,9 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " Kudos: https://github.com/SirVer/ultisnips/issues/376#issuecomment-55326568
 inoremap <expr> <S-TAB> pumvisible() ? neocomplete#close_popup() : "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>"
 
+" <CR> cancels NeoComplete popup if open
+inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
+
 " }}}
 
 " Timeouts {{{ "
