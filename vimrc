@@ -160,7 +160,7 @@ set confirm
 " Display line numbers on the left
 set number
 
-" Do not have git-gutten highlight lines
+" Do not have git-gutter highlight lines
 let g:gitgutter_highlight_lines = 0
 
 " Display an indicator in the 80th column
