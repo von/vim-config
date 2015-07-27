@@ -67,7 +67,7 @@ NeoBundle 'danro/rename.vim'
 NeoBundle 'kien/ctrlp.vim'
 
 " Allow one-keystroke navigation between vi panes and tmux panes
-" C-h/j/k/l as expected plus C-\ to switch to last pane
+" Use Shift-<arrow keys> to switch between panes/vim windows
 NeoBundle 'christoomey/vim-tmux-navigator'
 
 NeoBundle 'ciaranm/securemodelines'
