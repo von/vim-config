@@ -23,6 +23,9 @@ let mapleader = "\<Space>"
 " Open buffer list in vim-buffergator
 :map <leader>B :BuffergatorOpen<cr>
 
+" Clear highlighted search results
+:map <leader>c :noh<cr>
+
 :map <leader>C :NeoCompleteToggle<cr>
 
 " Toggle fold open/close
