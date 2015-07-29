@@ -96,6 +96,7 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'millermedeiros/vim-statline'
 NeoBundle 'moll/vim-bbye'  " For BDelete
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'Raimondi/delimitMate'  " Automatically close parns, etc.
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'  " Snippets for ultisnips
