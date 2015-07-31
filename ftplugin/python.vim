@@ -10,3 +10,5 @@ map [p :lp<cr>
 " Python configuration: Use tab inserts 4 spaces
 setlocal shiftwidth=4 softtabstop=4
 
+" Have docstrings work as expected with DelimitMate
+let b:delimitMate_nesting_quotes = ['"']
