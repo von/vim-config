@@ -41,8 +41,8 @@ vnoremap > >gv
 " see what your intent it. You can use C-c instead to exit insert mode.
 " Kudos: http://stackoverflow.com/a/1278813/197789
 
-" Note that if you use Vim inside of a Tmux session then you need 
-" to double escape the codes in tSI/tEI. 
+" Note that if you use Vim inside of a Tmux session then you need
+" to double escape the codes in tSI/tEI.
 function! WrapForTmux(s)
   if !exists('$TMUX')
     return a:s
