@@ -109,6 +109,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rsi' " readline-like key bindings in insert mode
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-vinegar'  " Tweaks for netrw
 
 call neobundle#end()
 
