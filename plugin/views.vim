@@ -4,7 +4,10 @@
 silent !mkdir ~/.vim-local/views/ > /dev/null 2>&1
 set viewdir=~/.vim-local/views/
 
+" Note that having an option in both sessionsoptions and viewoptions seems
+" to cause problems. Right now I'm trying to remove them from viewoptions.
 set viewoptions-=options
+set viewoptions-=folds
 
 " Save and load without errors {{{
 " Kudos: http://dotfiles.org/~tsukkee/.vimrc

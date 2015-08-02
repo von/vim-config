@@ -1,8 +1,7 @@
 " Session configuration
 
-" TODO: Both sessionoptions and viewoptions contain 'options' and I think
-"  this causes conflicts, like foldmethod getting lost.
-
+" Note that having an option in both sessionsoptions and viewoptions seems
+" to cause problems. Right now I'm trying to remove them from viewoptions.
 set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages,winsize,winpos
 
 let g:startify_session_dir = '~/.vim-local/sessions'
