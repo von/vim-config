@@ -8,5 +8,5 @@ set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,
 let g:startify_session_dir = '~/.vim-local/sessions'
 silent !mkdir ~/.vim-local/sessions > /dev/null 2>&1
 
-" Automatically save sessions when leaving vim or loading another sessions
+" Automatically save sessions when leaving vim or loading another session
 let g:startify_session_persistence = 1
