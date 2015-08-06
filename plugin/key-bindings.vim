@@ -114,6 +114,9 @@ nnoremap ; :
 " Kudos: http://blog.unixphilosopher.com/2015/02/five-weird-vim-tricks.html
 nnoremap ! :!
 
+" I don't want to go it Ex mode by accident
+nmap Q <nop>
+
 " Bindings for vim-expand-region {{{
 
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
