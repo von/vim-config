@@ -45,6 +45,13 @@ highlight clear SignColumn
 
 " }}} SignColumn
 "----------------------------------------------------------------------
+" ColorColumn {{{
+
+" For colorcolumn on column 80 (DarkGoldenRod)
+highlight ColorColumn ctermbg=136
+
+" }}} SignColumn
+"----------------------------------------------------------------------
 " Statusline {{{ "
 
 function! StatusLineInsertEnter(mode)
