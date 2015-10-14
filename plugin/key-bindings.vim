@@ -106,14 +106,6 @@ map -       <C-W>s<C-W><Down>
 nnoremap <CR> G
 nnoremap <BS> gg
 
-" Allow use of semi-colon to enter command mode
-" Kudos: http://blog.unixphilosopher.com/2015/02/five-weird-vim-tricks.html
-nnoremap ; :
-
-" Run a command with '!'
-" Kudos: http://blog.unixphilosopher.com/2015/02/five-weird-vim-tricks.html
-nnoremap ! :!
-
 " I don't want to go into Ex mode by accident
 nmap Q <nop>
 
@@ -140,6 +132,14 @@ inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
 " }}}
 
 " Command-mode bindings {{{
+
+" Allow use of semi-colon to enter command mode
+" Kudos: http://blog.unixphilosopher.com/2015/02/five-weird-vim-tricks.html
+nnoremap ; :
+
+" Run a command with '!'
+" Kudos: http://blog.unixphilosopher.com/2015/02/five-weird-vim-tricks.html
+nnoremap ! :!
 
 cnoremap <C-K> <C-E><C-U>
 cnoremap <C-U> <C-E><C-U>
