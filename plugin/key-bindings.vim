@@ -139,6 +139,13 @@ inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
 
 " }}}
 
+" Command-mode bindings {{{
+
+cnoremap <C-K> <C-E><C-U>
+cnoremap <C-U> <C-E><C-U>
+
+" }}}
+
 " Timeouts {{{ "
 
 " Timeout on mappings and key codes
