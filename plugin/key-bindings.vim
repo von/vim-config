@@ -110,6 +110,9 @@ nnoremap <BS> gg
 " Kudos: http://stackoverflow.com/a/11983449/197789
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
+" <num><C-l> moves to given column number
+noremap <C-l> <Bar>
+
 " I don't want to go into Ex mode by accident
 nmap Q <nop>
 
