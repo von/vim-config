@@ -106,6 +106,10 @@ map -       <C-W>s<C-W><Down>
 nnoremap <CR> G
 nnoremap <BS> gg
 
+" Let be use <CR> as normal in quickfix to jump to things
+" Kudos: http://stackoverflow.com/a/11983449/197789
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+
 " I don't want to go into Ex mode by accident
 nmap Q <nop>
 
