@@ -8,6 +8,9 @@
 " To see default vim key bindings, use ':help index'
 " Kudos: http://stackoverflow.com/a/2484137/197789
 
+" Note that vim-tmux-navigator uses the following keybindings:
+" C-h, C-l, C-j, C-k, C-\
+
 " Leader bindings {{{ "
 " My strategy is to use <leader> for commonly-used one-stroke commands.
 
