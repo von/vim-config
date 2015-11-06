@@ -46,6 +46,9 @@ let mapleader = "\<Space>"
 " Redraw with 'R'
 :map <leader>R :redraw!<cr>
 
+" Open a scratch buffer with 's'
+:map <leader>s :ScratchOpen<cr>
+
 " Source current file with 'S'
 :map <leader>S :source %<cr>:redraw!<cr>
 
