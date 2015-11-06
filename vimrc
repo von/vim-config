@@ -178,9 +178,11 @@ set tags=./tags;/
 " Enable use of the mouse for all modes
 set mouse=a
 
-" Use Mac system clipboard
-" Kudos: http://vim.wikia.com/wiki/Mac_OS_X_clipboard_sharing
-set clipboard=unnamed
+" Don't use Mac system clipboard by default
+"   It can be accessed through '+' - e.g. "+yy or "+pp
+" Set clipboard to "unnamed" to make system the default per:
+"   http://vim.wikia.com/wiki/Mac_OS_X_clipboard_sharing
+set clipboard="none"
 
 " Use blowfish instead of zip with vim's native encryption (see ':X')
 set cryptmethod=blowfish
