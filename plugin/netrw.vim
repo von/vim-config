@@ -2,4 +2,4 @@
  let g:netrw_special_syntax= 1
 
 " Don't show swap files in netrw.
-let g:netrw_list_hide= '.swp$'
+let g:netrw_list_hide= '.*\.swp$,.*\.swo$'
