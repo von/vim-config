@@ -187,6 +187,10 @@ set clipboard="none"
 " Use blowfish instead of zip with vim's native encryption (see ':X')
 set cryptmethod=blowfish
 
+" Don't give me an error if a swapfile is present when editing a file
+" Kudos: http://stackoverflow.com/a/1588848/197789
+set shortmess+=A
+
 " }}}
 "----------------------------------------------------------------------
 " Turn off bell and visual bell {{{ "
