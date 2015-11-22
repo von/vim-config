@@ -34,6 +34,8 @@ let mapleader = "\<Space>"
 " Toggle fold open/close
 :map <leader>f za
 
+" <leader>h is used by git-gutter
+
 " Open file explorer
 :map <leader>o :Explore<cr>
 
