@@ -6,6 +6,9 @@
 " saving, and swap files will keep you safe if your computer crashes.
 set hidden
 
+" BufferGator sort by filename instead of buffer number
+let g:buffergator_sort_regime = 'basename'
+
 "------------------------------------------------------------
 " Make current directory the one holding the current file {{{
 " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
