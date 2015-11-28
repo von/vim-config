@@ -16,7 +16,7 @@ let g:airline#extensions#whitespace#enabled = 1
 
 " Set airline theme
 " Kudos: http://choorucode.com/2015/03/18/how-to-use-themes-in-airline/
-let g:airline_theme='hybridline'
+let g:airline_theme='understated'
 
 " {{{ Use unicode symbols in airline
 "
