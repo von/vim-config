@@ -105,16 +105,20 @@ nnoremap <silent> <Leader><CR> <C-W>_<C-W><Bar>
 " http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
 :map <C-s> <C-B>
 
+" {{{ Carriage return
 " Type 12<Enter> to go to line 12
 " Hit Enter to go to end of file.
-" Hit Backspace to go to beginning of file.
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 nnoremap <CR> G
-nnoremap <BS> gg
 
 " Let me use <CR> as normal in quickfix to jump to things
 " Kudos: http://stackoverflow.com/a/11983449/197789
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+" }}} Carriage return
+
+" Hit Backspace to go to beginning of file.
+" Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+nnoremap <BS> gg
 
 " I don't want to go into Ex mode by accident
 nmap Q <nop>
