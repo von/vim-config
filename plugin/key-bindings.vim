@@ -37,8 +37,8 @@ let mapleader = "\<Space>"
 
 " <leader>h is used by git-gutter
 
-" Open file explorer
-:map <leader>o :Explore<cr>
+" Open file explorer with fuzzy matching with unite
+:map <leader>o :<C-u>Unite -start-insert file_rec<CR>
 
 " Close buffer without exiting (uses moll/vim-bbye)
 :map <leader>q :Bdelete<cr>
