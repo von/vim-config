@@ -18,8 +18,6 @@
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 let mapleader = "\<Space>"
 
-" See also unite.vim for <leader>g, <leader>m
-
 " Clear highlighted search results
 :map <leader><leader> :noh<cr>
 
@@ -34,6 +32,9 @@ let mapleader = "\<Space>"
 
 " Toggle fold open/close
 :map <leader>f za
+
+" <leader>g is grep via unite
+nnoremap <silent> <leader>g :Unite grep:.<cr>
 
 " <leader>h is used by git-gutter
 
@@ -76,6 +77,9 @@ let mapleader = "\<Space>"
 
 " Open all folds with <leader>Z
 :map <leader>Z zR
+
+" File searching with <leader>C-p via unite
+nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
 
 " Window manipulation {{{ "
 "
