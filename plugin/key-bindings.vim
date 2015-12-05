@@ -29,7 +29,8 @@ let mapleader = "\<Space>"
 " Clear highlighted search results
 :map <leader>c :noh<cr>
 
-:map <leader>C :NeoCompleteToggle<cr>
+" Comment current line or, if active, region
+:map <leader>C :Commentary<cr>
 
 " Toggle fold open/close
 :map <leader>f za
