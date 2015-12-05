@@ -20,14 +20,14 @@ let mapleader = "\<Space>"
 
 " See also unite.vim for <leader>g, <leader>m
 
+" Clear highlighted search results
+:map <leader><leader> :noh<cr>
+
 " Switch to previous buffer
 :map <leader>b :e #<cr>
 
 " Open buffer list in vim-buffergator
 :map <leader>B :BuffergatorOpen<cr>
-
-" Clear highlighted search results
-:map <leader>c :noh<cr>
 
 " Comment current line or, if active, region
 :map <leader>C :Commentary<cr>
