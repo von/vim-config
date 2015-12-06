@@ -88,12 +88,12 @@ nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 fi
 "
 " Kudos: http://codeincomplete.com/posts/2011/3/4/my_vimrc_file/
 " Split vertically with '|' and open file explorer
-map <leader><Bar>   :vsplit .<cr>
+map <leader><Bar>   :vsplit %<cr>
 
 " Split horizontally with '-'
 " Don't open file explorer since I'm more likely to be doing a horizontal
 " split to get two views on the current file.
-map <leader>-       <C-W>s<C-W><Down>
+map <leader>-       :split %<cr>
 
 " Window resizing
 nnoremap <silent> <Leader><Up> <C-W>-
