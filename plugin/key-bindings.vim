@@ -72,6 +72,9 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " Save with <leader>w
 :map <leader>w :w<cr>
 
+" Clean up whitespace with <leader>W
+:map <leader>W :clean<cr>
+
 " Close all folds with <leader>z
 :map <leader>z zM
 
