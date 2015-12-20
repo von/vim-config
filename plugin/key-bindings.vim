@@ -28,7 +28,7 @@ let mapleader = "\<Space>"
 :map <leader>B :BuffergatorOpen<cr>
 
 " Comment current line or, if active, region
-:map <leader>C :Commentary<cr>
+:map <leader>c :Commentary<cr>
 
 " Toggle fold open/close
 :map <leader>f za
