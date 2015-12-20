@@ -30,6 +30,9 @@ let mapleader = "\<Space>"
 " Comment current line or, if active, region
 :map <leader>c :Commentary<cr>
 
+" Copy whole buffer to system clipboard
+:map <leader>C gg"+yG
+
 " Toggle fold open/close
 :map <leader>f za
 
