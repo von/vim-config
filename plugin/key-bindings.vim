@@ -42,7 +42,7 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " <leader>h is used by git-gutter
 
 " Open file explorer with fuzzy matching with unite
-:map <leader>o :<C-u>Unite -start-insert file_rec<CR>
+:map <leader>o :Sexplore<CR>
 
 " Close buffer without exiting (uses moll/vim-bbye)
 :map <leader>q :Bdelete<cr>
