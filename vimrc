@@ -63,6 +63,7 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'danro/rename.vim'
 NeoBundle 'kien/ctrlp.vim'
 
