@@ -67,7 +67,7 @@ NeoBundle 'vim-airline/vim-airline-themes'
 
 " Rename current buffer with ':rename <name>'
 NeoBundle 'danro/rename.vim'
-NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 
 " Allow one-keystroke navigation between vi panes and tmux panes
 " Use Shift-<arrow keys> to switch between panes/vim windows
