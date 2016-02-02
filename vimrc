@@ -64,6 +64,8 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
+
+" Rename current buffer with ':rename <name>'
 NeoBundle 'danro/rename.vim'
 NeoBundle 'kien/ctrlp.vim'
 
