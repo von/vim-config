@@ -122,7 +122,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'sjl/gundo.vim'
 
 " Allow changing surround quotes with 'cs<current><new>'
-NeoBundle 'surround.vim'
+NeoBundle 'tpope/vim-surround'
 
 " Allow use of 'v' to expand region, 'V' to shrink
 NeoBundle 'terryma/vim-expand-region'
