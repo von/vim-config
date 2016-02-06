@@ -96,8 +96,9 @@ NeoBundle 'majutsushi/tagbar'
 " E.g. brew install macvim --with-cscope --with-lua --HEAD
 NeoBundle 'Shougo/neocomplete'
 
-NeoBundle 'millermedeiros/vim-statline'
-NeoBundle 'moll/vim-bbye'  " For BDelete
+" For BDelete
+NeoBundle 'moll/vim-bbye'
+
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'SirVer/ultisnips'
