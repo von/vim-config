@@ -149,6 +149,9 @@ NeoBundle 'tpope/vim-unimpaired'
 " Tweaks for netrw
 NeoBundle 'tpope/vim-vinegar'
 
+" Highlight surrounding perenthesis
+NeoBundle 'Yggdroot/hiPairs'
+
 call neobundle#end()
 
 " }}} Misc Bundles
