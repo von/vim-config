@@ -61,23 +61,30 @@ NeoBundle 'Shougo/vimproc', {
 " Note that bundles apparently need to be in vimrc (as opposed to
 " in a plugin).
 
+" Show git changes on left
 NeoBundle 'airblade/vim-gitgutter'
+
+" Fancy statusline
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 
 " Rename current buffer with ':rename <name>'
 NeoBundle 'danro/rename.vim'
+
+" C-p: Open files with fuzzy matching
 NeoBundle 'ctrlpvim/ctrlp.vim'
 
 " Allow one-keystroke navigation between vi panes and tmux panes
 " Use Shift-<arrow keys> to switch between panes/vim windows
 NeoBundle 'christoomey/vim-tmux-navigator'
 
+" Only allow certain things in modelines
 NeoBundle 'ciaranm/securemodelines'
 
 let g:buffergator_suppress_keymaps=1  " Do this in key-bindings.vim
 NeoBundle 'jeetsukumaran/vim-buffergator'
 
+" Open a scratch buffer with :ScratchOpen
 NeoBundle 'kana/vim-scratch'
 
 " Allows definiton of arbitrary objects (prereusite of following)
@@ -86,6 +93,7 @@ NeoBundle 'kana/vim-textobj-user'
 " ('ie' excludes leading and trailing whitespace)
 NeoBundle 'kana/vim-textobj-entire'
 
+" Basically a Python IDE
 NeoBundle 'klen/python-mode'
 
 " Following requires ctags-exuberant from ctags.sourceforge.net
@@ -99,20 +107,47 @@ NeoBundle 'Shougo/neocomplete'
 " For BDelete
 NeoBundle 'moll/vim-bbye'
 
+" Markdown file folding and commands
 NeoBundle 'plasticboy/vim-markdown'
+
+" For grep via <leader>g
 NeoBundle 'Shougo/unite.vim'
+
+" Allow snippet expansion with <tab>
 NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'  " Snippets for ultisnips
+" Snippets for ultisnips
+NeoBundle 'honza/vim-snippets'
+
+" Let me view all my undo information with <leader>u
 NeoBundle 'sjl/gundo.vim'
+
+" Allow changing surround quotes with 'cs<current><new>'
 NeoBundle 'surround.vim'
+
+" Allow use of 'v' to expand region, 'V' to shrink
 NeoBundle 'terryma/vim-expand-region'
+
+" Allow for use of {x,y} in abbrevIation and substitutions
+" Plus: crc for camelCase, crm for MixedCase, and crs for snake_case
 NeoBundle 'tpope/vim-abolish'
+
+" 'gcc' to comment/uncomment line, or gc<motion target>
 NeoBundle 'tpope/vim-commentary'
+
+" :GBlame and friends
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-rsi' " readline-like key bindings in insert mode
+
+" readline-like key bindings in insert mode
+NeoBundle 'tpope/vim-rsi'
+
+" Start screen for vim
 NeoBundle 'mhinz/vim-startify'
+
+" Key bindings with '[' and ']' prefixes
 NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'tpope/vim-vinegar'  " Tweaks for netrw
+
+" Tweaks for netrw
+NeoBundle 'tpope/vim-vinegar'
 
 call neobundle#end()
 
