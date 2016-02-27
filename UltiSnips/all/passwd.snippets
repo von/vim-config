@@ -5,7 +5,7 @@ import string
 
 def gen_password(length, remove_lookalike=True):
     """Generate a password of given length."""
-    alphabet = string.letters + string.digits
+    alphabet = string.letters + string.digits + "!$#*&@=+"
     if remove_lookalike:
         alphabet = alphabet.translate(
                     string.maketrans('', ''),  # For pre-2.6 compatability
