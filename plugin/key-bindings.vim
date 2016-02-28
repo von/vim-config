@@ -78,7 +78,7 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " Clean up whitespace with <leader>W
 :map <leader>W :clean<cr>
 
-" Yank link to system pastebuffer
+" Yank line to system pastebuffer
 :map <leader>y "+yy
 
 " Close all folds with <leader>z
