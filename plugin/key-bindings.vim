@@ -81,6 +81,9 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " Yank line to system pastebuffer
 :map <leader>y "+yy
 
+" Yank file to system pastebuffer
+:map <leader>Y :%y+
+
 " Close all folds with <leader>z
 :map <leader>z zM
 
