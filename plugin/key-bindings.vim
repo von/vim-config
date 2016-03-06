@@ -150,7 +150,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " Bindings for NeoComplete/UltiSnips {{{
 
-" Note <tab> is bound to Ultisnips in ultisnips.vim
+" Note <Tab> and <C-Tab> are bound to Ultisnips in ultisnips.vim
 
 " Shift-Tab either expands NeoComplete if its menu is open or Expands
 " a snippet. This allows hitting S-TAB twice to select and expand a snippet.
