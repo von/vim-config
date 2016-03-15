@@ -96,6 +96,10 @@ NeoBundle 'kana/vim-textobj-entire'
 " Basically a Python IDE
 NeoBundle 'klen/python-mode'
 
+" Enable faster folding
+" Required for neocomplete and foldtype=syntax or expr
+NeoBundle 'Konfekt/FastFold'
+
 " Following requires ctags-exuberant from ctags.sourceforge.net
 "   (On mac: brew install ctags-exuberant)
 NeoBundle 'majutsushi/tagbar'
