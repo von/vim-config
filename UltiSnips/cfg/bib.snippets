@@ -53,3 +53,17 @@ type: report
 project: ${8:Project}
 
 endsnippet
+
+snippet workshop "Workshop entry" b
+
+[${1:Tag}]
+title: ${2:Title}
+author: ${3:Authors}
+HowPublished: ${4:Conference}
+year: ${5:`date +%Y`}
+month: ${6:`date +%b`}`!p snip.rv=complete(t[6], ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'])`
+url: ${7:URL}
+type: workshop
+project: ${8:Project}
+
+endsnippet
