@@ -27,11 +27,11 @@ let mapleader = "\<Space>"
 " Open buffer list in vim-buffergator
 :map <leader>B :BuffergatorOpen<cr>
 
-" Comment current line or, if active, region
+" Comment/uncomment current line or, if active, region
 :map <leader>c :Commentary<cr>
 
-" Copy whole buffer to system clipboard
-:map <leader>C gg"+yG
+" Uncomment current and adjacect lines
+:map <leader>C gcu
 
 " Toggle fold open/close
 :map <leader>f za
