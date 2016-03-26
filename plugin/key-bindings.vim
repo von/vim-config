@@ -30,7 +30,7 @@ let mapleader = "\<Space>"
 " Comment/uncomment current line or, if active, region
 :map <leader>c :Commentary<cr>
 
-" Uncomment current and adjacect lines
+" Uncomment current and adjacent lines
 :map <leader>C gcu
 
 " Toggle fold open/close
