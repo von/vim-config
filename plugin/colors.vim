@@ -112,3 +112,11 @@ endif
 hi Folded ctermfg=021 ctermbg=234
 
 " }}} Folds "
+"----------------------------------------------------------------------
+" Completion Menu {{{
+" Kudos: https://github.com/thoughtstream/Damian-Conway-s-Vim-Setup
+highlight  Pmenu        ctermbg=white   ctermfg=black
+highlight  PmenuSel     ctermbg=blue    ctermfg=white   cterm=bold
+highlight  PmenuSbar    ctermbg=grey    ctermfg=grey
+highlight  PmenuThumb   ctermbg=blue    ctermfg=blue
+" }}} Completion Menu
