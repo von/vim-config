@@ -44,6 +44,9 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " Open file explorer
 :map <leader>o :Sexplore<CR>
 
+" Paste from system pastebuffer
+:map <leader>p "+p
+
 " Close buffer without exiting (uses moll/vim-bbye)
 :map <leader>q :Bdelete<cr>
 
