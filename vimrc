@@ -210,8 +210,9 @@ set number
 " Do not have git-gutter highlight lines
 let g:gitgutter_highlight_lines = 0
 
-" Display an indicator in the 80th column
-set colorcolumn=80
+" Display an indicator in the 80th column (only when line reaches it)
+" Kudos: https://www.youtube.com/watch?v=aHm36-na4-4
+call matchadd('ColorColumn', '\%80v', 100)
 
 " Keep this many lines on screen past cursor when scrolling
 set scrolloff=5
