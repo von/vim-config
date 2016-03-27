@@ -41,6 +41,8 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 
 " <leader>h is used by git-gutter
 
+" <leader>m is reserved for mode-specific bindings
+
 " Open file explorer
 :map <leader>o :Sexplore<CR>
 
@@ -58,9 +60,6 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 
 " Open a scratch buffer with 's'
 :map <leader>s :ScratchOpen<cr>
-
-" Source current file with 'S'
-:map <leader>S :source %<cr>:redraw!<cr>
 
 " Run tig to do my git stuff
 "   silent turns off request for enter when tig is done, that requires
