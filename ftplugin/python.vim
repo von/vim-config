@@ -9,3 +9,6 @@ let b:delimitMate_nesting_quotes = ['"']
 
 " Turn off automatic completion
 :NeoCompleteLock
+
+" Run PyLint with <leader>mp
+:map <leader>mp :PymodeLint<cr>:redraw!<cr>
