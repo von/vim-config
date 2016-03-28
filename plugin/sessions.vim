@@ -22,3 +22,21 @@ function! SInit(sessionName)
      exec ":SSave " . a:sessionName
    endif
 endfunction
+
+" Load session as specified by $VIM_SESSION {{{
+" And load any corresponding session initialization file in ~/.vim/sessions/
+" (If not commandline arguments were given)
+
+let g:sessionInitPath = expand('~/.vim/sessions/')
+
+if !empty($VIM_SESSION) && argc() == 0
+  " Load or create session (from sessions.vim)
+  autocmd VimEnter * :call SInit($VIM_SESSION)
+
+  let b:sessionInitFile = g:sessionInitPath . $VIM_SESSION . ".vim"
+  if filereadable(b:sessionInitFile)
+    exec "source " . b:sessionInitFile
+  endif
+
+endif
+" }}} Load session as specified by $VIM_SESSION
