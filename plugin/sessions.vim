@@ -11,7 +11,7 @@ silent !mkdir ~/.vim-local/sessions > /dev/null 2>&1
 " Automatically save sessions when leaving vim or loading another session
 let g:startify_session_persistence = 1
 
-" Create or Load a session
+" SInit(): Create or load a session {{{ "
 " Intended to be used as: vi -c 'call SInit("mysession")'
 function! SInit(sessionName)
   let sessionFile = expand(g:startify_session_dir . "/" . a:sessionName)
@@ -22,6 +22,7 @@ function! SInit(sessionName)
      exec ":SSave " . a:sessionName
    endif
 endfunction
+" }}} SInit(): Create or load a session "
 
 " Load session as specified by $VIM_SESSION {{{
 " And load any corresponding session initialization file in ~/.vim/sessions/
