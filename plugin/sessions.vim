@@ -5,11 +5,15 @@
 set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,
   \options,resize,tabpages,winsize,winpos
 
+" Startify configuration {{{ "
+
 let g:startify_session_dir = '~/.vim-local/sessions'
 silent !mkdir ~/.vim-local/sessions > /dev/null 2>&1
 
 " Automatically save sessions when leaving vim or loading another session
 let g:startify_session_persistence = 1
+
+" }}} Startify configuration "
 
 " SInit(): Create or load a session {{{ "
 " Intended to be used as: vi -c 'call SInit("mysession")'
@@ -24,20 +28,23 @@ function! SInit(sessionName)
 endfunction
 " }}} SInit(): Create or load a session "
 
-" Load session as specified by $VIM_SESSION {{{
+" LoadVIMSession(): Load session specified by $VIM_SESSION {{{ "
 " And load any corresponding session initialization file in ~/.vim/sessions/
-" (If not commandline arguments were given)
+" Only do this if no files were given on the commandline
 
 let g:sessionInitPath = expand('~/.vim/sessions/')
 
-if !empty($VIM_SESSION) && argc() == 0
-  " Load or create session (from sessions.vim)
-  autocmd VimEnter * :call SInit($VIM_SESSION)
+function! LoadVIMSession()
+  if !empty($VIM_SESSION) && argc() == 0
+    " Load or create session (from sessions.vim)
+    :call SInit($VIM_SESSION)
 
-  let b:sessionInitFile = g:sessionInitPath . $VIM_SESSION . ".vim"
-  if filereadable(b:sessionInitFile)
-    exec "source " . b:sessionInitFile
+    let b:sessionInitFile = g:sessionInitPath . $VIM_SESSION . ".vim"
+    if filereadable(b:sessionInitFile)
+      exec "source " . b:sessionInitFile
+    endif
   endif
+endfunction
+" }}} LoadVIMSession(): Load session specified by $VIM_SESSION "
 
-endif
-" }}} Load session as specified by $VIM_SESSION
+autocmd VimEnter * :call LoadVIMSession()
