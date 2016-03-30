@@ -35,6 +35,7 @@ endfunction
 let g:sessionInitPath = expand('~/.vim/sessions/')
 
 function! LoadVIMSession()
+  " TODO: Don't load VIMSession if -c or -S was given
   if !empty($VIM_SESSION) && argc() == 0
     " Load or create session (from sessions.vim)
     :call SInit($VIM_SESSION)
