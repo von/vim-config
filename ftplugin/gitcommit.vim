@@ -6,7 +6,9 @@
 setlocal nomodeline
 
 " Disable saving/loading views for GIT commits
-autocmd! autoview
+augroup autoview
+  autocmd!
+augroup End
 
 " Disable backups
 setlocal nobackup
