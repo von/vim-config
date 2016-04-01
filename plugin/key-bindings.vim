@@ -55,6 +55,9 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " Quit all buffers with 'Q'
 :map <leader>Q :qa<cr>
 
+" Show YankRing with 'r'
+:map <leader>r :YRShow<cr>
+
 " Redraw with 'R'
 :map <leader>R :redraw!<cr>
 

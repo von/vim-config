@@ -153,6 +153,9 @@ NeoBundle 'tpope/vim-unimpaired'
 " Tweaks for netrw
 NeoBundle 'tpope/vim-vinegar'
 
+" Ring for yanked text
+NeoBundle 'vim-scripts/YankRing.vim'
+
 call neobundle#end()
 
 " }}} Misc Bundles
