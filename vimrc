@@ -84,9 +84,6 @@ NeoBundle 'ciaranm/securemodelines'
 let g:buffergator_suppress_keymaps=1  " Do this in key-bindings.vim
 NeoBundle 'jeetsukumaran/vim-buffergator'
 
-" Open a scratch buffer with :ScratchOpen
-NeoBundle 'kana/vim-scratch'
-
 " Allows definiton of arbitrary objects (prereusite of following)
 NeoBundle 'kana/vim-textobj-user'
 " vim-textobj-entire adds text object of 'ae' for entire buffer
@@ -152,6 +149,9 @@ NeoBundle 'tpope/vim-unimpaired'
 
 " Tweaks for netrw
 NeoBundle 'tpope/vim-vinegar'
+
+" For :Scratch and Sscratch
+NeoBundle 'vim-scripts/scratch.vim'
 
 " Ring for yanked text
 NeoBundle 'vim-scripts/YankRing.vim'

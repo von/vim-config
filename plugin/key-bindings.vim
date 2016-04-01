@@ -62,7 +62,7 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 :map <leader>R :redraw!<cr>
 
 " Open a scratch buffer with 's'
-:map <leader>s :ScratchOpen<cr>
+:map <leader>s :call ToggleScratch()<CR>
 
 " Run tig to do my git stuff
 "   silent turns off request for enter when tig is done, that requires
