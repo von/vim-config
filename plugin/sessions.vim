@@ -27,25 +27,3 @@ function! SInit(sessionName)
    endif
 endfunction
 " }}} SInit(): Create or load a session "
-
-" LoadVIMSession(): Load session specified by $VIM_SESSION {{{ "
-" And load any corresponding session initialization file in ~/.vim/sessions/
-" Only do this if no files were given on the commandline
-
-let g:sessionInitPath = expand('~/.vim/sessions/')
-
-function! LoadVIMSession()
-  " TODO: Don't load VIMSession if -c or -S was given
-  if !empty($VIM_SESSION) && argc() == 0
-    " Load or create session (from sessions.vim)
-    :call SInit($VIM_SESSION)
-
-    let b:sessionInitFile = g:sessionInitPath . $VIM_SESSION . ".vim"
-    if filereadable(b:sessionInitFile)
-      exec "source " . b:sessionInitFile
-    endif
-  endif
-endfunction
-" }}} LoadVIMSession(): Load session specified by $VIM_SESSION "
-
-autocmd VimEnter * :call LoadVIMSession()
