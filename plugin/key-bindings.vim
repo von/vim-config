@@ -118,6 +118,10 @@ nnoremap <silent> <Leader><Left> <C-W><
 nnoremap <silent> <Leader>= <C-W>=
 " Maximize current window
 nnoremap <silent> <Leader><CR> <C-W>_<C-W><Bar>
+" Make current window 80 columns wide (including lines numbers)
+" Kudos: http://stackoverflow.com/a/16110704
+" Note <gt> doesn't seem to work here, so use '>'
+nnoremap <silent> <Leader>> 83<C-W><Bar>
 
 " }}} Window manipulation
 " }}} Leader bindings
