@@ -4,3 +4,5 @@ tags
 # bundle/ is managed by NeoBundle
 bundle/*
 .netrwhist
+# Compiled vim spell files
+*.spl
