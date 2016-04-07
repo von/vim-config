@@ -11,4 +11,4 @@ CommandCabbr wrap call<space>Preserve(':normal<space>gq}')
 CommandCabbr wrapall call<space>Preserve(':normal<space>gqG')
 
 " Allow for quick turning on and off soft wrapping of long lines
-CommandCabbr nowrap :set<space>nowrap!
+CommandCabbr nowrap setlocal<space>nowrap!
