@@ -4,6 +4,5 @@ setlocal noswapfile
 setlocal noundofile
 
 " Don't do parentheses matching
-HiPairsDisable
 setlocal noshowmatch
 NoMatchParen
