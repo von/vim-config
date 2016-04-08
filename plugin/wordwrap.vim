@@ -4,6 +4,9 @@
 " This interfers with cut'n'paste
 "set showbreak=↪
 
+" Automatically wrap comments (using textwidth)
+set formatoptions+=c
+
 " Automatically reformat when text is inserted or deleted
 set formatoptions+=a
 
