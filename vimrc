@@ -237,6 +237,9 @@ set cryptmethod=blowfish
 " Kudos: http://stackoverflow.com/a/1588848/197789
 set shortmess+=A
 
+" Automatically read a file if it has changed
+set autoread
+
 " }}}
 "----------------------------------------------------------------------
 " Turn off bell and visual bell {{{ "
