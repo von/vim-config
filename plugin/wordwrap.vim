@@ -4,6 +4,9 @@
 " This interfers with cut'n'paste
 "set showbreak=↪
 
+" Automatically reformat when text is inserted or deleted
+set formatoptions+=a
+
 " linebreak tells Vim to only wrap at a character in the 'breakat' option
 " (Basically, word boundaries, so turn this on for text modes.)
 set nolinebreak
