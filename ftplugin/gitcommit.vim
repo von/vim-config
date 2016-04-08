@@ -15,3 +15,6 @@ setlocal nobackup
 
 " Disable saving of undo information
 setlocal noundofile
+
+" Turn off automatic reformat when text is inserted or deleted
+setlocal formatoptions-=a
