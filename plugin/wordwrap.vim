@@ -11,6 +11,9 @@ set formatoptions+=c
 set formatoptions+=r
 set formatoptions+=o
 
+" Allow formatting of comments with 'gq'
+set formatoptions+=q
+
 " Automatically reformat when text is inserted or deleted
 set formatoptions+=a
 
