@@ -9,6 +9,9 @@ filetype indent plugin on
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
 
+" Use second line of pargraph for indentation
+set formatoptions+=2
+
 " Indentation settings for using 2 spaces instead of tabs.
 set shiftwidth=2
 set softtabstop=2
