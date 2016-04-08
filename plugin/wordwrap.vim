@@ -4,6 +4,10 @@
 " This interfers with cut'n'paste
 "set showbreak=↪
 
+" linebreak tells Vim to only wrap at a character in the 'breakat' option
+" (Basically, word boundaries, so turn this on for text modes.)
+set nolinebreak
+
 " Wrap the current paragraph
 CommandCabbr wrap call<space>Preserve(':normal<space>gq}')
 
@@ -21,10 +25,6 @@ function! WrapSoft()
   " wrap tells Vim to word wrap visually (as opposed to changing the text
   " in the buffer)
   setlocal wrap
-  " linebreak tells Vim to only wrap at a character in the breakat option
-  " (by default, this includes " ^I!@*-+;:,./?" (note the inclusion of " "
-  " and that ^I is the control character for Tab)).
-  setlocal linebreak
   " Disable wrapping and don't wrap when getting close to right margin.
   setlocal textwidth=0
   setlocal wrapmargin=0
