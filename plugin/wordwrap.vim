@@ -7,6 +7,10 @@
 " Automatically wrap comments (using textwidth)
 set formatoptions+=c
 
+" Automatically insert comment leader on new line
+set formatoptions+=r
+set formatoptions+=o
+
 " Automatically reformat when text is inserted or deleted
 set formatoptions+=a
 
