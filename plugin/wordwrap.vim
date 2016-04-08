@@ -4,6 +4,8 @@
 " This interfers with cut'n'paste
 "set showbreak=↪
 
+" set formatoptions {{{
+
 " Automatically wrap comments (using textwidth)
 set formatoptions+=c
 
@@ -20,6 +22,8 @@ set formatoptions+=a
 " Remove comment leaders when joining lines
 set formatoptions+=j
 
+" }}} set formatoptions
+
 " linebreak tells Vim to only wrap at a character in the 'breakat' option
 " (Basically, word boundaries, so turn this on for text modes.)
 set nolinebreak
@@ -33,9 +37,11 @@ CommandCabbr wrapall call<space>Preserve(':normal<space>gqG')
 " Allow for quick turning on and off soft wrapping of long lines
 CommandCabbr nowrap setlocal<space>nowrap!
 
-" Turn on soft (no insertion of characters) wrapping
-" Kudos: http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
-" Kudos: http://vim.wikia.com/wiki/Move_cursor_by_display_lines_when_wrapping
+" WrapSoft() {{{ "
+
+" Turn on soft (no insertion of characters) wrapping Kudos:
+" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks Kudos:
+" http://vim.wikia.com/wiki/Move_cursor_by_display_lines_when_wrapping
 function! WrapSoft()
   echo "Soft wrap ON"
   " wrap tells Vim to word wrap visually (as opposed to changing the text
@@ -71,6 +77,10 @@ function! WrapSoft()
   noremap  <buffer> <silent> $ g$
 endfunction
 
+" }}} WrapSoft() "
+
+" WrapHard() {{{ "
+
 " Turn on hard (insert carriage returns) wrapping
 function! WrapHard()
   echo "Hard wrap ON"
@@ -84,6 +94,10 @@ function! WrapHard()
   " Wrap lines that are longer than textwidth before lengthening them.
   setlocal formatoptions-=l
 endfunction
+
+" }}} WrapHard() "
+
+" WrapOff() {{{ "
 
 " Turn off any wrapping
 function! WrapOff()
@@ -105,3 +119,4 @@ function! WrapOff()
   silent! iunmap <buffer> <Home>
   silent! iunmap <buffer> <End>
 endfunction
+" }}} WrapOff() "
