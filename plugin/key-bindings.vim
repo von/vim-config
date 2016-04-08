@@ -101,12 +101,14 @@ nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 fi
 " Window manipulation {{{ "
 "
 " Kudos: http://codeincomplete.com/posts/2011/3/4/my_vimrc_file/
-" Split vertically with '|' and open file explorer
+
+" Don't open file explorer with splits since I'm more likely to be doing a
+" split to get two views on the current file.
+
+" Split vertically with '|'
 map <leader><Bar>   :vsplit %<cr>
 
 " Split horizontally with '-'
-" Don't open file explorer since I'm more likely to be doing a horizontal
-" split to get two views on the current file.
 map <leader>-       :split %<cr>
 
 " Window resizing
