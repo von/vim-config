@@ -9,3 +9,6 @@ set linebreak
 
 " Wrap current paragraph
 :map <leader>mw gqip
+
+" Automatically reformat when text is inserted or deleted
+set formatoptions+=a

@@ -16,9 +16,6 @@ set formatoptions+=o
 " Allow formatting of comments with 'gq'
 set formatoptions+=q
 
-" Automatically reformat when text is inserted or deleted
-set formatoptions+=a
-
 " Remove comment leaders when joining lines
 set formatoptions+=j
 
