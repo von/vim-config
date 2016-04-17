@@ -21,14 +21,14 @@
 " This is needed in part because YCM used submodules
 let g:pluginInstallDir = expand('~/.vim-bundle')
 
+if !isdirectory(g:pluginInstallDir)
+  execute 'silent! mkdir -p ' . g:pluginInstallDir
+endif
+
 let s:neobundleDir = g:pluginInstallDir . '/neobundle.vim'
 
 " Clone neobundle if not present
 " Kudos: https://bitbucket.org/slimane/vimlabo/wiki/.vimrc.neobundle
-
-if !isdirectory(g:pluginInstallDir)
-  execute 'silent! mkdir -p ' . g:pluginInstallDir
-endif
 
 if !isdirectory(s:neobundleDir) && executable('git')
   execute 'silent ! git clone https://github.com/Shougo/neobundle.vim ' . s:neobundleDir
