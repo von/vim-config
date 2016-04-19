@@ -44,7 +44,7 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " <leader>m is reserved for mode-specific bindings
 
 " Open file explorer
-:map <leader>o :Sexplore<CR>
+:map <leader>o :EditVifm<CR>
 
 " Paste from system pastebuffer
 :map <leader>p "+p

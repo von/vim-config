@@ -153,6 +153,9 @@ NeoBundle 'tpope/vim-unimpaired'
 " Tweaks for netrw
 NeoBundle 'tpope/vim-vinegar'
 
+" Integration with vifm
+NeoBundle 'vifm/vifm.vim'
+
 " For :Scratch and Sscratch
 NeoBundle 'vim-scripts/scratch.vim'
 
