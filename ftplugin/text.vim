@@ -10,5 +10,8 @@ set linebreak
 " Wrap current paragraph
 :map <leader>mw gqip
 
-" Automatically reformat when text is inserted or deleted
-set formatoptions+=a
+" Turn on automatic reformating with <leader>ma
+:nmap <leader>ma :set formatoptions+=a<cr>
+
+" Turn off automatic reformating with <leader>mA
+:nmap <leader>mA :set formatoptions-=a<cr>
