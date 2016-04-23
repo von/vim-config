@@ -6,3 +6,6 @@ setlocal noundofile
 " Don't do parentheses matching
 setlocal noshowmatch
 NoMatchParen
+
+" Turn off spell checking
+setlocal nospell
