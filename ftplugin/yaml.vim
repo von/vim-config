@@ -1,0 +1,1 @@
+highlight yamlComment ctermfg=Green
