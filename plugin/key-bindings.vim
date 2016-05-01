@@ -155,6 +155,9 @@ nmap Q <nop>
 nnoremap <silent> h :call ToggleMovement('h', 'zc')<CR>
 nnoremap <silent> <left> :call ToggleMovement('h', 'zc')<CR>
 
+" 0 toggles between first column and first non-empty column
+nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
+
 " Bindings for vim-expand-region {{{
 
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
