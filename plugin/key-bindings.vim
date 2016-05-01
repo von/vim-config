@@ -151,6 +151,12 @@ nnoremap <BS> gg
 " I don't want to go into Ex mode by accident
 nmap Q <nop>
 
+" Toggle fold when moving left from column 0
+" Note that when in a closed fold, cursor appears to be at column 0
+" when it may not actually be. A custom function may be required here.
+nnoremap <silent> h :call ToggleMovement('h', 'za')<CR>
+nnoremap <silent> <left> :call ToggleMovement('h', 'za')<CR>
+
 " Bindings for vim-expand-region {{{
 
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
