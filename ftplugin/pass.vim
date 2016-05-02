@@ -1,5 +1,6 @@
-"
 " Set up for password-store temporary files
+
+" Don't save anything
 setlocal noswapfile
 setlocal noundofile
 
