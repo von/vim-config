@@ -10,3 +10,6 @@ NoMatchParen
 
 " Turn off spell checking
 setlocal nospell
+
+" And turn off wordwrap
+call WrapOff()
