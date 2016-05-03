@@ -1,4 +1,4 @@
-" Key bindings and related configuration
+
 "
 " See also commands.vim
 "
@@ -150,10 +150,6 @@ nnoremap <BS> gg
 
 " I don't want to go into Ex mode by accident
 nmap Q <nop>
-
-" Close fold when moving left from column 0
-nnoremap <silent> h :call ToggleMovement('h', 'zc')<CR>
-nnoremap <silent> <left> :call ToggleMovement('h', 'zc')<CR>
 
 " 0 toggles between first column and first non-empty column
 nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
