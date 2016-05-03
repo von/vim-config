@@ -81,9 +81,6 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 " Only allow certain things in modelines
 NeoBundle 'ciaranm/securemodelines'
 
-" Deal intelligently with swap files
-NeoBundle 'gioele/vim-autoswap'
-
 let g:buffergator_suppress_keymaps=1  " Do this in key-bindings.vim
 NeoBundle 'jeetsukumaran/vim-buffergator'
 
