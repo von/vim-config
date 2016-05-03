@@ -40,7 +40,6 @@ CommandCabbr nowrap setlocal<space>nowrap!
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks Kudos:
 " http://vim.wikia.com/wiki/Move_cursor_by_display_lines_when_wrapping
 function! WrapSoft()
-  echo "Soft wrap ON"
   " wrap tells Vim to word wrap visually (as opposed to changing the text
   " in the buffer)
   setlocal wrap
@@ -80,7 +79,6 @@ endfunction
 
 " Turn on hard (insert carriage returns) wrapping
 function! WrapHard()
-  echo "Hard wrap ON"
   " Turn off soft wrap
   setlocal nowrap
   " That will automatically wrap text as close to 79 characters as white space
@@ -98,7 +96,6 @@ endfunction
 
 " Turn off any wrapping
 function! WrapOff()
-  echo "Wrap OFF"
   setlocal nowrap
   " Don't hard wrap text
   setlocal textwidth=0
