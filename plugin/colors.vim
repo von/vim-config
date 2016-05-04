@@ -34,7 +34,7 @@ set background=dark
 " Line numbers are light blue with dark grey background.
 " This also controls the line numbers for pylint errors.
 " To look good, this should match inactive tmux window color.
-hi LineNr         ctermfg=050 ctermbg=236
+hi LineNr         ctermfg=039 ctermbg=236
 
 " }}} Linenumbers
 "----------------------------------------------------------------------
@@ -56,8 +56,8 @@ highlight ColorColumn ctermbg=136
 " Folds {{{ "
 
 " Make folds blue on grey (same as line numbers)
-" To look good, this should match inactive tmux window color.
-hi Folded ctermfg=021 ctermbg=236
+" To look good, the background should match inactive tmux window color.
+hi Folded ctermfg=039 ctermbg=236
 
 " }}} Folds "
 "----------------------------------------------------------------------
