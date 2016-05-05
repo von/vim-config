@@ -72,6 +72,7 @@ highlight  PmenuThumb   ctermbg=blue    ctermfg=blue
 " Help {{{ "
 " Get rid of colored backgrounds
 highlight  helpNote ctermfg=yellow ctermbg=none
+highlight  helpHyperTextJump ctermfg=red ctermbg=none
 " }}} Help "
 "----------------------------------------------------------------------
 " Spell checking {{{ "
