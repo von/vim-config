@@ -2,7 +2,8 @@
 " For list of colors see $VIMRUNTIME/rgb.txt
 " To see all colors, run the following:
 " :runtime syntax/colortest.vim
-" For colors by 0-256 number, see http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+" For colors by 0-256 number, see:
+" http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 
 " Prevents dark fonts
 set background=dark
