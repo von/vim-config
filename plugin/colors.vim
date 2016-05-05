@@ -73,7 +73,16 @@ highlight  PmenuThumb   ctermbg=blue    ctermfg=blue
 " Get rid of colored backgrounds
 highlight  helpNote ctermfg=yellow ctermbg=none
 " }}} Help "
-"
+"----------------------------------------------------------------------
+" Spell checking {{{ "
+" Make misspellings read and underlined instead of red background
+" Kudos: http://stackoverflow.com/a/6009026/197789
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=red
+hi clear SpellCap
+hi SpellCap cterm=underline ctermfg=red
+hi clear SpellRare
+" }}} Spell checking "
 "----------------------------------------------------------------------
 " SynStack() {{{ "
 " Kudos: https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
