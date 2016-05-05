@@ -68,3 +68,9 @@ highlight  PmenuSel     ctermbg=blue    ctermfg=white   cterm=bold
 highlight  PmenuSbar    ctermbg=grey    ctermfg=grey
 highlight  PmenuThumb   ctermbg=blue    ctermfg=blue
 " }}} Completion Menu
+"----------------------------------------------------------------------
+" Help {{{ "
+" Get rid of colored backgrounds
+highlight  helpNote ctermfg=yellow ctermbg=none
+" }}} Help "
+"
