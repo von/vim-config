@@ -41,6 +41,10 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 
 " <leader>h is used by git-gutter
 
+" Show highlight group under cursor with <leader>H
+" SynStack() from colors.vim
+:map <silent> <leader>H :call SynStack()<CR>
+
 " <leader>m is reserved for mode-specific bindings
 
 " Open file explorer
