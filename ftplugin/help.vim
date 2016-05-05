@@ -1,0 +1,3 @@
+" Help mode
+
+set nospell
