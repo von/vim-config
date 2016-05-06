@@ -79,7 +79,7 @@ highlight  helpHyperTextJump ctermfg=red ctermbg=none
 " }}} Help "
 "----------------------------------------------------------------------
 " Spell checking {{{ "
-" Make misspellings read and underlined instead of red background
+" Make misspellings red and underlined instead of red background
 " Kudos: http://stackoverflow.com/a/6009026/197789
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
