@@ -9,6 +9,11 @@ set hidden
 " BufferGator sort by filename instead of buffer number
 let g:buffergator_sort_regime = 'basename'
 
+" Make BufferGator a virtical split on left that is at least 80 columns
+" wide so I can see buffer paths.
+let g:buffergator_viewport_split_policy = 'L'
+let g:buffergator_vsplit_size = 80
+
 "------------------------------------------------------------
 " Make current directory the one holding the current file {{{
 " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
