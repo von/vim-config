@@ -153,6 +153,10 @@ NeoBundle 'tpope/vim-vinegar'
 " Integration with vifm
 NeoBundle 'vifm/vifm.vim'
 
+" Highlighting for BATS
+" https://github.com/sstephenson/bats
+NeoBundle 'vim-scripts/bats.vim'
+
 " For :Scratch and Sscratch
 NeoBundle 'vim-scripts/scratch.vim'
 
