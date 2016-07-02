@@ -148,6 +148,11 @@ nnoremap <CR> G
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 " }}} Carriage return
 
+" Plus and minus open and close all folds {{{ "
+nnoremap - zM
+nnoremap + zR
+" }}} Plus and minus open and close folds "
+
 " Hit Backspace to go to beginning of file.
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 nnoremap <BS> gg
