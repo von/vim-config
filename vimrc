@@ -147,9 +147,6 @@ NeoBundle 'mhinz/vim-startify'
 " Key bindings with '[' and ']' prefixes
 NeoBundle 'tpope/vim-unimpaired'
 
-" Tweaks for netrw
-NeoBundle 'tpope/vim-vinegar'
-
 " Integration with vifm
 NeoBundle 'vifm/vifm.vim'
 
