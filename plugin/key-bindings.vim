@@ -185,6 +185,13 @@ inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
 
 " }}}
 
+" Insert-mode bindings {{{
+
+" Make C-c work exactly like Escape
+" Normally it doesn't do the same expansions and callbacks
+inoremap <C-C> <Esc>
+" }}}
+
 " Command-mode bindings {{{
 
 " Allow use of semi-colon to enter command mode
