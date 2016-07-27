@@ -187,8 +187,9 @@ inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
 
 " Insert-mode bindings {{{
 
-" Make C-c work exactly like Escape
-" Normally it doesn't do the same expansions and callbacks
+" Make Control-C behave like Escape for exiting insert mode.
+" Normally C-c does not check for abbreviations or trigger the |InsertLeave|
+" autocommand event. (See :help i_CTRL-C)
 inoremap <C-C> <Esc>
 " }}}
 
