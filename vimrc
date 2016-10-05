@@ -153,6 +153,9 @@ NeoBundle 'tpope/vim-unimpaired'
 " Integration with vifm
 NeoBundle 'vifm/vifm.vim'
 
+" Highlighting for applescript
+NeoBundle 'vim-scripts/applescript.vim'
+
 " Highlighting for BATS
 " https://github.com/sstephenson/bats
 NeoBundle 'vim-scripts/bats.vim'
