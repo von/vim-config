@@ -1,5 +1,6 @@
 # Snippets for generating a passwd
 global !p
+import os.path
 import random
 import string
 
@@ -19,6 +20,17 @@ def gen_pin(length):
     s = "".join([random.choice(alphabet) for i in xrange(length)])
     return s
 
+def gen_phrase(length):
+    """Generate a pass phrase of given length in words."""
+    dict = os.path.expanduser("~/lib/shared/words")
+    try:
+      with open(dict) as f:
+        words = f.readlines()
+    except IOError as e:
+      return str(e)
+    s = " ".join([random.choice(words).strip() for i in xrange(length)])
+    return s
+
 endglobal
 
 snippet "passwd(\d*)" "Insert a random password with optional length" r
@@ -29,4 +41,9 @@ endsnippet
 snippet "pin(\d*)" "Insert a random pin with optional length" r
 `!p length = int(match.group(1)) if match.group(1) else 4
 snip.rv = gen_pin(length) if not snip.c else snip.c`
+endsnippet
+
+snippet "phrase(\d*)" "Insert a pass phrase with optional number of words" r
+`!p length = int(match.group(1)) if match.group(1) else 4
+snip.rv = gen_phrase(length) if not snip.c else snip.c`
 endsnippet
