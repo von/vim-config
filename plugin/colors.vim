@@ -9,12 +9,31 @@
 set background=dark
 
 "----------------------------------------------------------------------
-" CursorLine {{{ "
+" Set CursorLine based on insert mode {{{ "
+" Kudos: http://vim.wikia.com/wiki/Change_statusline_color_to_show_insert_or_normal_mode
 
 :set cursorline
 
-" Medium-grey background for line cursor is on
-:hi CursorLine   cterm=NONE ctermbg=236 ctermfg=None
+function! SetCursorLineColor(mode)
+  " Turn off underline and any foreground changes
+  hi CursorLine cterm=None ctermfg=None
+  if a:mode == 'i'  " Insert mode
+    hi CursorLine ctermbg=18  " Dark blue
+  elseif a:mode == 'r'  " Replace mode
+    hi CursorLine ctermbg=22  " Dark green
+  elseif a:mode == 'v'  " Virtual Replace mode
+    hi CursorLine ctermbg=22  " Dark green
+  else " Not in insert mode
+    hi CursorLine ctermbg=236  " Medium grey
+  endif
+endfunction
+
+au InsertEnter * call SetCursorLineColor(v:insertmode)
+au InsertChange * call SetCursorLineColor(v:insertmode)
+au InsertLeave * call SetCursorLineColor("-")
+
+" Set default for start up
+call SetCursorLineColor("-")
 
 " }}} CursorLine "
 "----------------------------------------------------------------------
