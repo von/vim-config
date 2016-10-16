@@ -18,11 +18,11 @@ function! SetCursorLineColor(mode)
   " Turn off underline and any foreground changes
   hi CursorLine cterm=None ctermfg=None
   if a:mode == 'i'  " Insert mode
-    hi CursorLine ctermbg=18  " Dark blue
+    hi CursorLine ctermbg=22  " Dark blue
   elseif a:mode == 'r'  " Replace mode
-    hi CursorLine ctermbg=22  " Dark green
+    hi CursorLine ctermbg=18  " Dark green
   elseif a:mode == 'v'  " Virtual Replace mode
-    hi CursorLine ctermbg=22  " Dark green
+    hi CursorLine ctermbg=18  " Dark green
   else " Not in insert mode
     hi CursorLine ctermbg=236  " Medium grey
   endif
