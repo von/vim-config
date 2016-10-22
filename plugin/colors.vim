@@ -115,6 +115,11 @@ hi SpellCap cterm=underline ctermfg=red
 hi clear SpellRare
 " }}} Spell checking "
 "----------------------------------------------------------------------
+" TODO/XXX in comments {{{
+hi clear VimTodo
+hi VimTodo cterm=underline ctermfg=yellow
+" }}}
+"----------------------------------------------------------------------
 " SynStack() {{{ "
 " Kudos: https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
 function! SynStack()
