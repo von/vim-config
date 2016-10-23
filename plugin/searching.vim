@@ -10,7 +10,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Momentarily highlight a search term jumped to with n or N
+" Use n/N to search for next and momentarily highlight it {{{ "
 " Kudos: https://www.youtube.com/watch?v=aHm36-na4-4
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
@@ -27,6 +27,7 @@ function! HLNext (blinktime)
     call matchdelete(ring)
     redraw
 endfunction
+" }}} Use n/N to search for next and momentarily highlight it "
 
 " Use Tab/S-Tab to jump forward/backward in search hits {{{ "
 " Kudos: http://stackoverflow.com/a/40193754/197789
