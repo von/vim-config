@@ -27,3 +27,13 @@ function! HLNext (blinktime)
     call matchdelete(ring)
     redraw
 endfunction
+
+" Use Tab/S-Tab to jump forward/backward in search hits {{{ "
+" Kudos: http://stackoverflow.com/a/40193754/197789
+
+" needed for mapping <Tab> in command-line mode
+set wildcharm=<C-z>
+
+cnoremap <expr> <Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>/<C-r>/" : "<C-z>"
+cnoremap <expr> <S-Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>?<C-r>/" : "<S-Tab>"
+" }}} Use Tab/S-Tab to jump forward/backward in search hits "
