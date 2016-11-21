@@ -101,16 +101,5 @@ function! WrapOff()
   setlocal textwidth=0
   " Don't wrap existing long lines when inserting text.
   setlocal formatoptions+=l
-  "  This allows more natural movement between long lines with shorter lines
-  "  in between.
-  setlocal virtualedit=all
-  silent! nunmap <buffer> <Up>
-  silent! nunmap <buffer> <Down>
-  silent! nunmap <buffer> <Home>
-  silent! nunmap <buffer> <End>
-  silent! iunmap <buffer> <Up>
-  silent! iunmap <buffer> <Down>
-  silent! iunmap <buffer> <Home>
-  silent! iunmap <buffer> <End>
 endfunction
 " }}} WrapOff() "
