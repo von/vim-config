@@ -119,8 +119,8 @@ hi clear SpellRare
 hi clear VimTodo
 hi VimTodo cterm=underline ctermfg=yellow
 
-hi clear zshTodo
-hi zshTodo cterm=underline ctermfg=yellow
+hi link zshTodo VimTodo
+hi link luaTodo VimTodo
 " }}}
 "----------------------------------------------------------------------
 " SynStack() {{{ "
