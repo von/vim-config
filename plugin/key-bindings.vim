@@ -89,6 +89,8 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 
 " Yank line to system pastebuffer
 :map <leader>y "+yy
+" In visual mode, yank block
+:vnoremap <leader>y "+y
 
 " Yank file to system pastebuffer
 :map <leader>Y :%y+<cr>
