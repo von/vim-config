@@ -101,9 +101,6 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " Open all folds with <leader>Z
 :map <leader>Z zR
 
-" File searching with <leader>C-p via unite
-nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
-
 " Window manipulation {{{ "
 "
 " Kudos: http://codeincomplete.com/posts/2011/3/4/my_vimrc_file/
@@ -134,10 +131,17 @@ nnoremap <silent> <Leader>> 83<C-W><Bar>
 " }}} Window manipulation
 " }}} Leader bindings
 
+" Control characters {{{ "
+
+" File searching with <leader>C-p via unite
+nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
+
 " Map C-s to back-screen because C-b is used by tmux
 " Note this requires terminal to ignore C-s
 " http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
 :map <C-s> <C-B>
+
+" Control characters }}}
 
 " {{{ Carriage return
 " Type 12<Enter> to go to line 12
