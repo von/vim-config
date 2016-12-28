@@ -147,6 +147,9 @@ NeoBundle 'tpope/vim-rsi'
 " Start screen for vim
 NeoBundle 'mhinz/vim-startify'
 
+" Allow toggling full screen windows
+NeoBundle 'regedarek/ZoomWin'
+
 " Key bindings with '[' and ']' prefixes
 NeoBundle 'tpope/vim-unimpaired'
 

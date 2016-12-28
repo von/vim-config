@@ -121,8 +121,11 @@ nnoremap <silent> <Leader><Right> <C-W>>
 nnoremap <silent> <Leader><Left> <C-W><
 " Balance windows
 nnoremap <silent> <Leader>= <C-W>=
-" Maximize current window
-nnoremap <silent> <Leader><CR> <C-W>_<C-W><Bar>
+
+" Toggle Maximizing current window (uses ZoomWin)
+" Note that mapping to '<C-W>o' here doesn't work for some reason.
+nnoremap <silent> <Leader><CR> :silent call ZoomWin#ZoomWin()<CR>
+
 " Make current window 80 columns wide (including lines numbers)
 " Kudos: http://stackoverflow.com/a/16110704
 " Note <gt> doesn't seem to work here, so use '>'
