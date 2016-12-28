@@ -163,9 +163,6 @@ NeoBundle 'vim-scripts/bats.vim'
 " For :Scratch and Sscratch
 NeoBundle 'vim-scripts/scratch.vim'
 
-" Ring for yanked text
-NeoBundle 'vim-scripts/YankRing.vim'
-
 call neobundle#end()
 
 " }}} Misc Bundles
