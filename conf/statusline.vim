@@ -11,12 +11,15 @@ set ruler
 " Enable fugitive support with statline
 let g:statline_fugitive = 1
 
+" Airline Configuration {{{ "
+
 " Show whitespace errors
 let g:airline#extensions#whitespace#enabled = 1
 
 " Set airline theme
 " Kudos: http://choorucode.com/2015/03/18/how-to-use-themes-in-airline/
 let g:airline_theme='vonairlinetheme'
+
 
 " {{{ Use unicode symbols in airline
 "
@@ -33,6 +36,9 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
 "}}}
 
+" Refresh Airline in case it has already been loaded.
+:AirlineRefresh
+
 " {{{ tabline configuration
 
 " Turn on enhanced tabline
@@ -46,7 +52,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
-" }}}
+" }}} Clean up tabline
 
 " {{{ Index buffers in tabline and add keybindings
 let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -59,5 +65,6 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
-" }}}
-" }}}
+" }}} Index buffers in tabline and add keybindings
+" }}} tabline configuration
+" }}} Airline Configuration "

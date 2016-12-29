@@ -263,3 +263,18 @@ set visualbell
 set t_vb=
 
 " }}} Turn off bell and visual bell "
+"----------------------------------------------------------------------
+" Configure loading individual configuration files in conf/ {{{ "
+" Use VimEnter autocmd as that is called after all other initialization
+" Kudos: http://vim.wikia.com/wiki/How_to_initialize_plugins
+
+function! g:LoadConfig ()
+  runtime! conf/**/*.vim
+endfunction
+
+augroup loadconfig
+  autocmd!
+  autocmd VimEnter * call LoadConfig()
+augroup END
+
+" }}} Load individual configuration files in conf/ "
