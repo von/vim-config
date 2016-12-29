@@ -217,6 +217,22 @@ cnoremap <C-U> <C-E><C-U>
 
 " }}}
 
+" Visual-mode bindings {{{ "
+
+" Call TwiddleCase on selection
+vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
+
+" }}} Visual-mode bindings "
+
+" Bracket ([,]) bindings {{{ "
+
+" Find previous unicode character
+:map [U ?[^\x00-\x7F]<cr>
+" Find next unicode character
+:map ]U /[^\x00-\x7F]<cr>
+
+" }}} Bracket ([,]) bindings "
+"
 " Timeouts {{{ "
 
 " Timeout on mappings and key codes

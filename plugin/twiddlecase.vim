@@ -15,5 +15,3 @@ function! TwiddleCase(str)
   endif
   return result
 endfunction
-
-vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv

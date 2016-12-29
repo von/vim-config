@@ -11,9 +11,3 @@ function! WhitespaceClean()
   call Preserve(':%s/\v\s+$//e')
 endfunction
 " }}} WhitespaceClean "
-
-CommandCabbr clean call<space>WhitespaceClean()
-
-" Make whitespace visible
-set list listchars=tab:⋅⋅,trail:⋅,nbsp:⋅
-

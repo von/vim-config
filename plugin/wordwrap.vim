@@ -1,38 +1,4 @@
-" Word wrap configuration
-
-" Prefix for wrapped lines
-" This interfers with cut'n'paste
-"set showbreak=↪
-
-" set formatoptions {{{
-
-" Automatically wrap comments (using textwidth)
-set formatoptions+=c
-
-" Automatically insert comment leader on new line
-set formatoptions+=r
-set formatoptions+=o
-
-" Allow formatting of comments with 'gq'
-set formatoptions+=q
-
-" Remove comment leaders when joining lines
-set formatoptions+=j
-
-" }}} set formatoptions
-
-" linebreak tells Vim to only wrap at a character in the 'breakat' option
-" (Basically, word boundaries, so turn this on for text modes.)
-set nolinebreak
-
-" Wrap the current paragraph
-CommandCabbr wrap call<space>Preserve(':normal<space>gq}')
-
-" Wrap the whole document
-CommandCabbr wrapall call<space>Preserve(':normal<space>gqG')
-
-" Allow for quick turning on and off soft wrapping of long lines
-CommandCabbr nowrap setlocal<space>nowrap!
+" Word wrap functions
 
 " WrapSoft() {{{ "
 

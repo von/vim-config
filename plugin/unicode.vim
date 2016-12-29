@@ -1,11 +1,6 @@
 " Configuration for Unicode/Non-ascii
 " Kudos: http://stackoverflow.com/a/16988346
 
-" Find previous unicode character
-:map [U ?[^\x00-\x7F]<cr>
-" Find next unicode character
-:map ]U /[^\x00-\x7F]<cr>
-
 " Replace unicode characters with ascii equivalents
 " Kudos: http://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html
 " Kudos: http://stackoverflow.com/a/2801132/197789
@@ -19,5 +14,3 @@ function! UnicodeClean()
   " Right double quote(”) to neutral quote(")
   call Preserve(":%s/\\%u201D/\"/ge")
 endfunction
-
-CommandCabbr uniclean call<space>UnicodeClean()
