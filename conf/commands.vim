@@ -15,11 +15,17 @@ CommandCabbr ccab CommandCabbr
 " Clean up whitespace in file
 CommandCabbr clean call<space>WhitespaceClean()
 
+" Close all folds with ':fold'
+CommandCabbr fold norm<space>zM
+
 " Allow for quick turning on and off soft wrapping of long lines
 CommandCabbr nowrap setlocal<space>nowrap!
 
 " Restore ':p' for previous buffer
 CommandCabbr p prev
+
+" Open all folds with ':unfold'
+CommandCabbr unfold norm<space>zR
 
 " Convert unicode to standard character equivalents
 CommandCabbr uniclean call<space>UnicodeClean()
