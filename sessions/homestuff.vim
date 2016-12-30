@@ -1,4 +1,4 @@
 " Initialization for homestuff session
 
-" find should search under ~/homstuff/
+" find should search under ~/homestuff/
 set path+=~/homestuff/**
