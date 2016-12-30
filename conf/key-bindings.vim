@@ -232,7 +232,23 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 :map ]U /[^\x00-\x7F]<cr>
 
 " }}} Bracket ([,]) bindings "
-"
+
+" Map n and N to HLNext() {{{ "
+" Find next search match and briefly highlight it.
+nnoremap <silent> n   n:call HLNext(0.4)<cr>
+nnoremap <silent> N   N:call HLNext(0.4)<cr>
+" }}} Map n and N to HLNext() "
+
+" Use Tab/S-Tab to jump forward/backward in search hits {{{ "
+" Kudos: http://stackoverflow.com/a/40193754/197789
+
+" needed for mapping <Tab> in command-line mode
+set wildcharm=<C-z>
+
+cnoremap <expr> <Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>/<C-r>/" : "<C-z>"
+cnoremap <expr> <S-Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>?<C-r>/" : "<S-Tab>"
+" }}} Use Tab/S-Tab to jump forward/backward in search hits "
+
 " Timeouts {{{ "
 
 " Timeout on mappings and key codes

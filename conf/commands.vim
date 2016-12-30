@@ -18,11 +18,30 @@ CommandCabbr clean call<space>WhitespaceClean()
 " Close all folds with ':fold'
 CommandCabbr fold norm<space>zM
 
+" Re-indent, whole file or selected area
+" Kudos: http://vim.wikia.com/wiki/Fix_indentation
+CommandCabbr indent call<space>Preserve(':normal<space>gg=G')
+" ALternative to above is use '==' to re-indent current line or selection,
+" or '<n>==' (e.g. '5==') to re-indent <n> lines
+
+" Turn off paste mode (resume indentation)
+CommandCabbr nopaste set<space>nopaste
+
+" Replace tabs with spaces
+CommandCabbr notabs set<space>expandtab
+
 " Allow for quick turning on and off soft wrapping of long lines
 CommandCabbr nowrap setlocal<space>nowrap!
 
 " Restore ':p' for previous buffer
 CommandCabbr p prev
+
+" Turn off indentation for pasting
+" Kudos: http://stackoverflow.com/a/2514520/197789
+CommandCabbr paste set<space>paste
+
+" Don't replace tabs with spaces
+CommandCabbr tabs set<space>noexpandtab
 
 " Open all folds with ':unfold'
 CommandCabbr unfold norm<space>zR
