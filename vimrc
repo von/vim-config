@@ -292,17 +292,18 @@ set t_vb=
 
 " }}} Turn off bell and visual bell "
 "----------------------------------------------------------------------
-" Configure loading individual configuration files in conf/ {{{ "
-" Use VimEnter autocmd as that is called after all other initialization
-" Kudos: http://vim.wikia.com/wiki/How_to_initialize_plugins
+" LoadConfig() {{{ "
+" Define LoadConfig() to load my configuration.
+" This will be called later in after/plugin/loadconf.vim
+
+" The goal here is to load my configuration after all other system
+" configuration and bundles have been loaded since some of my configuration
+" uses that configuration and code. I tried this as a VimEnter autocmd but that
+" is run after commandline commands (e.g. -c <cmd>) which is too late to
+" support, e.g., SInit().
 
 function! g:LoadConfig ()
   runtime! conf/**/*.vim
 endfunction
 
-augroup loadconfig
-  autocmd!
-  autocmd VimEnter * call LoadConfig()
-augroup END
-
-" }}} Load individual configuration files in conf/ "
+" }}} LoadConfig()
