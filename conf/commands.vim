@@ -3,6 +3,13 @@
 " Note user commands must start with uppercase letter
 " http://vimdoc.sourceforge.net/htmldoc/usr_40.html#40.2
 
+" "H" command for current window help {{{ "
+" Help that replaces current window instead of opening split
+" Uses fact that help will reuse buffer of type help
+" Kudos: http://stackoverflow.com/a/26431632/197789
+command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
+" }}} "H" command for current window help "
+
 " Command abbreviations (cabber and CommandCabbr wrapper) are more flexible,
 " http://vimdoc.sourceforge.net/htmldoc/map.html#Abbreviations
 " http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
