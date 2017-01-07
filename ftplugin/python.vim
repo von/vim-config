@@ -7,7 +7,7 @@ setlocal shiftwidth=4 softtabstop=4
 " Have docstrings work as expected with DelimitMate
 let b:delimitMate_nesting_quotes = ['"']
 
-" Turn off automatic completion
+" Turn off automatic completion as its too distracting.
 :NeoCompleteLock
 
 " Run PyLint with <leader>mp
