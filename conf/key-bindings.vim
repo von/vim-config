@@ -47,6 +47,9 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 
 " <leader>m is reserved for mode-specific bindings
 
+" <leader>N toggles NeoComplete
+:map <leader>N :NeoCompleteToggle<CR>
+
 " Open file explorer
 :map <leader>o :EditVifm<CR>
 
