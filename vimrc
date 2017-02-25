@@ -78,6 +78,9 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 " Use Shift-<arrow keys> to switch between panes/vim windows
 NeoBundle 'christoomey/vim-tmux-navigator'
 
+" Allow me to rename tabs
+NeoBundle 'gcmt/taboo.vim'
+
 " Allow for easy rendering of markdown
 NeoBundle 'JamshedVesuna/vim-markdown-preview'
 
