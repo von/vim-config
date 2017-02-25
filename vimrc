@@ -145,6 +145,9 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rsi'
 
 " Start screen for vim
+" startify_session_persistence must be set before loading
+" so startify sets up AutoCmd
+let g:startify_session_persistence = 1
 NeoBundle 'mhinz/vim-startify'
 
 " Allow toggling full screen windows
