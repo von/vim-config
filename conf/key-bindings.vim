@@ -172,13 +172,6 @@ nmap Q <nop>
 " 0 toggles between first column and first non-empty column
 nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
 
-" Bindings for vim-expand-region {{{
-
-" Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
-
-" }}} Bindings for vim-expand-region
 
 " Bindings for NeoComplete/UltiSnips {{{
 
@@ -221,6 +214,11 @@ cnoremap <C-U> <C-E><C-U>
 
 " Call TwiddleCase on selection
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
+
+" Bindings for vim-expand-region
+" Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " }}} Visual-mode bindings "
 
