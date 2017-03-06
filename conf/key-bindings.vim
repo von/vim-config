@@ -53,6 +53,11 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " Open file explorer
 :map <leader>o :EditVifm<CR>
 
+" Unite file searching
+" ProjectDir is the top-level version control directory
+" (e.g. where .git/ is)
+:nmap <leader>O :UniteWithProjectDir -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
+
 " Paste from system pastebuffer
 :map <leader>p "+p
 
@@ -135,9 +140,6 @@ nnoremap <silent> <Leader>> 83<C-W><Bar>
 " }}} Leader bindings
 
 " Control characters {{{ "
-
-" File searching with <leader>C-p via unite
-nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
 
 " Map C-s to back-screen because C-b is used by tmux
 " Note this requires terminal to ignore C-s
