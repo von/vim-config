@@ -123,6 +123,11 @@ hi link zshTodo VimTodo
 hi link luaTodo VimTodo
 " }}}
 "----------------------------------------------------------------------
+" Unite {{{ "
+hi clear uniteSource__GrepPattern
+hi uniteSource__GrepPattern cterm=underline ctermfg=yellow
+" }}} Unite "
+"----------------------------------------------------------------------
 " SynStack() {{{ "
 " Kudos: https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
 function! SynStack()
