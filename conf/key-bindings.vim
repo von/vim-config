@@ -93,7 +93,10 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 :map <leader>W :clean<cr>
 
 " Yank line to system pastebuffer
-:map <leader>y "+yy
+" Note yy yanks line including carraige return which will screw up
+" passwords! 'g_' is like '$' but without newline.
+" Kudos: http://stackoverflow.com/a/20165747/197789
+:map <leader>y ^vg_"+y
 " In visual mode, yank block
 :vnoremap <leader>y "+y
 
