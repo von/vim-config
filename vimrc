@@ -95,6 +95,8 @@ NeoBundle 'kana/vim-textobj-user'
 " vim-textobj-entire adds text object of 'ae' for entire buffer
 " ('ie' excludes leading and trailing whitespace)
 NeoBundle 'kana/vim-textobj-entire'
+" Adds 'al' for entire line and 'il' without leading and trailing whitespace
+NeoBundle 'kana/vim-textobj-line'
 
 " Basically a Python IDE
 NeoBundle 'klen/python-mode'
