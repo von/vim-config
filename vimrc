@@ -82,6 +82,8 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'gcmt/taboo.vim'
 
 " Allow for easy rendering of markdown
+" Replace default C-p
+let vim_markdown_preview_hotkey='<leader>mP'
 NeoBundle 'JamshedVesuna/vim-markdown-preview'
 
 " Only allow certain things in modelines
