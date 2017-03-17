@@ -302,18 +302,13 @@ set t_vb=
 
 " }}} Turn off bell and visual bell "
 "----------------------------------------------------------------------
-" LoadConfig() {{{ "
-" Define LoadConfig() to load my configuration.
-" This will be called later in after/plugin/loadconf.vim
+" load conf/*.vim {{{ "
 
-" The goal here is to load my configuration after all other system
-" configuration and bundles have been loaded since some of my configuration
-" uses that configuration and code. I tried this as a VimEnter autocmd but that
-" is run after commandline commands (e.g. -c <cmd>) which is too late to
-" support, e.g., SInit().
+" Don't usr conf/**/*.vim here as we don't want to load conf/after/*.vim
+" yet.
+runtime! conf/*.vim
 
-function! g:LoadConfig ()
-  runtime! conf/**/*.vim
-endfunction
+" Note that after/conf/LoadAfterConf.vim will load afer/conf/*.vim
+" after plugin/*.vim
 
-" }}} LoadConfig()
+" }}} load conf/*.vim
