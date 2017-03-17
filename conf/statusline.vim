@@ -81,8 +81,10 @@ nmap <leader>8 8gt
 nmap <leader>9 9gt
 " }}} Index buffers in tabline and add keybindings
 " }}} tabline configuration
-"
-" Refresh Airline in case it has already been loaded.
-:AirlineRefresh
+
+if !has('vim_starting')
+  " If reloading configuration, refresh Airline
+  :AirlineRefresh
+endif
 
 " }}} Airline Configuration "
