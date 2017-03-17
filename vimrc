@@ -308,7 +308,7 @@ set t_vb=
 " yet.
 runtime! conf/*.vim
 
-" Note that after/conf/LoadAfterConf.vim will load afer/conf/*.vim
+" Note that after/plugin/LoadAfterConf.vim will load conf/after/*.vim
 " after plugin/*.vim
 
 " }}} load conf/*.vim
