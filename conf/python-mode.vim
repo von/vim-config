@@ -21,3 +21,6 @@ let g:pymode_rope = 0
 
 " Rebind from "<leader> b" which conflicts with changing buffers
 let g:pymode_breakpoint_bind = "<leader>P"
+
+" Turn off pymode folding as it folds too much
+let g:pymode_folding = 0
