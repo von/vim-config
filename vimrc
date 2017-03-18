@@ -1,12 +1,16 @@
 " vimrc (use double quotes for comments)
 " Kudos: http://vim.wikia.com/wiki/Example_vimrc
 "
+" Loads conf/*.vim
+"
 " Also see the ftplugins/ directory for filetype-specific stuff:
 " http://vim.wikia.com/wiki/keep_your_vimrc_file_clean
 "
 " And plugins/ for other automatically loaded configuration
 " These are loaded after this file.
 " http://vimdoc.sourceforge.net/htmldoc/starting.html#initialization
+"
+" after/plugin/LoadAfterConf.vim will load conf/after/*.vim after plugins/
 "
 "----------------------------------------------------------------------
 " Set up ~/.vim-local {{{ "
