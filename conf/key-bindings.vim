@@ -11,6 +11,13 @@
 " Note that vim-tmux-navigator uses the following keybindings:
 " C-h, C-l, C-j, C-k, C-\
 
+" Disable automatic keybinds of bundles {{{ "
+
+" Buffergator
+let g:buffergator_suppress_keymaps=1
+
+" }}} Disable automatic keybinds of bundles "
+
 " Leader bindings {{{ "
 " My strategy is to use <leader> for commonly-used one-stroke commands.
 
@@ -46,6 +53,9 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 :map <silent> <leader>H :call SynStack()<CR>
 
 " <leader>m is reserved for mode-specific bindings
+
+" vim_markdown_preview: Replace default C-p
+let vim_markdown_preview_hotkey='<leader>mP'
 
 " <leader>N toggles NeoComplete
 :map <leader>N :NeoCompleteToggle<CR>

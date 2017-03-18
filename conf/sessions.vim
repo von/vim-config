@@ -1,7 +1,6 @@
 " Session configuration
 
-" Note that startify_session_persistence is set in ../vimrc
-" as it needs to be set before startify is loaded.
+" Note that startify_session_persistence is set in startify.vim
 
 " Note that having an option in both sessionsoptions and viewoptions seems
 " to cause problems. Right now I'm trying to remove them from viewoptions.

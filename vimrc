@@ -82,14 +82,11 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'gcmt/taboo.vim'
 
 " Allow for easy rendering of markdown
-" Replace default C-p
-let vim_markdown_preview_hotkey='<leader>mP'
 NeoBundle 'JamshedVesuna/vim-markdown-preview'
 
 " Only allow certain things in modelines
 NeoBundle 'ciaranm/securemodelines'
 
-let g:buffergator_suppress_keymaps=1  " Do this in key-bindings.vim
 NeoBundle 'jeetsukumaran/vim-buffergator'
 
 " Allows definiton of arbitrary objects (prereusite of following)
@@ -152,9 +149,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rsi'
 
 " Start screen for vim
-" startify_session_persistence must be set before loading
-" so startify sets up AutoCmd
-let g:startify_session_persistence = 1
 NeoBundle 'mhinz/vim-startify'
 
 " Allow toggling full screen windows
