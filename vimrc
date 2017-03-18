@@ -184,6 +184,7 @@ NeoBundleCheck
 " Set up ~/.vim-local {{{ "
 
 " Where we store all our local state
+" Keep this in .vimrc as stuff in conf/ relies on it
 silent !mkdir ~/.vim-local > /dev/null 2>&1
 
 " }}} Set up ~/.vim-local "
