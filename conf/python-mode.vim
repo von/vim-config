@@ -1,5 +1,11 @@
 " Configuration related to python-mode plugin
 
+" Turn on default options
+let g:pymode_options = 1
+
+" Use my coloring of max width column
+let g:pymode_options_colorcolumn = 0
+
 " Disable run code plugin
 let g:pymode_run = 0
 
