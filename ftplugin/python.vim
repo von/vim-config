@@ -1,5 +1,4 @@
-"
-" Key bindings for python files
+" ftplugin for python mode
 
 " Python configuration: tab inserts 4 spaces
 setlocal shiftwidth=4 softtabstop=4
