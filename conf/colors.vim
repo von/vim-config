@@ -64,6 +64,9 @@ call SetCursorLineColor("-")
 " To look good, this should match inactive tmux window color.
 hi LineNr         ctermfg=039 ctermbg=236
 
+" Line number for line with cursor
+hi CursorLineNr   ctermfg=yellow ctermbg=236
+
 " }}} Linenumbers
 "----------------------------------------------------------------------
 " SignColumn {{{
