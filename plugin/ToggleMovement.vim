@@ -1,15 +1,17 @@
-" ToggleMovement(firstOp, thenOp)
-" Try firstOp, if that doesn't cause cursor movement, then execute thenOp
+" ToggleMovement(Op1, Op2, ...)
+" Try operations until one causes the cursor to move, then return
 "
-" Note that thenOp doesn't technically need to be a movement.
-" I added 'silent!' on thenOp call so I could safely try toggling folds.
+" Note that ops dosn't technically need to be a movement.
+" I added 'silent!' so I could safely try toggling folds.
 "
 " Kudos: http://ddrscott.github.io/blog/2016/vim-toggle-movement/
 
-function! ToggleMovement(firstOp, thenOp)
+function! ToggleMovement(...)
   let pos = getpos('.')
-  execute "normal! " . a:firstOp
-  if pos == getpos('.')
-    execute "silent! normal! " . a:thenOp
-  endif
+  for op in a:000
+    execute "silent! normal! " . op
+    if pos != getpos('.')
+      break
+    endif
+  endfor
 endfunction
