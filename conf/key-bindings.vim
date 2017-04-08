@@ -99,8 +99,30 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " Save with <leader>w
 :map <leader>w :w<cr>
 
+" <leader>W - wrap and whitespace  {{{ "
+
+" Turn on soft wrap
+:map <leader>W :call WrapSoft()<cr>
+
+" Re-wrap whole file
+:map <leader>Wa gqG
+
 " Clean up whitespace with <leader>W
-:map <leader>W :clean<cr>
+:map <leader>Wc :clean<cr>
+
+" Turn on hard wrap
+:map <leader>Wh :call WrapHard()<cr>
+
+" Turn off word wrapping
+:map <leader>Wo :call WrapOff()<cr>
+
+" Re-wrap paragraph
+:map <leader>Wp {gq}
+
+" Turn on soft wrap
+:map <leader>Ws :call WrapSoft()<cr>
+
+" }}} <leader>W - wrap and whitespace  "
 
 " Yank line to system pastebuffer
 " Note yy yanks line including carraige return which will screw up
@@ -184,9 +206,20 @@ nnoremap <BS> gg
 " I don't want to go into Ex mode by accident
 nmap Q <nop>
 
-" 0 toggles between first column and first non-empty column
-nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
+" Remap 0 and $ to for SoftWrap {{{
+" Go to first non-whitepace character on line, then first column of line or
+" paragraph. Seems to work well for soft-wrapped or unwrapped.
+nnoremap <silent> 0 :call ToggleMovement('g^', '0')<CR>
+" End of wrapped line, then end of paragraph
+nnoremap <silent> $ :call ToggleMovement('g$', '$')<CR>
+" }}} Remap 0 and $ to for SoftWrap
 
+" Remap Up/Down to work with soft wrap nicely {{{
+noremap  <buffer> <silent> <Up>   gk
+noremap  <buffer> <silent> <Down> gj
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
+" }}} Remap Up/Down to work with soft wrap nicely
 
 " Bindings for NeoComplete/UltiSnips {{{
 
