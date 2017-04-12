@@ -29,9 +29,12 @@ function! SetCursorLineColor(mode)
   endif
 endfunction
 
-au InsertEnter * call SetCursorLineColor(v:insertmode)
-au InsertChange * call SetCursorLineColor(v:insertmode)
-au InsertLeave * call SetCursorLineColor("-")
+augroup SetCursorLine
+  au!
+  au InsertEnter * call SetCursorLineColor(v:insertmode)
+  au InsertChange * call SetCursorLineColor(v:insertmode)
+  au InsertLeave * call SetCursorLineColor("-")
+augroup END
 
 " Only highlight CursorLine in current buffer
 " Kudos: http://stackoverflow.com/a/12018552/197789
