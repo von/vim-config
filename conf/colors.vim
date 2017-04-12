@@ -39,10 +39,10 @@ augroup END
 " Only highlight CursorLine in current buffer
 " Kudos: http://stackoverflow.com/a/12018552/197789
 augroup CursorLine
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-  augroup END
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
 " Set default for start up
 call SetCursorLineColor("-")
