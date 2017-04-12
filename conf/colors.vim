@@ -16,15 +16,16 @@ set background=dark
 
 function! SetCursorLineColor(mode)
   " Turn off underline and any foreground changes
-  hi CursorLine cterm=None ctermfg=None
+  hi CursorLine cterm=None ctermfg=None ctermbg=236  " Medium grey
+  hi CursorLineNr cterm=None ctermfg=None ctermbg=236
   if a:mode == 'i'  " Insert mode
-    hi CursorLine ctermbg=22  " Dark blue
+    hi CursorLineNr ctermfg=black ctermbg=green
   elseif a:mode == 'r'  " Replace mode
-    hi CursorLine ctermbg=18  " Dark green
-  elseif a:mode == 'v'  " Virtual Replace mode
-    hi CursorLine ctermbg=18  " Dark green
+    hi CursorLineNr ctermfg=black ctermbg=blue
+  elseif a:mode == 'v'  " Virtual Replace mode (gr/gR)
+    hi CursorLineNr ctermfg=black ctermbg=red
   else " Not in insert mode
-    hi CursorLine ctermbg=236  " Medium grey
+    hi CursorLineNr ctermfg=yellow
   endif
 endfunction
 
