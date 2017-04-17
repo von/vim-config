@@ -128,6 +128,7 @@ hi VimTodo cterm=underline ctermfg=yellow
 
 hi link zshTodo VimTodo
 hi link luaTodo VimTodo
+hi link pythonTodo VimTodo
 " }}}
 "----------------------------------------------------------------------
 " Unite {{{ "
