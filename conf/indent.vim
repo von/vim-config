@@ -1,13 +1,14 @@
 " Configuration related to indentation
 
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-filetype indent plugin on
+" Note that we run 'filetype indent on' in after/indent.vim since some
+" plugin turns it off.
 
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
+
+" Automatically indent new lines
+set smartindent
 
 " Use second line of pargraph for indentation
 set formatoptions+=2
