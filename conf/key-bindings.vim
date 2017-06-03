@@ -285,18 +285,20 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " Map n and N to HLNext() {{{ "
 " Find next search match and briefly highlight it.
-nnoremap <silent> n   n:call HLNext(0.4)<cr>
-nnoremap <silent> N   N:call HLNext(0.4)<cr>
+" The 'zv' opens folds if needed
+nnoremap <silent> n   nzv:call HLNext(0.4)<cr>
+nnoremap <silent> N   Nzv:call HLNext(0.4)<cr>
 " }}} Map n and N to HLNext() "
 
 " Use Tab/S-Tab to jump forward/backward in search hits {{{ "
 " Kudos: http://stackoverflow.com/a/40193754/197789
+" The 'zv' opens folds if needed
 
 " needed for mapping <Tab> in command-line mode
 set wildcharm=<C-z>
 
-cnoremap <expr> <Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>/<C-r>/" : "<C-z>"
-cnoremap <expr> <S-Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>?<C-r>/" : "<S-Tab>"
+cnoremap <expr> <Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>zv/<C-r>/" : "<C-z>"
+cnoremap <expr> <S-Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>zv?<C-r>/" : "<S-Tab>"
 " }}} Use Tab/S-Tab to jump forward/backward in search hits "
 
 " Timeouts {{{ "
