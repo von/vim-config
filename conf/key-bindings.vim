@@ -43,6 +43,10 @@ let mapleader = "\<Space>"
 " Toggle fold open/close
 :map <leader>f za
 
+" Open all folds with search results
+" Kudos: https://stackoverflow.com/a/18805662/197789
+:map <leader>F :g//foldopen<CR>
+
 " <leader>g is grep via unite
 nnoremap <silent> <leader>g :Unite grep:.<cr>
 
