@@ -56,6 +56,9 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 
+" Handle indention with pasting nicely
+NeoBundle 'von-forks/vim-bracketed-paste'
+
 " Rename current buffer with ':rename <name>'
 NeoBundle 'danro/rename.vim'
 
