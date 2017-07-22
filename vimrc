@@ -15,9 +15,12 @@
 "----------------------------------------------------------------------
 " Set up ~/.vim-local {{{ "
 
-" Where we store all our local state
-" Keep this in .vimrc as stuff in conf/ relies on it
-silent !mkdir ~/.vim-local > /dev/null 2>&1
+" Only on startup
+if has('vim_starting')
+  " Where we store all our local state
+  " Keep this in .vimrc as stuff in conf/ relies on it
+  silent !mkdir ~/.vim-local > /dev/null 2>&1
+endif
 
 " }}} Set up ~/.vim-local "
 "----------------------------------------------------------------------
