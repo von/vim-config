@@ -61,6 +61,9 @@ nnoremap <silent> <leader>g :Unite grep:.<cr>
 " vim_markdown_preview: Replace default C-p
 let vim_markdown_preview_hotkey='<leader>mP'
 
+" <leader>M toggle Quickmenu
+:map <leader>M :call quickmenu#toggle(0)<cr>
+
 " <leader>N toggles NeoComplete
 :map <leader>N :NeoCompleteToggle<CR>
 

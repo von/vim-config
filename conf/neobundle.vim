@@ -120,6 +120,9 @@ NeoBundle 'honza/vim-snippets'
 " Let me view all my undo information with <leader>u
 NeoBundle 'sjl/gundo.vim'
 
+" Let me pop up a menu of commands
+NeoBundle 'skywind3000/quickmenu.vim'
+
 " Allow changing surround quotes with 'cs<current><new>'
 NeoBundle 'tpope/vim-surround'
 
