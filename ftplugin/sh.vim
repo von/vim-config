@@ -1,4 +1,5 @@
 " Shell mode
 
 setlocal foldmethod=syntax
-setlocal commentstring="#%s"
+" Make commentary work correctly
+setlocal commentstring=#\ %s
