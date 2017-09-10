@@ -14,3 +14,28 @@ function! UnicodeClean()
   " Right double quote(”) to neutral quote(")
   call Preserve(":%s/\\%u201D/\"/ge")
 endfunction
+
+" Highlight non-ascii {{{
+" Kudos https://stackoverflow.com/a/27690622/197789
+
+function! HighlightNonAsciiOff()
+  echom "Setting non-ascii highlight off"
+  highlight nonascii none
+  let g:is_non_ascii_on=0
+endfunction
+
+function! HighlightNonAsciiOn()
+  syntax match nonascii "[^\x00-\x7F]" containedin=cComment,vimLineComment,pythonComment
+  echom "Setting non-ascii highlight on"
+  highlight nonascii cterm=underline ctermfg=green ctermbg=none term=underline
+  let g:is_non_ascii_on=1
+endfunction
+
+function! ToggleHighlightNonascii()
+  if g:is_non_ascii_on == 1
+    call HighlightNonAsciiOff()
+  else
+    call HighlightNonAsciiOn()
+  endif
+endfunction
+" }}}
