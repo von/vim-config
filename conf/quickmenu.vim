@@ -10,6 +10,7 @@ let g:quickmenu_options = "HL"
 call quickmenu#append("# Utilities", '')
 call quickmenu#append("git blame", 'Gblame', 'Toggle git blame mode')
 call quickmenu#append("Clean whitespace", 'clean', 'Clean up whitespace')
+call quickmenu#append("Clean Unicode", "call UnicodeClean()", "Clean Unicode")
 
 " Options
 call quickmenu#append("# Options", '')
@@ -18,6 +19,7 @@ call quickmenu#append("Toggle Neocomplete", "NeoCompleteToggle", "Toggle NeoComp
 call quickmenu#append("Soft Word Wrap", "call WrapSoft()", "Soft (virtual) word wrapping")
 call quickmenu#append("Hard Word Wrap", "call WrapHard()", "Hard word wrapping")
 call quickmenu#append("Word Wrap Off", "call WrapOff()", "Hard word wrapping")
+call quickmenu#append("Toggle Highlight of Non-ASCII", "call ToggleHighlightNonascii()", "Highlight Non-ASCII")
 
 " Debugging
 call quickmenu#append("# Debugging", '')
