@@ -28,6 +28,9 @@ let mapleader = "\<Space>"
 " Clear highlighted search results
 :map <leader><leader> :noh<cr>
 
+" Open menu of tabs
+:map <leader><tab> :BuffergatorTabsOpen<cr>
+
 " Switch to previous buffer
 :map <leader>b :e #<cr>
 
