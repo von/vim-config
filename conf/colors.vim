@@ -147,6 +147,13 @@ hi clear uniteSource__GrepPattern
 hi uniteSource__GrepPattern cterm=underline ctermfg=yellow
 " }}} Unite "
 "----------------------------------------------------------------------
+" HTML {{{ "
+hi clear htmlItalic
+" italic is not currently supported in my setup
+" TODO: https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
+hi htmlItalic ctermfg=grey
+" }}} Unite "
+"----------------------------------------------------------------------
 " SynStack() {{{ "
 " Kudos: https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
 function! SynStack()
