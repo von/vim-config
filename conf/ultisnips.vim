@@ -1,7 +1,8 @@
 " Configuration related to Ultisnips plugin
 
-" See key-bindings.vim for other keybindings related to Ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
+" Change from <tab> here which we have bound in key-bindings.vim to also
+" handle NeoComplete
+let g:UltiSnipsExpandTrigger="<c-s-tab>"
 
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
