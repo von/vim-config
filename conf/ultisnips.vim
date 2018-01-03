@@ -4,6 +4,9 @@
 " handle NeoComplete
 let g:UltiSnipsExpandTrigger="<c-s-tab>"
 
+" List all snippets with Shift-Tab
+let g:UltiSnipsListSnippets="<s-tab>"
+
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 

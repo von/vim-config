@@ -238,11 +238,10 @@ noremap  <buffer> <silent> j gj
 " BTW, it is tempting to use escape to cancel Neocomplete menu, but it is part of the
 " sequence for arrow keystrokes, so will not have the desired results.
 
-" Tab and Shift-Tab either expands NeoComplete if its menu is open or Expands
-" a snippet. This allows hitting S-TAB twice to select and expand a snippet.
+" Tab either expands NeoComplete if its menu is open or expands a snippet.
+" This allows hitting TAB twice to select and expand a snippet.
 " Kudos: https://github.com/SirVer/ultisnips/issues/376#issuecomment-55326568
 inoremap <expr> <TAB> pumvisible() ? neocomplete#close_popup() : "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>"
-inoremap <expr> <S-TAB> pumvisible() ? neocomplete#close_popup() : "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>"
 
 " <CR> cancels NeoComplete popup if Open (and inserts a <CR>)
 inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
