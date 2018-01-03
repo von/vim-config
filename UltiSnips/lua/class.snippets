@@ -1,0 +1,30 @@
+# Kudos: http://lua-users.org/wiki/ObjectOrientationTutorial
+snippet class "Class template" b
+-- ${1:MyClass}
+-- The table representing the class, which will double as the metatable for the instances
+local $1 = {}
+-- Failed table lookups on the instances should fallback to the class table, to get methods
+$1.__index = $1
+
+-- Calls to $1() return $1.new()
+setmetatable($1, {
+  __call = function (cls, ...)
+    return cls.new(...)
+  end,
+})
+
+-- syntax equivalent to "$1.new = function..."
+function $1.new(init)
+  local self = setmetatable({}, $1)
+  self.value = init
+  return self
+end
+
+function $1.set_value(self, newval)
+  self.value = newval
+end
+
+function $1.get_value(self)
+  return self.value
+end
+endsnippet
