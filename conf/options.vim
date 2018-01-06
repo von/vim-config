@@ -28,3 +28,10 @@ set shortmess+=A
 
 " Automatically read a file if it has changed
 set autoread
+
+" Don't show swap when browsing files (e.g. netrw, ctrlspace)
+" Note that vim-vinegar overrides netrw_list_hide with contents of
+" wildignore, so use it instead.
+"let g:netrw_list_hide= '.*\.swp$,.*\.swo$'
+set wildignore+=*.swp
+set wildignore+=*.swo
