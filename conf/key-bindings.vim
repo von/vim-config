@@ -34,8 +34,8 @@ let mapleader = "\<Space>"
 " Switch to previous buffer
 :map <leader>b :e #<cr>
 
-" Open buffer list in vim-buffergator
-:map <leader>B :BuffergatorOpen<cr>
+" Open tab-specific buffer list
+:map <leader>B :Unite buffer_tab<cr>
 
 " Comment/uncomment current line or, if active, region
 :map <leader>c :Commentary<cr>

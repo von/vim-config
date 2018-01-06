@@ -78,8 +78,6 @@ NeoBundle 'JamshedVesuna/vim-markdown-preview'
 " Only allow certain things in modelines
 NeoBundle 'ciaranm/securemodelines'
 
-NeoBundle 'jeetsukumaran/vim-buffergator'
-
 " Allows definiton of arbitrary objects (prereusite of following)
 NeoBundle 'kana/vim-textobj-user'
 " vim-textobj-entire adds text object of 'ae' for entire buffer
@@ -111,6 +109,9 @@ NeoBundle 'plasticboy/vim-markdown'
 
 " For grep via <leader>g
 NeoBundle 'Shougo/unite.vim'
+
+" Let me associate buffers with tabs
+NeoBundle 'Shougo/tabpagebuffer.vim'
 
 " Allow snippet expansion with <tab>
 NeoBundle 'SirVer/ultisnips'
