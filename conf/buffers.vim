@@ -13,13 +13,3 @@ let g:buffergator_sort_regime = 'basename'
 " wide so I can see buffer paths.
 let g:buffergator_viewport_split_policy = 'L'
 let g:buffergator_vsplit_size = 80
-
-"------------------------------------------------------------
-" Make current directory the one holding the current file {{{
-" http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-augroup BufEnterLCD
-  autocmd!
-  autocmd BufEnter * silent! lcd %:p:h
-augroup END
-
-" }}}
