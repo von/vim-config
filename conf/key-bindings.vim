@@ -29,7 +29,7 @@ let mapleader = "\<Space>"
 :map <leader><leader> :noh<cr>
 
 " Open menu of tabs
-:map <leader><tab> :BuffergatorTabsOpen<cr>
+:map <leader><tab> :Unite tab<cr>
 
 " Switch to previous buffer
 :map <leader>b :e #<cr>
