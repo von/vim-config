@@ -26,3 +26,4 @@ set backspace=indent,eol,start
 " Kudos: http://stackoverflow.com/a/3702781/197789
 vnoremap < <gv
 vnoremap > >gv
+vnoremap = =gv
