@@ -209,6 +209,13 @@ nnoremap - zM
 nnoremap + zR
 " }}} Plus and minus open and close folds "
 
+" <,>,= maintain visual selection {{{ "
+" Kudos: http://stackoverflow.com/a/3702781/197789
+vnoremap < <gv
+vnoremap > >gv
+vnoremap = =gv
+" }}}
+
 " Hit Backspace to go to beginning of file.
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 nnoremap <BS> gg

@@ -21,9 +21,3 @@ set tabstop=8
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
-
-" Have < and > (change indentation) keep visual selection active
-" Kudos: http://stackoverflow.com/a/3702781/197789
-vnoremap < <gv
-vnoremap > >gv
-vnoremap = =gv
