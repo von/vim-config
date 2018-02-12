@@ -9,6 +9,7 @@ let g:quickmenu_options = "HL"
 " Git
 call quickmenu#append("# Utilities", '')
 call quickmenu#append("git blame", 'Gblame', 'Toggle git blame mode')
+call quickmenu#append("git undo hunk", 'GitGutterUndoHunk', 'Undo changes in hunk')
 call quickmenu#append("Clean whitespace", 'clean', 'Clean up whitespace')
 call quickmenu#append("Clean Unicode", "call UnicodeClean()", "Clean Unicode")
 
