@@ -306,6 +306,26 @@ nnoremap <silent> n   nzv:call HLNext(0.4)<cr>
 nnoremap <silent> N   Nzv:call HLNext(0.4)<cr>
 " }}} Map n and N to HLNext() "
 
+" T prefix for tab command {{{ "
+" Kudos: http://vim.wikia.com/wiki/Alternative_tab_navigation
+
+" Close tab
+nnoremap <silent> Tc :tabclose<cr>
+
+" List of tabs
+nnoremap <silent> Tl :Unite tab<cr>
+
+" Close tab
+nnoremap <silent> Tn :tabnew<cr>
+
+" Last tab
+" Kudos: https://superuser.com/a/675119/128341
+let g:lasttab = tabpagenr()
+au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <silent> TT :exe "tabn " . g:lasttab<cr>
+
+" }}} T prefix for tab command "
+
 " Use Tab/S-Tab to jump forward/backward in search hits {{{ "
 " Kudos: http://stackoverflow.com/a/40193754/197789
 " The 'zv' opens folds if needed
