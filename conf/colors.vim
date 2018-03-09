@@ -140,6 +140,7 @@ hi link shTodo VimTodo
 hi link zshTodo VimTodo
 hi link luaTodo VimTodo
 hi link pythonTodo VimTodo
+hi link confTodo VimTodo
 " }}}
 "----------------------------------------------------------------------
 " Unite {{{ "
