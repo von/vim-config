@@ -4,6 +4,9 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
+" Automatically change to directory of file in current buffer
+set autochdir
+
 " /bin/sh is an alias for bash
 let g:is_bash=1
 
