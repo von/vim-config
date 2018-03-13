@@ -26,7 +26,7 @@ endif
 "----------------------------------------------------------------------
 " load conf/*.vim {{{ "
 
-" Don't usr conf/**/*.vim here as we don't want to load conf/after/*.vim
+" Don't use conf/**/*.vim here as we don't want to load conf/after/*.vim
 " yet.
 runtime! conf/*.vim
 
