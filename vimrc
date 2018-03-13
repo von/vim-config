@@ -1,7 +1,7 @@
 " vimrc (use double quotes for comments)
 " Kudos: http://vim.wikia.com/wiki/Example_vimrc
 "
-" Loads conf/*.vim
+" Loads conf/*.vim and after that neobundle.vim
 "
 " Also see the ftplugins/ directory for filetype-specific stuff:
 " http://vim.wikia.com/wiki/keep_your_vimrc_file_clean
@@ -34,3 +34,11 @@ runtime! conf/*.vim
 " after plugin/*.vim
 
 " }}} load conf/*.vim
+"----------------------------------------------------------------------
+" Load NeoBundles {{{ "
+
+" Do this after conf/*.vim but before conf/after/*.vim since some
+" configuration needs to be run before and some after.
+runtime! neobundle.vim
+
+" }}} Load NeoBundles "
