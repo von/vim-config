@@ -22,6 +22,14 @@ call quickmenu#append("Hard Word Wrap", "call WrapHard()", "Hard word wrapping")
 call quickmenu#append("Word Wrap Off", "call WrapOff()", "Hard word wrapping")
 call quickmenu#append("Toggle Highlight of Non-ASCII", "call ToggleHighlightNonascii()", "Highlight Non-ASCII")
 
+" Projects
+call quickmenu#append("# Projects", '')
+func! AddProject(projectname, projectconf)
+  call quickmenu#append(a:projectname, "call ProjectTabNew(\"" . a:projectname . "\")", "Launch project " . a:projectname)
+endfunc
+" Make copy() as map() changes in place
+call map(copy(g:projects), function('AddProject'))
+
 " Debugging
 call quickmenu#append("# Debugging", '')
 call quickmenu#append("Debug highlight group", "call SynStack()", "Debug highlight group under cursor")
