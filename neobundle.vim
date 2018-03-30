@@ -75,9 +75,6 @@ NeoBundle 'gcmt/taboo.vim'
 " Allow for easy rendering of markdown
 NeoBundle 'JamshedVesuna/vim-markdown-preview'
 
-" Only allow certain things in modelines
-NeoBundle 'ciaranm/securemodelines'
-
 " Allows definiton of arbitrary objects (prereusite of following)
 NeoBundle 'kana/vim-textobj-user'
 " vim-textobj-entire adds text object of 'ae' for entire buffer
@@ -87,6 +84,8 @@ NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'kana/vim-textobj-line'
 
 " Basically a Python IDE
+" Note this resets the filetypedetect augroup so some other bundles need
+" to be after this plugin, namely securemodelines
 NeoBundle 'klen/python-mode'
 
 " Enable faster folding
@@ -164,6 +163,12 @@ NeoBundle 'vim-scripts/bats.vim'
 
 " For :Scratch and Sscratch
 NeoBundle 'vim-scripts/scratch.vim'
+
+" Only allow certain things in modelines
+" Note this needs to be loaded after python-mode since that seems
+" to reset the filetypedetect autogroup which causes ftplugin to
+" run after modeline processing.
+NeoBundle 'ciaranm/securemodelines'
 
 call neobundle#end()
 
