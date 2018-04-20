@@ -9,4 +9,11 @@ function! SInit(sessionName)
   else
     exec ":SSave " . a:sessionName
   endif
+
+  " Save session every time we create or delete a buffer
+  augroup SInitRegularSave
+    autocmd!
+    exec "autocmd BufAdd * :SSave! " . a:sessionName
+    exec "autocmd BufDelete * :SSave! " . a:sessionName
+  augroup END
 endfunction
