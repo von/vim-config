@@ -13,10 +13,11 @@ let g:is_bash=1
 " Better command-line completion
 set wildmenu
 
-" Allow use of modeline.
-" Note we use securemodelines bundle to limit what can be used in modeline
-set modeline
-set modelines=5
+" Disable modeline and let securemodelines bundle take care of this
+set nomodeline
+
+" Turn on verbose output from securemodelines
+let g:secure_modelines_verbose=1
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
