@@ -6,18 +6,17 @@ import string
 
 def gen_password(length, remove_lookalike=True):
     """Generate a password of given length."""
-    alphabet = string.letters + string.digits + "!$#*&@=+"
+    alphabet = string.ascii_letters + string.digits + "!$#*&@=+"
     if remove_lookalike:
-        alphabet = alphabet.translate(
-                    string.maketrans('', ''),  # For pre-2.6 compatability
-                    '0O1l')  # Characters to delete
-    s = "".join([random.choice(alphabet) for i in xrange(length)])
+        lookalikes = "0O1l"
+        alphabet = alphabet.translate(str.maketrans('', '', lookalikes))
+    s = "".join([random.choice(alphabet) for i in range(length)])
     return s
 
 def gen_pin(length):
     """Generate a numerical pin of given length."""
     alphabet = string.digits
-    s = "".join([random.choice(alphabet) for i in xrange(length)])
+    s = "".join([random.choice(alphabet) for i in range(length)])
     return s
 
 def gen_phrase(length):
@@ -28,7 +27,7 @@ def gen_phrase(length):
         words = f.readlines()
     except IOError as e:
       return str(e)
-    s = " ".join([random.choice(words).strip() for i in xrange(length)])
+    s = " ".join([random.choice(words).strip() for i in range(length)])
     return s
 
 endglobal
