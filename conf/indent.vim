@@ -1,7 +1,7 @@
 " Configuration related to indentation
 
-" Note that we run 'filetype indent on' in after/indent.vim since some
-" plugin turns it off.
+" Note hack related to this in ../neobundle.vim
+filetype indent on
 
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
