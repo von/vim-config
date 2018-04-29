@@ -108,6 +108,8 @@ let vim_markdown_preview_hotkey='<leader>mP'
 
 " Save with <leader>w
 :map <leader>w :w<cr>
+" In visual mode, don't save partial file and restore visual selection.
+:vmap <leader>w :<C-U>w<cr>gv
 
 " <leader>W - wrap and whitespace  {{{ "
 
