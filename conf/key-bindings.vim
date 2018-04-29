@@ -238,22 +238,22 @@ noremap  <buffer> <silent> k gk
 noremap  <buffer> <silent> j gj
 " }}} Remap Up/Down to work with soft wrap nicely
 
-" Bindings for NeoComplete/UltiSnips {{{
-
-" This relies on changes in ultisnips.vim
+" Bindings for NeoComplete {{{
 
 " BTW, it is tempting to use escape to cancel Neocomplete menu, but it is part of the
 " sequence for arrow keystrokes, so will not have the desired results.
 
-" Tab either expands NeoComplete if its menu is open or expands a snippet.
-" This allows hitting TAB twice to select and expand a snippet.
-" Kudos: https://github.com/SirVer/ultisnips/issues/376#issuecomment-55326568
-inoremap <expr> <TAB> pumvisible() ? neocomplete#close_popup() : "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>"
+" <Tab> completes NeoComplete popup if Open, otherwise acts normally
+inoremap <expr> <Tab> pumvisible() ? neocomplete#close_popup() : "<Tab>"
 
-" <CR> cancels NeoComplete popup if Open (and inserts a <CR>)
+" <CR> always inserts a <CR>, canceling NeoComplete popup if Open
 inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
 
 " }}}
+
+" Bindings for Ultisnips {{{
+" Uses <S-Tab> and <C-l>. See ultisnips.vim
+" }}} Bindings for Ultisnips
 
 " Insert-mode bindings {{{
 
