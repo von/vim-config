@@ -88,7 +88,7 @@ let vim_markdown_preview_hotkey='<leader>mP'
 :map <leader>Q :qa<cr>
 
 " Redraw with 'R'
-:map <leader>R :redraw!<cr>
+:map <leader>R :GitGutter<cr>:redraw!<cr>
 
 " Open a scratch buffer with 's'
 :map <leader>s :call ToggleScratch()<CR>
