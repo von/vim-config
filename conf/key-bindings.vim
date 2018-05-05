@@ -204,6 +204,8 @@ nnoremap <CR> G
 " Let me use <CR> as normal in quickfix to jump to things
 " Kudos: http://stackoverflow.com/a/11983449/197789
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+" See also ../ftplugin/qf.vim
+
 " }}} Carriage return
 
 " Plus and minus open and close all folds {{{ "
@@ -257,6 +259,13 @@ inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
 " Uses <S-Tab> and <C-l>. See ultisnips.vim
 " }}} Bindings for Ultisnips
 
+" Normal-mode binginds {{{ "
+
+" C-c in normal mode closes quickfix
+nmap <C-C> :cclose<cr>
+
+" }}} Normal-mode binginds "
+
 " Insert-mode bindings {{{
 
 " Make Control-C behave like Escape for exiting insert mode.
@@ -293,6 +302,10 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " }}} Visual-mode bindings "
 
 " Bracket ([,]) bindings {{{ "
+
+" Use vim-qf functions for navigating quickfix
+nmap [q <Plug>(qf_qf_previous)
+nmap ]q <Plug>(qf_qf_next)
 
 " Find previous unicode character
 :map [U ?[^\x00-\x7F]<cr>

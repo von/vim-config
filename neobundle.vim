@@ -109,6 +109,9 @@ NeoBundle 'moll/vim-bbye'
 " Markdown file folding and commands
 NeoBundle 'plasticboy/vim-markdown'
 
+" Quickfix commands
+NeoBundle 'romainl/vim-qf'
+
 " For grep via <leader>g
 NeoBundle 'Shougo/unite.vim'
 
