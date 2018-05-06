@@ -28,8 +28,9 @@ endif
 
 call neobundle#begin(g:pluginInstallDir)
 
-" Hack: For some reason the aboe call seems to reset filetype indent
-filetype indent on
+" Required per https://github.com/Shougo/neobundle.vim
+" For some reason the aboe call seems to reset filetype indent
+filetype plugin indent on
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
