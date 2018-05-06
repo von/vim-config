@@ -79,6 +79,10 @@ NeoBundle 'gcmt/taboo.vim'
 " Allow for easy rendering of markdown
 NeoBundle 'JamshedVesuna/vim-markdown-preview'
 
+" FZF plugin
+set rtp+=/usr/local/opt/fzf
+NeoBundle 'junegunn/fzf.vim'
+
 " Allows definiton of arbitrary objects (prereusite of following)
 NeoBundle 'kana/vim-textobj-user'
 " vim-textobj-entire adds text object of 'ae' for entire buffer
