@@ -7,6 +7,10 @@
 " Syntax highlighting
 syntax on
 
+" Manually set this as it seems to get set to reset
+" when called from vim/tig/vim.
+set encoding=utf-8
+
 " Enable use of the mouse for all modes
 set mouse=a
 
@@ -21,6 +25,7 @@ set clipboard="none"
 set confirm
 
 " Make whitespace visible
+" Requires encoding=utf-8
 set list listchars=tab:⋅⋅,trail:⋅,nbsp:⋅
 
 " Prefix for wrapped lines
