@@ -129,6 +129,11 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 
 " Let me view all my undo information with <leader>u
+if has('python3')
+  " Work with python3.
+  " Kudos: https://bitbucket.org/sjl/gundo.vim/issues/42/about-python3-support
+  let g:gundo_prefer_python3 = 1
+endif
 NeoBundle 'sjl/gundo.vim'
 
 " Let me pop up a menu of commands
