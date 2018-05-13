@@ -184,7 +184,7 @@ NeoBundle 'vim-scripts/scratch.vim'
 " Note this needs to be loaded after python-mode since that seems
 " to reset the filetypedetect autogroup which causes ftplugin to
 " run after modeline processing.
-NeoBundle 'ciaranm/securemodelines'
+NeoBundle 'von-forks/securemodelines'
 
 call neobundle#end()
 
