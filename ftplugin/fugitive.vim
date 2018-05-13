@@ -3,6 +3,3 @@
 " Delete fugitive buffers when leaving them
 " Kudos: http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
 set bufhidden=delete
-
-" Diable saving of views
-autocmd! autoview

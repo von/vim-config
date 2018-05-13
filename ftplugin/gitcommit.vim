@@ -7,11 +7,6 @@
 setlocal nomodeline
 let b:disable_secure_modelines = 1
 
-" Disable saving/loading views for GIT commits
-augroup autoview
-  autocmd!
-augroup End
-
 " Disable backups
 setlocal nobackup
 
