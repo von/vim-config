@@ -5,6 +5,7 @@
 " Kudos: http://www.dreamind.de/cgi-bin/gitweb.cgi?p=configurations.git;a=commitdiff_plain;h=8bfd2c81b8bbcf79dec9771daf7ac2cb57fe12ce
 " XXX This doesn't disable securemodelines
 setlocal nomodeline
+let b:disable_secure_modelines = 1
 
 " Disable saving/loading views for GIT commits
 augroup autoview
