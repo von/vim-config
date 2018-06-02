@@ -22,6 +22,17 @@ call quickmenu#append("Hard Word Wrap", "call WrapHard()", "Hard word wrapping")
 call quickmenu#append("Word Wrap Off", "call WrapOff()", "Hard word wrapping")
 call quickmenu#append("Toggle Highlight of Non-ASCII", "call ToggleHighlightNonascii()", "Highlight Non-ASCII")
 
+" Sessions
+call quickmenu#append("# Sessions", '')
+func! AddSession(index, sessionpath)
+  let l:sessionname = fnamemodify(a:sessionpath, ":t")
+  if l:sessionname ==# "__LAST__"
+    return
+  endif
+  call quickmenu#append(l:sessionname, "SLoad " . l:sessionname, "Load session " . l:sessionname)
+endfunc
+call map(split(globpath(g:startify_session_dir, '*'), '\n'), function('AddSession'))
+
 " Projects
 call quickmenu#append("# Projects", '')
 func! AddProject(projectname, projectconf)
