@@ -311,9 +311,9 @@ nmap [q <Plug>(qf_qf_previous)
 nmap ]q <Plug>(qf_qf_next)
 
 " Find previous unicode character
-:map [U ?[^\x00-\x7F]<cr>
+nmap [U ?[^\x00-\x7F]<cr>
 " Find next unicode character
-:map ]U /[^\x00-\x7F]<cr>
+nmap ]U /[^\x00-\x7F]<cr>
 
 " }}} Bracket ([,]) bindings "
 
