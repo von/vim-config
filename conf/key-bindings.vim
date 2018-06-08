@@ -206,7 +206,10 @@ nnoremap <CR> G
 
 " Let me use <CR> as normal in quickfix to jump to things
 " Kudos: http://stackoverflow.com/a/11983449/197789
-autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+augroup quickfixcr
+  autocmd!
+  autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+augroup END
 " See also ../ftplugin/qf.vim
 
 " }}} Carriage return
@@ -339,7 +342,10 @@ nnoremap <silent> Tn :tabnew<cr>
 " Last tab
 " Kudos: https://superuser.com/a/675119/128341
 let g:lasttab = tabpagenr()
-au TabLeave * let g:lasttab = tabpagenr()
+augroup lasttab
+  autocmd!
+  autocmd TabLeave * let g:lasttab = tabpagenr()
+augroup END
 nnoremap <silent> TT :exe "tabn " . g:lasttab<cr>
 
 " }}} T prefix for tab command "
