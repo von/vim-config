@@ -33,7 +33,7 @@ let mapleader = "\<Space>"
 " Switch to previous buffer
 :map <leader>b :e #<cr>
 
-" Open tab-specific buffer list
+" Open buffer list
 :map <leader>B :Unite -start-insert buffer file<cr>
 
 " Comment/uncomment current line or, if active, region
