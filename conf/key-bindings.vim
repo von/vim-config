@@ -1,6 +1,5 @@
-
 "
-" See also commands.vim
+" See also after/commands.vim
 "
 " To see key mappings and their source, use ':verbose map'
 " Kudos: http://stackoverflow.com/a/7644189/197789
