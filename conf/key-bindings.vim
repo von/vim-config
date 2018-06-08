@@ -93,8 +93,8 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " Open a scratch buffer with 's'
 :map <leader>s :call ToggleScratch()<CR>
 
-" Open startify, probably for Session menu
-:map <leader>S :Startify<cr>
+" Toggle session menu
+:map <leader>S :call SessionMenu()<CR>
 
 " Run tig to do my git stuff
 "   silent turns off request for enter when tig is done, that requires

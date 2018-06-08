@@ -1,5 +1,8 @@
 " Configuration for quickmenu
 
+" Work on default menu
+call quickmenu#current(0)
+
 " clear all the items
 call quickmenu#reset()
 
@@ -22,17 +25,6 @@ call quickmenu#append("Hard Word Wrap", "call WrapHard()", "Hard word wrapping")
 call quickmenu#append("Word Wrap Off", "call WrapOff()", "Hard word wrapping")
 call quickmenu#append("Toggle Highlight of Non-ASCII", "call ToggleHighlightNonascii()", "Highlight Non-ASCII")
 
-" Sessions
-call quickmenu#append("# Sessions", '')
-func! AddSession(index, sessionpath)
-  let l:sessionname = fnamemodify(a:sessionpath, ":t")
-  if l:sessionname ==# "__LAST__"
-    return
-  endif
-  call quickmenu#append(l:sessionname, "SLoad " . l:sessionname, "Load session " . l:sessionname)
-endfunc
-call map(split(globpath(g:startify_session_dir, '*'), '\n'), function('AddSession'))
-
 " Projects
 call quickmenu#append("# Projects", '')
 func! AddProject(projectname, projectconf)
@@ -44,3 +36,28 @@ call map(copy(g:projects), function('AddProject'))
 " Debugging
 call quickmenu#append("# Debugging", '')
 call quickmenu#append("Debug highlight group", "call SynStack()", "Debug highlight group under cursor")
+
+" SessionMenu(): Display menu of Sessions {{{ "
+
+" Internal helper function
+func! s:add_session(index, sessionpath)
+  let l:sessionname = fnamemodify(a:sessionpath, ":t")
+  if l:sessionname ==# "__LAST__"
+    return
+  endif
+  call quickmenu#append(l:sessionname, "SLoad " . l:sessionname, "Load session " . l:sessionname)
+endfunction
+
+" TODO: Right now this regenerates the session menu each time it is invoked.
+"       This certainly isn't necessary if we are closing the menu, but I don't
+"       know how to detect it is open. And if I'm opening the menu, I only
+"       need to regenerate if a session has been created or deleted.
+function! SessionMenu()
+  let l:menu_id = 765   " Arbitrary
+  call quickmenu#current(l:menu_id)
+  call quickmenu#reset()
+  call quickmenu#header("Sessions")
+  call map(split(globpath(g:startify_session_dir, '*'), '\n'), function('s:add_session'))
+  call quickmenu#toggle(l:menu_id)
+endfunction
+" }}} SessionMenu(): Display menu of Sessions "
