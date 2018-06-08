@@ -35,7 +35,7 @@ let mapleader = "\<Space>"
 :map <leader>b :e #<cr>
 
 " Open tab-specific buffer list
-:map <leader>B :Unite -start-insert buffer_tab<cr>
+:map <leader>B :Unite -start-insert buffer file_rec<cr>
 
 " Comment/uncomment current line or, if active, region
 :map <leader>c :Commentary<cr>
