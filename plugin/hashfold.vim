@@ -5,6 +5,14 @@
 " Use '#------+' (hash followed by 6+ dashes) to close all folds
 " Use '#-----' (hash followed by 5 dashes) to close second-level fold
 
+" Call this function to set up Hashfolding: call HashFold
+" Meant to be invoked in a ftplugin file
+function! HashFold()
+  setlocal foldmethod=expr
+  let &l:foldexpr =  'HashFoldExpr()'
+  let &l:foldtext =  'HashFoldText()'
+endfunction
+
 function! HashFoldExpr()
   let thisline = getline(v:lnum)
   if match(thisline, '^#\{7,}') >= 0
