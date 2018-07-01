@@ -142,6 +142,7 @@ hi link luaTodo VimTodo
 hi link luaCommentTodo VimTodo
 hi link pythonTodo VimTodo
 hi link confTodo VimTodo
+hi link tmuxTodo VimTodo
 " }}}
 "----------------------------------------------------------------------
 " Unite {{{ "
