@@ -15,6 +15,8 @@ call quickmenu#append("git blame", 'Gblame', 'Toggle git blame mode')
 call quickmenu#append("git undo hunk", 'GitGutterUndoHunk', 'Undo changes in hunk')
 call quickmenu#append("Clean whitespace", 'call WhitespaceClean()', 'Clean up whitespace')
 call quickmenu#append("Clean Unicode", "call UnicodeClean()", "Clean Unicode")
+call quickmenu#append("Hammerspoon source file", "call HammerspoonSourceCurrentFile()", "Hammerspoon source file", "lua")
+call quickmenu#append("Reload Hammerspoon config", "call HammerspoonReload()", "Reload Hammerspoon config", "lua")
 
 " Options
 call quickmenu#append("# Options", '')
