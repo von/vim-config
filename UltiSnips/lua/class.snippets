@@ -20,6 +20,7 @@ function $1.new(init)
   return self
 end
 
+-- Examples methods
 function $1.set_value(self, newval)
   self.value = newval
 end
@@ -27,4 +28,7 @@ end
 function $1.get_value(self)
   return self.value
 end
+
+-- If module, return class definition
+return $1
 endsnippet
