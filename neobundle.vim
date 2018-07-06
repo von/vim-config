@@ -56,6 +56,9 @@ NeoBundle 'Shougo/vimproc', {
 " Show git changes on left
 NeoBundle 'airblade/vim-gitgutter'
 
+" Set working directory to project roo
+NeoBundle 'airblade/vim-rooter'
+
 " Fancy statusline
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
