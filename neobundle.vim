@@ -164,6 +164,9 @@ NeoBundle 'mhinz/vim-startify'
 " Allow toggling full screen windows
 NeoBundle 'regedarek/ZoomWin'
 
+" Better indentation for lua
+NeoBundle 'tbastos/vim-lua'
+
 " Key bindings with '[' and ']' prefixes
 NeoBundle 'tpope/vim-unimpaired'
 
