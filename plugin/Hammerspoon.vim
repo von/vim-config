@@ -4,8 +4,7 @@
 
 " Reload my Hammerspoon configuration
 function! HammerspoonReload()
-  silent execute "!hs -c 'hs.reload()'"
-  execute "redraw!"
+  AsyncRun hs -c 'hs.reload()'
   echo "Reloading Hammerspoon configuration"
 endfunction
 
@@ -16,7 +15,6 @@ endfunction
 
 " Have Hammerspoon source given file
 function! HammerspoonSourceFile(path)
-  silent execute "!hs " . a:path
-  execute "redraw!"
+  exec ":AsyncRun hs " . a:path
   echo "Hammerspoon sourcing " . a:path
 endfunction
