@@ -139,6 +139,9 @@ if has('python3')
 endif
 NeoBundle 'sjl/gundo.vim'
 
+" Let me run async commands in VIM > 8
+NeoBundle 'skywind3000/asyncrun.vim'
+
 " Let me pop up a menu of commands
 NeoBundle 'skywind3000/quickmenu.vim'
 
