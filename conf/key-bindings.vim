@@ -99,6 +99,7 @@ let vim_markdown_preview_hotkey='<leader>mP'
 "   silent turns off request for enter when tig is done, that requires
 "   refresh supplied by redraw.
 "   Call to GitGutter refreshes its symbols.
+" XXX: The GitGutter call here doesn't seem to be working
 :map <leader>t :silent !tig status<cr>:GitGutter<cr>:redraw!<cr>
 
 " Toggle ctags
@@ -264,7 +265,7 @@ inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
 " Uses <S-Tab> and <C-l>. See ultisnips.vim
 " }}} Bindings for Ultisnips
 
-" Normal-mode binginds {{{ "
+" Normal-mode bindings {{{ "
 
 " C-c in normal mode closes quickfix
 nmap <C-C> :cclose<cr>
