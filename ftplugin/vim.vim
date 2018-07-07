@@ -4,4 +4,4 @@
 setlocal foldmethod=marker
 
 " Source current file with 'ms'
-:map <leader>ms :source %<cr>:redraw!<cr>
+:map <leader>ms :source %<cr>:redraw!<cr>:echo "Sourced"<cr>
