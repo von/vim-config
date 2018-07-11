@@ -5,7 +5,8 @@
 set nocompatible
 
 " Automatically change to directory of file in current buffer
-set autochdir
+" This is overridden by vim-rooter in ../neobundle.vim
+" set autochdir
 
 " /bin/sh is an alias for bash
 let g:is_bash=1
