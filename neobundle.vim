@@ -58,6 +58,7 @@ NeoBundle 'airblade/vim-gitgutter'
 
 " Set working directory to project roo
 NeoBundle 'airblade/vim-rooter'
+let g:rooter_silent_chdir = 1
 
 " Fancy statusline
 NeoBundle 'vim-airline/vim-airline'
