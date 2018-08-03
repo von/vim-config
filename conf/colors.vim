@@ -144,6 +144,7 @@ hi link pythonTodo VimTodo
 hi link confTodo VimTodo
 hi link tmuxTodo VimTodo
 hi link perlTodo VimTodo
+hi link javaScriptCommentTodo VimTodo
 " }}}
 "----------------------------------------------------------------------
 " Unite {{{ "
