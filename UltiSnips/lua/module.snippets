@@ -1,5 +1,10 @@
 snippet module "Module file template" b
+-- ${1:Module} module
 module = {}
+
+-- Set up logger for module
+local log = hs.logger.new("$1")
+module.log = log
 
 -- Module contents here
 -- e.g. module.foo = function() hs.alert("Hello world") end

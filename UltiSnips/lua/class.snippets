@@ -13,8 +13,13 @@ setmetatable($1, {
   end,
 })
 
+-- Set up logger
+local log = hs.logger.new("$1")
+$1.log = log
+
 -- syntax equivalent to "$1.new = function..."
 function $1.new(init)
+  log.d("new() called")
   local self = setmetatable({}, $1)
   self.value = init
   return self
