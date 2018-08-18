@@ -9,7 +9,7 @@ def gen_password(length, remove_lookalike=True):
     alphabet = string.ascii_letters + string.digits + "!$#*&@=+"
     if remove_lookalike:
         lookalikes = "0O1l"
-        alphabet = alphabet.translate(str.maketrans('', '', lookalikes))
+        alphabet = alphabet.translate(None, lookalikes)
     s = "".join([random.choice(alphabet) for i in range(length)])
     return s
 
