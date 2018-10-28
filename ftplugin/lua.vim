@@ -1,5 +1,4 @@
-" Indent works OK, can't get syntax to work, so my preference...
-set foldmethod=marker
+set foldmethod=syntax
 
 " <leader>ms causes Hammerspoon to source current file
 nmap <leader>ms :call HammerspoonSourceCurrentFile()<cr>
