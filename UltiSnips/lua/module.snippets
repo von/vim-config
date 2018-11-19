@@ -2,8 +2,18 @@ snippet module "Module file template" b
 -- ${1:Module} module
 local module = {}
 
+module.debug = function(enable)
+  if enable then
+    log.setLogLevel('debug')
+    log.d("Debugging enabled")
+  else
+    log.d("Disabling debugging")
+    log.setLogLevel('info')
+  end
+end
+
 -- Set up logger for module
-local log = hs.logger.new("$1")
+local log = hs.logger.new("$1", "info")
 module.log = log
 
 -- Module contents here
