@@ -1,0 +1,102 @@
+snippet spoon "Spoon init.lua file template" b
+-- ${1:Module} spoon
+-- Spoon names should use TitleCase
+-- https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md#how-do-i-create-a-spoon
+spoon = {}
+
+-- Set up logger for module
+local log = hs.logger.new("$1")
+spoon.log = log
+
+-- Metadata
+spoon.name="$1"
+spoon.version="0.1"
+spoon.author=""
+-- https://opensource.org/licenses/Apache-2.0
+spoon.license="Apache-2.0"
+spoon.homepage=""
+
+-- Internal function used to find our location, so we know where to load files from
+local function script_path()
+    local str = debug.getinfo(2, "S").source:sub(2)
+    return str:match("(.*/)")
+end
+spoon.path = script_path()
+
+-- Methods
+-- Spoon methods/variables/constants/etc. should use camelCase
+
+--- $1:init(self)
+--- Method
+--- Initializes a $1
+--- When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua
+--- from the relevant Spoon.
+--- Do generally not perform any work, map any hotkeys, start any timers/watchers/etc.
+--- in the main scope of your init.lua. Instead, it should simply prepare an object
+--- with methods to be used later, then return the object.
+---
+--- Parameters:
+---  * None
+---
+--- Returns:
+---  * $1 object
+
+module.init = function(self)
+  -- Code here
+  return self
+end
+
+--start() and stop()
+--If your Spoon provides some kind of background activity, e.g. timers, watchers,
+--spotlight searches, etc. you should generally activate them in a :start()
+--method, and de-activate them in a :stop() method
+
+--- $1:start(self)
+--- Method
+--- Start background activity.
+---
+--- Parameters:
+---  * param - Some parameter
+---
+--- Returns:
+---  * $1 object
+module.start = function(self)
+  -- Code here
+  return self
+end
+
+--- $1:stop(self)
+--- Method
+--- Stop background activity.
+---
+--- Parameters:
+---  * param - Some parameter
+---
+--- Returns:
+---  * $1 object
+module.stop = function(self)
+  -- Code here
+  return self
+end
+
+--- $1:bindHotKey(self, table)
+--- Method
+--- If your Spoon provides actions that a user can map to hotkeys, you should
+--- expose a :bindHotKeys() method. The method should accept a single parameter,
+--- which is a table. The keys of the table should be strings that describe the
+--- action performed by the hotkeys, and the values of the table should be tables
+--- containing modifiers and keynames/keycodes.
+---
+--- Parameters:
+---  * table - Table of action to key mappings
+---
+--- Returns:
+---  * $1 object
+
+module.bindHotKeys = function(self, table)
+  -- Code here
+  return self
+end
+
+return spoon
+endsnippet
