@@ -2,6 +2,10 @@ snippet module "Module file template" b
 -- ${1:Module} module
 local module = {}
 
+-- Set up logger for module
+local log = hs.logger.new("$1", "info")
+module.log = log
+
 module.debug = function(enable)
   if enable then
     log.setLogLevel('debug')
@@ -11,10 +15,6 @@ module.debug = function(enable)
     log.setLogLevel('info')
   end
 end
-
--- Set up logger for module
-local log = hs.logger.new("$1", "info")
-module.log = log
 
 -- Module contents here
 -- e.g. module.foo = function() hs.alert("Hello world") end
