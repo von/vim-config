@@ -146,6 +146,11 @@ hi link tmuxTodo VimTodo
 hi link perlTodo VimTodo
 hi link javaScriptCommentTodo VimTodo
 " }}}
+""----------------------------------------------------------------------
+" tmux {{{ "
+" Make 'colour236' visible
+hi clear tmuxColour236
+" }}} Unite "
 "----------------------------------------------------------------------
 " Unite {{{ "
 hi clear uniteSource__GrepPattern
