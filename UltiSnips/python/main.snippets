@@ -21,9 +21,8 @@ def make_parser():
                                  action="store_true", default=False,
                                  help="run quietly")
     parser.add_argument("--version", action="version", version="%(prog)s 1.0")
-    parser.add_argument('args', metavar='args', type=str, nargs='+',
-                        help='some extra arguments' +
-                        ' (use "error" to trigger an error)')
+    parser.add_argument("args", metavar="args", type=str, nargs="+",
+                        help="some extra arguments")
     return parser
 
 
