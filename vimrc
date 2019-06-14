@@ -46,5 +46,5 @@ runtime! neobundle.vim
 " Load man support {{{ "
 " Enable the :Man <topic> command
 " Kudos: http://vim.wikia.com/wiki/View_man_pages_in_Vim
-runtime ftplugin/man.vim
+runtime! ftplugin/man.vim
 " }}} Load man support "
