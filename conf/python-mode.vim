@@ -1,5 +1,16 @@
 " Configuration related to python-mode plugin
 
+" Workaround for 'imp module is deprecated {{{ "
+
+" Per https://github.com/vim/vim/issues/3117
+" With some significant modifications to get it to work for me
+" Workaround for the following warning:
+" DeprecationWarning: the imp module is deprecated in favour of importlib
+if has('python3')
+  silent! python3 import imp
+endif
+" }}} Workaround for 'imp module is deprecated "
+
 " Turn on default options
 let g:pymode_options = 1
 
