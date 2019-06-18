@@ -70,7 +70,8 @@ NeoBundle 'danro/rename.vim'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 
 " Allow one-keystroke navigation between vi panes and tmux panes
-" Use Shift-<arrow keys> to switch between panes/vim windows
+" Use Control-<arrow keys> to switch between panes/vim windows
+" My tmux.conf maps S-<arrow keys> to C-<arrow keys> in vim
 NeoBundle 'christoomey/vim-tmux-navigator'
 
 " Allow me to rename tabs
