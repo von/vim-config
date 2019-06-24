@@ -164,6 +164,10 @@ hi clear htmlItalic
 hi htmlItalic ctermfg=grey
 " }}} Unite "
 "----------------------------------------------------------------------
+" vim {{{
+hi vimHiCtermError cterm=underline ctermfg=red
+" }}}}
+"----------------------------------------------------------------------
 " SynStack() {{{ "
 " Kudos: https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
 function! SynStack()
