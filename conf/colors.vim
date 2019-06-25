@@ -166,6 +166,7 @@ hi htmlItalic ctermfg=grey
 "----------------------------------------------------------------------
 " vim {{{
 hi vimHiCtermError cterm=underline ctermfg=red
+hi vimUserAttrbError cterm=underline ctermfg=red
 " }}}}
 "----------------------------------------------------------------------
 " SynStack() {{{ "
