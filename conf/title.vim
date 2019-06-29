@@ -5,11 +5,15 @@
 " Turn on setting the title.
 set title
 
-" The following causes vim to refresh the title each time we change buffers.
-" Otherwise it will only set the title once at startup.
-augroup RefreshTitle
-  autocmd!
-  " The concatenation of the colon is a hack to prevent vim from
-  " interpreting the string as a modeline.
-  autocmd BufEnter * let &titlestring = "vim" . ":" . expand("%:t")
-augroup END
+" Set title
+" My tmux configuration picks this up and uses it as the pane title.
+" Values:
+"   %F   Full pathname
+"   %M   Modified flag
+" The concatenation of the colon is a hack to prevent vim from
+" interpreting the string as a modeline. Need to use let to do
+" string catenation.
+let &titlestring="vim" . ":%F%(\ %M%)"
+
+" Use 99% of available width for title
+let &titlelen=99
