@@ -5,7 +5,9 @@
 set nocompatible
 
 " Automatically change to directory of file in current buffer
-set autochdir
+" This is disabled because I found it didn't work reliably for me and I use
+" ../plugin/AutoCD.vim instead.
+set noautochdir
 
 " /bin/sh is an alias for bash
 let g:is_bash=1
