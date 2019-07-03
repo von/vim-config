@@ -244,10 +244,10 @@ nnoremap <silent> $ :call ToggleMovement('g$', '$')<CR>
 " }}} Remap 0 and $ to for SoftWrap
 
 " Remap Up/Down to work with soft wrap nicely {{{
-noremap  <buffer> <silent> <Up>   gk
-noremap  <buffer> <silent> <Down> gj
-noremap  <buffer> <silent> k gk
-noremap  <buffer> <silent> j gj
+noremap  <Up>   gk
+noremap  <Down> gj
+noremap  k gk
+noremap  j gj
 " }}} Remap Up/Down to work with soft wrap nicely
 
 " Bindings for NeoComplete {{{
