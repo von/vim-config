@@ -15,3 +15,9 @@ setlocal noundofile
 
 " Turn off automatic reformat when text is inserted or deleted
 setlocal formatoptions-=a
+
+" Turn off wordwrapper
+setlocal nowrap
+setlocal textwidth=0
+" Don't wrap existing long lines when inserting text.
+setlocal formatoptions+=l
