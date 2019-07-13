@@ -21,3 +21,5 @@ setlocal nowrap
 setlocal textwidth=0
 " Don't wrap existing long lines when inserting text.
 setlocal formatoptions+=l
+setlocal formatoptions-=c
+setlocal formatoptions-=t
