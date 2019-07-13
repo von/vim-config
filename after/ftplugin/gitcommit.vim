@@ -23,3 +23,6 @@ setlocal textwidth=0
 setlocal formatoptions+=l
 setlocal formatoptions-=c
 setlocal formatoptions-=t
+
+" Don't show whitespace errors in statusline
+silent! call airline#extensions#whitespace#disable()
