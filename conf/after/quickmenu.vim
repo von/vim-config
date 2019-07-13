@@ -9,12 +9,14 @@ call quickmenu#reset()
 " enable cursorline (L) and cmdline help (H)
 let g:quickmenu_options = "HL"
 
-" Git
+" Utilities
 call quickmenu#append("# Utilities", '')
 call quickmenu#append("git blame", 'Gblame', 'Toggle git blame mode')
 call quickmenu#append("git undo hunk", 'GitGutterUndoHunk', 'Undo changes in hunk')
 call quickmenu#append("Clean whitespace", 'call WhitespaceClean()', 'Clean up whitespace')
 call quickmenu#append("Clean Unicode", "call UnicodeClean()", "Clean Unicode")
+call quickmenu#append("Wrap paragraph", "normal {gq}", "Wrap paragraph")
+call quickmenu#append("Wrap file", "normal gqG", "Wrap file")
 call quickmenu#append("Hammerspoon source file", "call HammerspoonSourceCurrentFile()", "Hammerspoon source file", "lua")
 call quickmenu#append("Reload Hammerspoon config", "call HammerspoonReload()", "Reload Hammerspoon config", "lua")
 
