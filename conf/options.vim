@@ -1,5 +1,9 @@
 " Options
 
+" Time after keystroke to write swap file. Set this to be low so GitGutter
+" plugin updates quickly.
+set updatetime=100
+
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
