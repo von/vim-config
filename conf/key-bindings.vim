@@ -311,6 +311,10 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " Bracket ([,]) bindings {{{ "
 
+" Bracket-g to jump between GitGutter hunks
+nmap ]g <Plug>GitGutterNextHunk
+nmap [g <Plug>GitGutterPrevHunk
+
 " Use vim-qf functions for navigating quickfix
 nmap [q <Plug>(qf_qf_previous)
 nmap ]q <Plug>(qf_qf_next)
