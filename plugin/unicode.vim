@@ -13,6 +13,8 @@ function! UnicodeClean()
   call Preserve(":%s/\\%u201C/\"/ge")
   " Right double quote(”) to neutral quote(")
   call Preserve(":%s/\\%u201D/\"/ge")
+  " Some sort of funky space
+  call Preserve(":%s/ / /ge")
 endfunction
 
 " Highlight non-ascii {{{
