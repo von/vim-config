@@ -18,6 +18,8 @@ endfunction
 " Highlight non-ascii {{{
 " Kudos https://stackoverflow.com/a/27690622/197789
 
+let g:is_non_ascii_on = 0
+
 function! HighlightNonAsciiOff()
   echom "Setting non-ascii highlight off"
   highlight nonascii none
