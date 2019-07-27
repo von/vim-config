@@ -17,8 +17,13 @@ let g:buffergator_suppress_keymaps=1
 
 " }}} Disable automatic keybinds of bundles "
 
+" Multi-character bindings:
+"  <leader> (space)   Used for navigation and UI manipulation
+"  <comma>            Used to change buffer contents
+"  <backslash>        Used to set options
+
 " Leader bindings {{{ "
-" My strategy is to use <leader> for commonly-used one-stroke commands.
+" Navigation and UI manipulation.
 
 " Use space as leader
 " Kudos: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
@@ -35,12 +40,6 @@ let mapleader = "\<Space>"
 
 " Open buffer list
 :map <leader>B :Unite -start-insert buffer file<cr>
-
-" Comment/uncomment current line or, if active, region
-:map <leader>c :Commentary<cr>
-
-" Uncomment current and adjacent lines
-:map <leader>C gcu
 
 " Toggle fold open/close
 :map <leader>f za
@@ -66,9 +65,6 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " <leader>M toggle Quickmenu
 :map <leader>M :call quickmenu#toggle(0)<cr>
 
-" <leader>N toggles NeoComplete
-:map <leader>N :NeoCompleteToggle<CR>
-
 " Open file explorer
 :map <leader>o :EditVifm<CR>
 
@@ -76,9 +72,6 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " ProjectDir is the top-level version control directory
 " (e.g. where .git/ is)
 :nmap <leader>O :UniteWithProjectDir -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
-
-" Paste from system pastebuffer
-:map <leader>p "+p
 
 " Close buffer without exiting (uses moll/vim-bbye)
 :map <leader>q :Bdelete<cr>
@@ -107,50 +100,12 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " Toggle ctags
 :map <leader>T :TagbarToggle<cr>
 
-:map <leader>u :GundoToggle<cr>
-
 :map <leader>v :silent !vifm<cr>:redraw!<cr>
 
 " Save with <leader>w
 :map <leader>w :w<cr>
 " In visual mode, don't save partial file and restore visual selection.
 :vmap <leader>w :<C-U>w<cr>gv
-
-" <leader>W - wrap and whitespace  {{{ "
-
-" Turn on soft wrap
-:map <leader>W :call WrapSoft()<cr>
-
-" Re-wrap whole file
-:map <leader>Wa gqG
-
-" Clean up whitespace with <leader>W
-:map <leader>Wc :clean<cr>
-
-" Turn on hard wrap
-:map <leader>Wh :call WrapHard()<cr>
-
-" Turn off word wrapping
-:map <leader>Wo :call WrapOff()<cr>
-
-" Re-wrap paragraph
-:map <leader>Wp {gq}
-
-" Turn on soft wrap
-:map <leader>Ws :call WrapSoft()<cr>
-
-" }}} <leader>W - wrap and whitespace  "
-
-" Yank line to system pastebuffer
-" Note yy yanks line including carraige return which will screw up
-" passwords! 'g_' is like '$' but without newline.
-" Kudos: http://stackoverflow.com/a/20165747/197789
-:map <leader>y ^vg_"+y
-" In visual mode, yank block
-:vnoremap <leader>y "+y
-
-" Yank file to system pastebuffer
-:map <leader>Y :%y+<cr>
 
 " Close all folds with <leader>z
 :map <leader>z zM
@@ -190,6 +145,62 @@ nnoremap <silent> <Leader>> 83<C-W><Bar>
 
 " }}} Window manipulation
 " }}} Leader bindings
+
+" Comma-bindings {{{ "
+" Used to change buffer contents
+
+" Comment/uncomment current line or, if active, region
+:map ,c :Commentary<cr>
+
+" Uncomment current and adjacent lines
+:map ,C gcu
+
+" Re-wrap paragraph
+:map ,f {gq}
+
+" Re-wrap whole file
+:map ,F gqG
+
+" Paste from system pastebuffer
+:map ,p "+p
+
+" Clean up whitespace
+:map ,S :clean<cr>
+
+:map ,u :GundoToggle<cr>
+
+" Yank line to system pastebuffer
+" Note yy yanks line including carraige return which will screw up
+" passwords! 'g_' is like '$' but without newline.
+" Kudos: http://stackoverflow.com/a/20165747/197789
+:map ,y ^vg_"+y
+" In visual mode, yank block
+:vnoremap ,y "+y
+
+" Yank file to system pastebuffer
+:map ,Y :%y+<cr>
+
+" }}} Comma-bindings "
+
+" Backslash bindings {{{ "
+" Used to set options
+
+" <leader>N toggles NeoComplete
+:map \N :NeoCompleteToggle<CR>
+
+" Turn on soft wrap
+:map \W :call WrapSoft()<cr>
+
+" Turn on hard wrap
+:map \Wh :call WrapHard()<cr>
+
+" Turn off word wrapping
+:map \Wo :call WrapOff()<cr>
+
+" Turn on soft wrap
+:map \Ws :call WrapSoft()<cr>
+
+" }}} Backslash bindings "
 
 " Control characters {{{ "
 
