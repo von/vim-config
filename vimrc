@@ -26,9 +26,13 @@ endif
 "----------------------------------------------------------------------
 " load conf/*.vim {{{ "
 
+" Use 'source' instead of 'runtime' as the latter loads all matching files
+" in 'runtimepath'
 " Don't use conf/**/*.vim here as we don't want to load conf/after/*.vim
 " yet.
-runtime! conf/*.vim
+for f in split(glob('~/.vim/conf/*.vim'), '\n')
+  exe 'source' f
+endfor
 
 " Note that after/plugin/LoadAfterConf.vim will load conf/after/*.vim
 " after plugin/*.vim
@@ -39,7 +43,7 @@ runtime! conf/*.vim
 
 " Do this after conf/*.vim but before conf/after/*.vim since some
 " configuration needs to be run before and some after.
-runtime! neobundle.vim
+source ~/.vim/neobundle.vim
 
 " }}} Load NeoBundles "
 "----------------------------------------------------------------------
