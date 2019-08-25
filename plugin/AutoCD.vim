@@ -4,5 +4,5 @@
 
 augroup AutoCD
   autocmd!
-  autocmd BufEnter * silent lcd %:p:h
+  autocmd BufEnter * if &buftype != 'terminal' | silent lcd %:p:h | endif
 augroup END
