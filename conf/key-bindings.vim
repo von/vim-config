@@ -320,6 +320,18 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " }}} Visual-mode bindings "
 
+" Terminal-Job bindings {{{ "
+
+" <C-W>n: Change to Terminal-Normal mode
+"         Documentation says this is the default, but that's not my experience
+tmap <C-W>n <C-\><C-N>
+
+" <C-W><C-Z>: Toggle zoom
+" XXX a running curses application (e.g. tig) won't resize
+tmap <C-W><C-Z> <C-W>:silent call ZoomWin#ZoomWin()<CR>
+
+" }}} Terminal-Job bindings "
+
 " Bracket ([,]) bindings {{{ "
 
 " Bracket-g to jump between GitGutter hunks
