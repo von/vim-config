@@ -8,6 +8,9 @@
 " Prevents dark fonts
 set background=dark
 
+" Don't use gui colors (this is the default)
+set notermguicolors
+
 "----------------------------------------------------------------------
 " Set CursorLine based on insert mode {{{ "
 " Kudos: http://vim.wikia.com/wiki/Change_statusline_color_to_show_insert_or_normal_mode
