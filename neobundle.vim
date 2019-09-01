@@ -149,6 +149,10 @@ NeoBundle 'tpope/vim-surround'
 " Allow use of 'v' to expand region, 'V' to shrink
 NeoBundle 'terryma/vim-expand-region'
 
+" So Focus autocmds work right. Important for GitGutter
+" Note: this requires 'set -g focus-events on' in tmux.conf
+NeoBundle 'tmux-plugins/vim-tmux-focus-events'
+
 " Allow for use of {x,y} in abbrevIation and substitutions
 " Plus: crc for camelCase, crm for MixedCase, and crs for snake_case
 NeoBundle 'tpope/vim-abolish'
