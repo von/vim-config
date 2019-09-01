@@ -4,6 +4,9 @@ setlocal spell
 " Turn on wordwrap
 setlocal textwidth=79
 
+" Color column 80
+setlocal colorcolumn=80
+
 " Break at characters in 'breakat' (word boundaries)
 set linebreak
 

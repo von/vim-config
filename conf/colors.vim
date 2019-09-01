@@ -89,16 +89,6 @@ highlight clear SignColumn
 " For colorcolumn on column 80 (DarkGoldenRod)
 highlight ColorColumn ctermbg=136
 
-" Display an indicator in the 80th column (only when line reaches it)
-" Kudos: https://www.youtube.com/watch?v=aHm36-na4-4
-augroup SetColorCoumn
-  au!
-  " For inital Vim window...
-  au VimEnter * call matchadd('ColorColumn', '\%80v', 100)
-  " ...and each subsequent window.
-  au WinNew * call matchadd('ColorColumn', '\%80v', 100)
-augroup END
-
 " }}} SignColumn
 "----------------------------------------------------------------------
 " Folds {{{ "
