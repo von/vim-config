@@ -56,11 +56,6 @@ NeoBundle 'Shougo/vimproc', {
 " Show git changes on left
 NeoBundle 'airblade/vim-gitgutter'
 
-" Dim windows without focus
-NeoBundle 'blueyed/vim-diminactive'
-" Dim based on focus
-let g:diminactive_enable_focus = 1
-
 " Fancy statusline
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
