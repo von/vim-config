@@ -86,8 +86,9 @@ highlight clear SignColumn
 "----------------------------------------------------------------------
 " ColorColumn {{{
 
-" For colorcolumn on column 80 (DarkGoldenRod)
-highlight ColorColumn ctermbg=136
+" For colorcolumn on column 80 (Grey matching cursorline)
+" Also used for dimmed screens by blueyed/vim-diminactive
+highlight ColorColumn ctermbg=236
 
 " }}} SignColumn
 "----------------------------------------------------------------------
