@@ -9,10 +9,16 @@ call quickmenu#reset()
 " enable cursorline (L) and cmdline help (H)
 let g:quickmenu_options = "HL"
 
-" Utilities
-call quickmenu#append("# Utilities", '')
+" Git
+call quickmenu#append("# Git", '')
 call quickmenu#append("git blame", 'Gblame', 'Toggle git blame mode')
 call quickmenu#append("git undo hunk", 'GitGutterUndoHunk', 'Undo changes in hunk')
+call quickmenu#append("git stage hunk", 'GitGutterStageHunk', 'Stage changes in hunk')
+call quickmenu#append("git commit", 'Gcommit', 'Commit staged changes')
+call quickmenu#append("git amend", 'Gcommit --amend', 'Amend staged changes')
+
+" Utilities
+call quickmenu#append("# Utilities", '')
 call quickmenu#append("Clean whitespace", 'call WhitespaceClean()', 'Clean up whitespace')
 call quickmenu#append("Clean Unicode", "call UnicodeClean()", "Clean Unicode")
 call quickmenu#append("Wrap paragraph", "normal {gq}", "Wrap paragraph")
