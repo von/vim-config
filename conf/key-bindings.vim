@@ -48,8 +48,11 @@ let mapleader = "\<Space>"
 " Kudos: https://stackoverflow.com/a/18805662/197789
 :map <leader>F :g//foldopen<CR>
 
-" <leader>g is grep via unite
-nnoremap <silent> <leader>g :Unite grep:.<cr>
+" <leader>g invokes Gstatus
+nnoremap <leader>g :Gstatus<cr>
+
+" <leader>G is grep via unite
+nnoremap <silent> <leader>G :Unite grep:.<cr>
 
 " <leader>h is used by git-gutter
 
