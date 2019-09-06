@@ -393,6 +393,13 @@ cnoremap <expr> <Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>zv/<C-
 cnoremap <expr> <S-Tab> getcmdtype() == "/" \|\| getcmdtype() == "?" ? "<CR>zv?<C-r>/" : "<S-Tab>"
 " }}} Use Tab/S-Tab to jump forward/backward in search hits "
 
+" Fix broken gx {{{
+" See https://github.com/vim/vim/issues/4738
+" Kudos: https://github.com/vim/vim/issues/4738#issuecomment-521506447
+nnoremap <silent> gx :!open <cWORD><CR>:redraw!<CR>
+
+" }}} Fix broken gx
+
 " Timeouts {{{ "
 
 " Timeout on mappings and key codes
