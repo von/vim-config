@@ -13,16 +13,6 @@
 " after/plugin/LoadAfterConf.vim will load conf/after/*.vim after plugins/
 "
 "----------------------------------------------------------------------
-" Fix term in tmux {{{
-" If we are running in tmux, term will be screen-256color and vim
-" works better if term=xterm-256color when running :term
-"
-if &term == "screen-256color"
-  set term=xterm-256color
-endif
-
-" }}} Fix term in tmux
-"----------------------------------------------------------------------
 " Set up ~/.vim-local {{{ "
 
 " Only on startup

@@ -4,9 +4,6 @@
 " http://vim.wikia.com/wiki/256_colors_in_vim
 "
 
-" Syntax highlighting
-syntax on
-
 " Manually set this as it seems to get set to reset
 " when called from vim/tig/vim.
 set encoding=utf-8
