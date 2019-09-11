@@ -6,6 +6,10 @@ if !empty($TMUX)
 set t_ts=]2;
 set t_fs=\\
 
+" Strikethrough escape codes
+set t_Ts=[9m
+set t_Te=[0m
+
 " Enable true colour, since vim can't detect it within tmux.
 " Requires termguicolors to be set.
 " Kudos: https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
