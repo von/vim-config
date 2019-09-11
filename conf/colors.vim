@@ -64,6 +64,8 @@ call SetCursorLineColor("-")
 " Comments {{{ "
 
 :hi Comment ctermfg=14 cterm=italic guifg=#00ffff
+" Title: <- example of a vimCommentTitle
+:hi vimCommentTitle ctermfg=14 cterm=italic guifg=#00aaff
 
 " }}} Comments "
 "----------------------------------------------------------------------
