@@ -15,3 +15,11 @@ highlight GitGutterChange ctermfg=yellow ctermbg=236
 highlight GitGutterDelete ctermfg=red ctermbg=236
 " A changed line followed by at least one removed line
 highligh GitGutterChangeDelete ctermfg=136 ctermbg=236
+
+" Hack: update GitGutter whenever we enter a buffer until the autocmd
+" communication works between them as it should.
+" See: https://github.com/airblade/vim-gitgutter/issues/502#issuecomment-446389662
+augroup GitGutterFix
+  autocmd!
+  autocmd BufEnter * GitGutter
+augroup END
