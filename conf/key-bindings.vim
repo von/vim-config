@@ -48,8 +48,17 @@ let mapleader = "\<Space>"
 " Kudos: https://stackoverflow.com/a/18805662/197789
 :map <leader>F :g//foldopen<CR>
 
-" <leader>g invokes Gstatus
-nnoremap <leader>g :Gstatus<cr>
+" <leader>g for git interactions
+" Followig are a mix of Fugitive, GitGutter, and Fzf
+nnoremap <leader>ga :Gcommit --amend<cr>
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gd :GitGutterPreviewHunk<cr>
+nnoremap <leader>gl :BCommits<cr>
+nnoremap <leader>gs :GitGutterStageHunk<cr>
+nnoremap <leader>gS :Gstatus<cr>
+nnoremap <leader>gz :GitGutterFold<cr>
+nnoremap <leader>g! :GitGutterUndoHunk<cr>
 
 " <leader>G is grep via unite
 nnoremap <silent> <leader>G :Unite grep:.<cr>
