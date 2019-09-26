@@ -1,7 +1,7 @@
 " vimrc (use double quotes for comments)
 " Kudos: http://vim.wikia.com/wiki/Example_vimrc
 "
-" Loads conf/*.vim and after that neobundle.vim
+" Loads conf/*.vim and then load Bundles
 "
 " Also see the ftplugins/ directory for filetype-specific stuff:
 " http://vim.wikia.com/wiki/keep_your_vimrc_file_clean
@@ -19,7 +19,8 @@
 if has('vim_starting')
   " Where we store all our local state
   " Keep this in .vimrc as stuff in conf/ relies on it
-  silent !mkdir ~/.vim-local > /dev/null 2>&1
+  let g:vimlocal=expand('~/.vim-local')
+  execute 'silent !mkdir -p ' . g:vimlocal
 endif
 
 " }}} Set up ~/.vim-local "
