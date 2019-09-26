@@ -119,6 +119,9 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " In visual mode, don't save partial file and restore visual selection.
 :vmap <leader>w :<C-U>w<cr>gv
 
+" Open a vimwiki
+:map <leader>W :VimwikiUISelect<cr>
+
 " Close all folds with <leader>z
 :map <leader>z zM
 

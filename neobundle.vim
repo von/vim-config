@@ -191,6 +191,9 @@ NeoBundle 'vim-scripts/bats.vim'
 " For :Scratch and Sscratch
 NeoBundle 'vim-scripts/scratch.vim'
 
+" Wikis in ~/vimwiki by default
+NeoBundle 'vimwiki/vimwiki'
+
 " Only allow certain things in modelines
 " Note this needs to be loaded after python-mode since that seems
 " to reset the filetypedetect autogroup which causes ftplugin to
