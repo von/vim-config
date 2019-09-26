@@ -39,13 +39,13 @@ endfor
 
 " }}} load conf/*.vim
 "----------------------------------------------------------------------
-" Load NeoBundles {{{ "
+" Load Bundles {{{ "
 
 " Do this after conf/*.vim but before conf/after/*.vim since some
 " configuration needs to be run before and some after.
-source ~/.vim/neobundle.vim
+source ~/.vim/dein.vim
 
-" }}} Load NeoBundles "
+" }}} Load Bundles "
 "----------------------------------------------------------------------
 " Load man support {{{ "
 " Enable the :Man <topic> command
