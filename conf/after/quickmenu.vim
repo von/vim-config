@@ -1,7 +1,12 @@
 " Configuration for quickmenu
 
-" Work on default menu
-call quickmenu#current(0)
+" Guard
+try
+  " Work on default menu
+  call quickmenu#current(0)
+catch
+  finish
+endtry
 
 " clear all the items
 call quickmenu#reset()
