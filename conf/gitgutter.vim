@@ -1,8 +1,5 @@
 " Configuration for GitGutter plugin
 
-" Guard
-if exists(':GitGutter')
-
 " Use colored dots instead of "+/-/etc."
 " Kudos: https://github.com/statico/dotfiles/blob/master/.vim/vimrc
 let g:gitgutter_sign_added = '∙'
@@ -24,7 +21,5 @@ highligh GitGutterChangeDelete ctermfg=136 ctermbg=236
 " See: https://github.com/airblade/vim-gitgutter/issues/502#issuecomment-446389662
 augroup GitGutterFix
   autocmd!
-  autocmd BufEnter * GitGutter
+  autocmd BufEnter * silent! GitGutter
 augroup END
-
-endif
