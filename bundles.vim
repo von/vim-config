@@ -1,6 +1,6 @@
-" Configure NeoBundle and set up bundles
+" Load bundles
 "
-" NeoBundle setup {{{
+" VimPlug setup {{{
 "
 " First time run ':NeoBundleInstall' to install bundles
 " Then run ':NeoBundleUpdate' to update.
@@ -9,44 +9,22 @@
 " This is needed in part because YCM used submodules
 let g:pluginInstallDir = expand('~/.vim-bundle')
 
+" If our pluginInstallDir doesn't exist, bootstrap
 if !isdirectory(g:pluginInstallDir)
   execute 'silent! mkdir -p ' . g:pluginInstallDir
 endif
 
-let s:neobundleDir = g:pluginInstallDir . '/neobundle.vim'
-
-" Clone neobundle if not present
-" Kudos: https://bitbucket.org/slimane/vimlabo/wiki/.vimrc.neobundle
-
-if !isdirectory(s:neobundleDir) && executable('git')
-  execute 'silent ! git clone https://github.com/Shougo/neobundle.vim ' . s:neobundleDir
+" Keep plug.vim in vimlocal to keep it from clutter git repo
+" and allow automatic upgrading via PlugUpgrade
+if empty(glob(g:vimlocal . '/autoload/plug.vim'))
+  execute 'silent !curl -fLo ' . g:vimlocal . '/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-if has('vim_starting')
-  execute 'set runtimepath+=' . s:neobundleDir
-endif
 
-call neobundle#begin(g:pluginInstallDir)
+call plug#begin(g:pluginInstallDir)
 
-" Required per https://github.com/Shougo/neobundle.vim
-" For some reason the above call seems to reset filetype indent
-filetype plugin indent on
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Allow async command running for autocompletion
-" Kudos: https://github.com/joedicastro/dotfiles/blob/master/vim/vimrc
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
-" }}} NeoBundle
+" }}} VimPlug setup
 "----------------------------------------------------------------------
 " Load Bundles {{{
 "
@@ -54,80 +32,80 @@ NeoBundle 'Shougo/vimproc', {
 " in a plugin).
 
 " Show git changes on left
-NeoBundle 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " Fancy statusline
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Handle indention with pasting nicely
-NeoBundle 'von-forks/vim-bracketed-paste'
+Plug 'von-forks/vim-bracketed-paste'
 
 " Rename current buffer with ':rename <name>'
-NeoBundle 'danro/rename.vim'
+Plug 'danro/rename.vim'
 
 " C-p: Open files with fuzzy matching
-NeoBundle 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Allow one-keystroke navigation between vi panes and tmux panes
 " Use Control-<arrow keys> to switch between panes/vim windows
 " My tmux.conf maps S-<arrow keys> to C-<arrow keys> in vim
-NeoBundle 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Allow me to rename tabs
-NeoBundle 'gcmt/taboo.vim'
+Plug 'gcmt/taboo.vim'
 
 " Allow for easy rendering of markdown
-NeoBundle 'JamshedVesuna/vim-markdown-preview'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 " FZF plugin
 set rtp+=/usr/local/opt/fzf
-NeoBundle 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 
 " Allows definiton of arbitrary objects (prereusite of following)
-NeoBundle 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-user'
 " vim-textobj-entire adds text object of 'ae' for entire buffer
 " ('ie' excludes leading and trailing whitespace)
-NeoBundle 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-entire'
 " Adds 'al' for entire line and 'il' without leading and trailing whitespace
-NeoBundle 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-line'
 
 " Basically a Python IDE
 " Note this resets the filetypedetect augroup so some other bundles need
 " to be after this plugin, namely securemodelines
-NeoBundle 'klen/python-mode'
+Plug 'klen/python-mode'
 
 " Enable faster folding
 " Required for neocomplete and foldtype=syntax or expr
-NeoBundle 'Konfekt/FastFold'
+Plug 'Konfekt/FastFold'
 
 " Following requires ctags-exuberant from ctags.sourceforge.net
 "   (On mac: brew install ctags-exuberant)
-NeoBundle 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 " Requires lau
 " E.g. brew install macvim --with-cscope --with-lua --HEAD
-NeoBundle 'Shougo/neocomplete'
+Plug 'Shougo/neocomplete'
 
 " For BDelete
-NeoBundle 'moll/vim-bbye'
+Plug 'moll/vim-bbye'
 
 " Markdown file folding and commands
-NeoBundle 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 
 " Quickfix commands
-NeoBundle 'romainl/vim-qf'
+Plug 'romainl/vim-qf'
 
 " For grep via <leader>g
-NeoBundle 'Shougo/unite.vim'
+Plug 'Shougo/unite.vim'
 
 " Let me associate buffers with tabs
-NeoBundle 'Shougo/tabpagebuffer.vim'
+Plug 'Shougo/tabpagebuffer.vim'
 
 " Allow snippet expansion with <tab>
-NeoBundle 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 " Snippets for ultisnips
-NeoBundle 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " Let me view all my undo information with <leader>u
 if has('python3')
@@ -135,78 +113,71 @@ if has('python3')
   " Kudos: https://bitbucket.org/sjl/gundo.vim/issues/42/about-python3-support
   let g:gundo_prefer_python3 = 1
 endif
-NeoBundle 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 
 " Let me run async commands in VIM > 8
-NeoBundle 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asyncrun.vim'
 
 " Let me pop up a menu of commands
-NeoBundle 'skywind3000/quickmenu.vim'
+Plug 'skywind3000/quickmenu.vim'
 
 " Allow changing surround quotes with 'cs<current><new>'
-NeoBundle 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Allow use of 'v' to expand region, 'V' to shrink
-NeoBundle 'terryma/vim-expand-region'
+Plug 'terryma/vim-expand-region'
 
 " So Focus autocmds work right. Important for GitGutter
 " Note: this requires 'set -g focus-events on' in tmux.conf
-NeoBundle 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Allow for use of {x,y} in abbrevIation and substitutions
 " Plus: crc for camelCase, crm for MixedCase, and crs for snake_case
-NeoBundle 'tpope/vim-abolish'
+Plug 'tpope/vim-abolish'
 
 " 'gcc' to comment/uncomment line, or gc<motion target>
-NeoBundle 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " :GBlame and friends
-NeoBundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " readline-like key bindings in insert mode
-NeoBundle 'tpope/vim-rsi'
+Plug 'tpope/vim-rsi'
 
 " Start screen for vim
-NeoBundle 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 
 " Allow toggling full screen windows
-NeoBundle 'regedarek/ZoomWin'
+Plug 'regedarek/ZoomWin'
 
 " Better indentation for lua
-NeoBundle 'tbastos/vim-lua'
+Plug 'tbastos/vim-lua'
 
 " Key bindings with '[' and ']' prefixes
-NeoBundle 'tpope/vim-unimpaired'
+Plug 'tpope/vim-unimpaired'
 
 " Integration with vifm
-NeoBundle 'vifm/vifm.vim'
+Plug 'vifm/vifm.vim'
 
 " Highlighting for applescript
-NeoBundle 'vim-scripts/applescript.vim'
+Plug 'vim-scripts/applescript.vim'
 
 " Highlighting for BATS
 " https://github.com/sstephenson/bats
-NeoBundle 'vim-scripts/bats.vim'
+Plug 'vim-scripts/bats.vim'
 
 " For :Scratch and Sscratch
-NeoBundle 'vim-scripts/scratch.vim'
+Plug 'vim-scripts/scratch.vim'
 
 " Wikis in ~/vimwiki by default
-NeoBundle 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 
 " Only allow certain things in modelines
 " Note this needs to be loaded after python-mode since that seems
 " to reset the filetypedetect autogroup which causes ftplugin to
 " run after modeline processing.
-NeoBundle 'von-forks/securemodelines'
+Plug 'von-forks/securemodelines'
 
-call neobundle#end()
+call plug#end()
 
 " }}} Misc Bundles
-"------------------------------------------------------------
-" NeoBundleCheck {{{
-
-" Installation check.
-NeoBundleCheck
-
-" }}} NeoBundleCheck

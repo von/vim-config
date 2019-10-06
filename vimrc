@@ -14,12 +14,16 @@
 "
 "----------------------------------------------------------------------
 " Set up ~/.vim-local {{{ "
+" Where we store all our local state that is not in git
+
+let g:vimlocal=expand('~/.vim-local')
+
+" Allow use of autoload in vimlocal. Needed for vim-plug in ./bundles.vim
+execute 'set rtp+=' . g:vimlocal
 
 " Only on startup
 if has('vim_starting')
-  " Where we store all our local state
-  " Keep this in .vimrc as stuff in conf/ relies on it
-  let g:vimlocal=expand('~/.vim-local')
+  " Keep this in .vimrc as stuff in conf/ and .bundles.vim relies on it
   execute 'silent !mkdir -p ' . g:vimlocal
 endif
 
@@ -40,13 +44,13 @@ endfor
 
 " }}} load conf/*.vim
 "----------------------------------------------------------------------
-" Load NeoBundles {{{ "
+" Load Bundles {{{ "
 
 " Do this after conf/*.vim but before conf/after/*.vim since some
 " configuration needs to be run before and some after.
-source ~/.vim/neobundle.vim
+source ~/.vim/bundles.vim
 
-" }}} Load NeoBundles "
+" }}} Load Bundles "
 "----------------------------------------------------------------------
 " Load man support {{{ "
 " Enable the :Man <topic> command
