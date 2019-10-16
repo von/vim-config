@@ -17,6 +17,7 @@ let g:quickmenu_options = "HL"
 " Git
 call quickmenu#append("# Git", '')
 call quickmenu#append("git blame", 'Gblame', 'Toggle git blame mode')
+call quickmenu#append("git status", 'Gstatus', 'git status')
 call quickmenu#append("git undo hunk", 'GitGutterUndoHunk', 'Undo changes in hunk')
 call quickmenu#append("git stage hunk", 'GitGutterStageHunk', 'Stage changes in hunk')
 call quickmenu#append("git commit", 'Gcommit', 'Commit staged changes')
