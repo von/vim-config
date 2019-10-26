@@ -11,7 +11,10 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "von"
-hi Normal		  guifg=white  guibg=black
+
+" NONE for background lets tmux highlighting of active pane work correctly
+" Kudos: https://stackoverflow.com/a/37720708/197789
+hi Normal		  guifg=white  guibg=NONE
 
 " Folds {{{ "
 
