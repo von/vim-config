@@ -14,7 +14,7 @@ if !isdirectory(g:pluginInstallDir)
   execute 'silent! mkdir -p ' . g:pluginInstallDir
 endif
 
-" Keep plug.vim in vimlocal to keep it from clutter git repo
+" Keep plug.vim in vimlocal to keep it from cluttering git repo
 " and allow automatic upgrading via PlugUpgrade
 if empty(glob(g:vimlocal . '/autoload/plug.vim'))
   execute 'silent !curl -fLo ' . g:vimlocal . '/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
