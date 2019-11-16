@@ -96,6 +96,9 @@ Plug 'plasticboy/vim-markdown'
 " Quickfix commands
 Plug 'romainl/vim-qf'
 
+" Interative command execution (needed for unite)
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+
 " For grep via <leader>g
 Plug 'Shougo/unite.vim'
 
