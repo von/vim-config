@@ -184,6 +184,9 @@ hi Title		  term=bold  cterm=bold  ctermfg=darkmagenta  gui=bold	guifg=Magenta
 " Visual mode selected text
 hi Visual		  ctermbg=242 guibg=#6C6C6C
 
+" Concealed text - soft background with yellow text
+hi Conceal		  guifg=yellow guibg=#303030
+
 hi WarningMsg	  term=standout  cterm=bold  ctermfg=darkred guifg=Red
 hi Cursor		  guifg=bg	guibg=Green
 hi Constant		  term=underline  cterm=bold ctermfg=magenta  guifg=#ffa0a0
