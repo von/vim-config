@@ -29,6 +29,7 @@ call quickmenu#append("Clean whitespace", 'call WhitespaceClean()', 'Clean up wh
 call quickmenu#append("Clean Unicode", "call UnicodeClean()", "Clean Unicode")
 call quickmenu#append("Wrap paragraph", "normal {gq}", "Wrap paragraph")
 call quickmenu#append("Wrap file", "normal gqG", "Wrap file")
+call quickmenu#append("VimWiki", "VimwikiUISelect", "VimWiki")
 call quickmenu#append("Hammerspoon source file", "call HammerspoonSourceCurrentFile()", "Hammerspoon source file", "lua")
 call quickmenu#append("Reload Hammerspoon config", "call HammerspoonReload()", "Reload Hammerspoon config", "lua")
 
