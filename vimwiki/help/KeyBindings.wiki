@@ -9,6 +9,9 @@ spaces, saving, etc.)
 Application hotkeys such as iTerm
 
 *Control* is used for tmux (tmux/tmux.conf), in particular C-Space is my prefix.
+  * Hammerspoon installs application-specific hotkeys for Mail (Control-T and
+    control-P). I found this works better than System Preferences / Keyboard /
+    Shortcuts
 
 *Shift* is used in conjunction with the above.
 
