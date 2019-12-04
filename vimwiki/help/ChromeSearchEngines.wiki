@@ -49,3 +49,6 @@ w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedi
 
 IU Exchange Calendar (no search, just a shortcut)
 owa: https://www.exchange.iu.edu/owa/?bO=1#path=/calendar IU Exchange Calendar
+
+Google contacts
+contact: https://contacts.google.com/search/%s Google contacts
