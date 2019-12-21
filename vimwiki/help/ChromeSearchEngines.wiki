@@ -46,3 +46,6 @@ uucb: https://encrypted.google.com/search?q=%s+site%3Ahttps%3A%2F%2Fwww.uubloomi
 
 Search Wikipedia
 w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
+
+IU Exchange Calendar (no search, just a shortcut)
+owa: https://www.exchange.iu.edu/owa/?bO=1#path=/calendar IU Exchange Calendar
