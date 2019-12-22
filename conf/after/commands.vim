@@ -64,3 +64,6 @@ CommandCabbr wrap call<space>Preserve(':normal<space>gq}')
 " Wrap the whole document
 CommandCabbr wrapall call<space>Preserve(':normal<space>gqG')
 
+" Redirect output of command to buffer
+" Uses 'Redir' from ../../plugin/Redir.vim
+CommandCabbr > Redir
