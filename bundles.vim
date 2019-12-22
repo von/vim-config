@@ -38,9 +38,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Handle indention with pasting nicely
-Plug 'von-forks/vim-bracketed-paste'
-
 " Rename current buffer with ':rename <name>'
 Plug 'danro/rename.vim'
 
