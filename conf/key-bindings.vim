@@ -136,10 +136,10 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " split to get two views on the current file.
 
 " Split vertically with '|'
-map <leader><Bar>   :vsplit %<cr>
+map <leader><Bar>   :vsplit<cr>
 
 " Split horizontally with '-'
-map <leader>-       :split %<cr>
+map <leader>-       :split<cr>
 
 " Window resizing
 nnoremap <silent> <Leader><Up> <C-W>-
