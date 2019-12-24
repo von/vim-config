@@ -47,10 +47,12 @@ Plug 'danro/rename.vim'
 " C-p: Open files with fuzzy matching
 Plug 'ctrlpvim/ctrlp.vim'
 
-" Allow one-keystroke navigation between vi panes and tmux panes
-" Use Control-<arrow keys> to switch between panes/vim windows
-" My tmux.conf maps S-<arrow keys> to C-<arrow keys> in vim
-Plug 'christoomey/vim-tmux-navigator'
+if !has("gui_macvim")
+  " Allow one-keystroke navigation between vi panes and tmux panes
+  " Use Control-<arrow keys> to switch between panes/vim windows
+  " My tmux.conf maps S-<arrow keys> to C-<arrow keys> in vim
+  Plug 'christoomey/vim-tmux-navigator'
+endif
 
 " Allow me to rename tabs
 Plug 'gcmt/taboo.vim'

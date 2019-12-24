@@ -412,6 +412,16 @@ nnoremap <silent> gx :!open <cWORD><CR>:redraw!<CR>
 
 " }}} Fix broken gx
 
+" Shift-arrows for MacVim {{{ "
+if has("gui_macvim")
+  noremap <S-left> <C-w><C-h>
+  noremap <S-right> <C-w><C-l>
+  noremap <S-up> <C-w><C-k>
+  noremap <S-down> <C-w><C-j>
+endif
+
+" }}} Shift-arrows for MacVim "
+
 " Timeouts {{{ "
 
 " Timeout on mappings and key codes

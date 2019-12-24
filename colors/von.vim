@@ -12,9 +12,15 @@ if exists("syntax_on")
 endif
 let g:colors_name = "von"
 
-" NONE for background lets tmux highlighting of active pane work correctly
-" Kudos: https://stackoverflow.com/a/37720708/197789
-hi Normal		  guifg=white  guibg=NONE
+if has("gui_macvim")
+  " We need to explicity set background for MacVim
+  hi Normal		  guifg=white  guibg=black
+else
+  " NONE for background lets tmux highlighting of active pane work correctly
+  " Kudos: https://stackoverflow.com/a/37720708/197789
+  hi Normal		  guifg=white  guibg=NONE
+endif
+
 
 " Folds {{{ "
 
