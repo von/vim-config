@@ -77,8 +77,15 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " <leader>M toggle Quickmenu
 :map <leader>M :call quickmenu#toggle(0)<cr>
 
-" Open file explorer
-:map <leader>o :EditVifm<CR>
+if has("gui_macvim")
+  " Unite file searching
+  " ProjectDir is the top-level version control directory
+  " (e.g. where .git/ is)
+  :nmap <leader>o :UniteWithProjectDir -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
+else
+  " Open file explorer
+  :map <leader>o :EditVifm<CR>
+endif
 
 " Unite file searching
 " ProjectDir is the top-level version control directory
@@ -112,7 +119,9 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " Toggle ctags
 :map <leader>T :TagbarToggle<cr>
 
-:map <leader>v :silent !vifm<cr>:redraw!<cr>
+if !has("gui_macvim")
+  :map <leader>v :silent !vifm<cr>:redraw!<cr>
+endif
 
 " Save with <leader>w
 :map <leader>w :w<cr>

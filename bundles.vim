@@ -161,8 +161,11 @@ Plug 'tbastos/vim-lua'
 " Key bindings with '[' and ']' prefixes
 Plug 'tpope/vim-unimpaired'
 
-" Integration with vifm
-Plug 'vifm/vifm.vim'
+if !has("gui_macvim")
+  " Integration with vifm
+  " Doesn't work with MacVim
+  Plug 'vifm/vifm.vim'
+endif
 
 " Highlighting for applescript
 Plug 'vim-scripts/applescript.vim'
