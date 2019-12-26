@@ -5,5 +5,8 @@
 
 function! ReloadVIMRC()
   source $MYVIMRC
+  if filereadable($MYGVIMRC)
+    source $MYGVIMRC
+  endif
   redraw!
 endfunction
