@@ -1,4 +1,4 @@
-" Configuration for MacVim
+" Configuration for MacVim when running as a GUI
 " https://macvim-dev.github.io/macvim/
 
 " Set font and size

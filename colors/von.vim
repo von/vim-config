@@ -12,8 +12,8 @@ if exists("syntax_on")
 endif
 let g:colors_name = "von"
 
-if has("gui_macvim")
-  " We need to explicity set background for MacVim
+if has("gui_running")
+  " We need to explicity set background for MacVim GUI
   hi Normal		  guifg=white  guibg=black
 else
   " NONE for background lets tmux highlighting of active pane work correctly

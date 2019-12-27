@@ -12,6 +12,10 @@
 "
 " after/plugin/LoadAfterConf.vim will load conf/after/*.vim after plugins/
 "
+" Note that MacVim will return true for has("gui_macvim") if it is running as
+" either a GUI or on the commandline. Use has("gui_running") to distinguish
+" between those two cases.
+"
 "----------------------------------------------------------------------
 " Set up ~/.vim-local {{{ "
 " Where we store all our local state that is not in git

@@ -77,7 +77,7 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " <leader>M toggle Quickmenu
 :map <leader>M :call quickmenu#toggle(0)<cr>
 
-if has("gui_macvim")
+if has("gui_running")
   " Unite file searching
   " ProjectDir is the top-level version control directory
   " (e.g. where .git/ is)
@@ -119,7 +119,7 @@ endif
 " Toggle ctags
 :map <leader>T :TagbarToggle<cr>
 
-if !has("gui_macvim")
+if !has("gui_running")
   :map <leader>v :silent !vifm<cr>:redraw!<cr>
 endif
 
@@ -421,15 +421,15 @@ nnoremap <silent> gx :!open <cWORD><CR>:redraw!<CR>
 
 " }}} Fix broken gx
 
-" Shift-arrows for MacVim {{{ "
-if has("gui_macvim")
+" Shift-arrows for MacVim GUI {{{ "
+if has("gui_running")
   noremap <S-left> <C-w><C-h>
   noremap <S-right> <C-w><C-l>
   noremap <S-up> <C-w><C-k>
   noremap <S-down> <C-w><C-j>
 endif
 
-" }}} Shift-arrows for MacVim "
+" }}} Shift-arrows for MacVim GUI "
 
 " Timeouts {{{ "
 

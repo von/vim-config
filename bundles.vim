@@ -47,7 +47,7 @@ Plug 'danro/rename.vim'
 " C-p: Open files with fuzzy matching
 Plug 'ctrlpvim/ctrlp.vim'
 
-if !has("gui_macvim")
+if !has("gui_running")
   " Allow one-keystroke navigation between vi panes and tmux panes
   " Use Control-<arrow keys> to switch between panes/vim windows
   " My tmux.conf maps S-<arrow keys> to C-<arrow keys> in vim
@@ -161,9 +161,9 @@ Plug 'tbastos/vim-lua'
 " Key bindings with '[' and ']' prefixes
 Plug 'tpope/vim-unimpaired'
 
-if !has("gui_macvim")
+if !has("gui_running")
   " Integration with vifm
-  " Doesn't work with MacVim
+  " Doesn't work with MacVim GUI
   Plug 'vifm/vifm.vim'
 endif
 
