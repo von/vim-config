@@ -421,15 +421,16 @@ nnoremap <silent> gx :!open <cWORD><CR>:redraw!<CR>
 
 " }}} Fix broken gx
 
-" Shift-arrows for MacVim GUI {{{ "
-if has("gui_running")
+" Shift-arrows for when not in tmux {{{ "
+" This includes running in MacVim
+if empty($TMUX)
   noremap <S-left> <C-w><C-h>
   noremap <S-right> <C-w><C-l>
   noremap <S-up> <C-w><C-k>
   noremap <S-down> <C-w><C-j>
 endif
 
-" }}} Shift-arrows for MacVim GUI "
+" }}} Shift-arrows for when not in tmux "
 
 " Timeouts {{{ "
 
