@@ -359,8 +359,8 @@ tmap <C-W><C-Z> <C-W>:silent call ZoomWin#ZoomWin()<CR>
 " Bracket ([,]) bindings {{{ "
 
 " Bracket-g to jump between GitGutter hunks
-nmap ]g <Plug>GitGutterNextHunk
-nmap [g <Plug>GitGutterPrevHunk
+nmap ]g <Plug>(GitGutterNextHunk)
+nmap [g <Plug>(GitGutterPrevHunk)
 
 " Use vim-qf functions for navigating quickfix
 nmap [q <Plug>(qf_qf_previous)
