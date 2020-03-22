@@ -54,6 +54,7 @@ nnoremap <leader>ga :Gcommit --amend<cr>
 nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gd :GitGutterPreviewHunk<cr>
+nnoremap <leader>gD :Git diff<cr>
 nnoremap <leader>gl :BCommits<cr>
 nnoremap <leader>gs :GitGutterStageHunk<cr>
 nnoremap <leader>gS :Gstatus<cr>
