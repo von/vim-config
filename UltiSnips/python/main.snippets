@@ -3,7 +3,7 @@ import argparse
 import sys
 
 
-def make_parser():
+def make_argparser():
     """Return arparse.ArgumentParser instance"""
     parser = argparse.ArgumentParser(
         description=__doc__,  # printed with -h/--help
@@ -27,7 +27,7 @@ def make_parser():
 
 
 def main(argv=None):
-    parser = make_parser()
+    parser = make_argparser()
     args = parser.parse_args(argv if argv else sys.argv[1:])
 
     for arg in args.args:
