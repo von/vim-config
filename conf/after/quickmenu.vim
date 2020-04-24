@@ -34,6 +34,7 @@ call quickmenu#append("Wrap file", "normal gqG", "Wrap file")
 call quickmenu#append("VimWiki", "VimwikiUISelect", "VimWiki")
 call quickmenu#append("Hammerspoon source file", "call HammerspoonSourceCurrentFile()", "Hammerspoon source file", "lua")
 call quickmenu#append("Reload Hammerspoon config", "call HammerspoonReload()", "Reload Hammerspoon config", "lua")
+call quickmenu#append("Gundo", "call GundoToggle()", "Toggle Gundo menu")
 
 " Options
 call quickmenu#append("# Options", '')
