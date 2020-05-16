@@ -4,10 +4,6 @@ snippet spoon "Spoon init.lua file template" b
 -- https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md#how-do-i-create-a-spoon
 spoon = {}
 
--- Set up logger for module
-local log = hs.logger.new("$1")
-spoon.log = log
-
 -- Metadata
 spoon.name="$1"
 spoon.version="0.1"
@@ -15,6 +11,27 @@ spoon.author=""
 -- https://opensource.org/licenses/Apache-2.0
 spoon.license="Apache-2.0"
 spoon.homepage=""
+
+-- Set up logger for module
+local log = hs.logger.new("$1")
+spoon.log = log
+
+-- Enable or disable debugging
+--
+--- Parameters:
+---  * enable - Boolean indicating whether debugging should be on
+---
+--- Returns:
+---  * Nothing
+spoon.debug = function(enable)
+  if enable then
+    log.setLogLevel('debug')
+    log.d("Debugging enabled")
+  else
+    log.d("Disabling debugging")
+    log.setLogLevel('info')
+  end
+end
 
 -- Internal function used to find our location, so we know where to load files from
 local function script_path()
@@ -85,7 +102,12 @@ end
 --- expose a :bindHotKeys() method. The method should accept a single parameter,
 --- which is a table. The keys of the table should be strings that describe the
 --- action performed by the hotkeys, and the values of the table should be tables
---- containing modifiers and keynames/keycodes.
+--- containing modifiers and keynames/keycodes. E.g.
+---   {
+---     f1 = {{"cmd", "alt"}, "f"},
+---     f2 = {{"cmd", "alt"}, "f"}
+--    }
+---
 ---
 --- Parameters:
 ---  * table - Table of action to key mappings
@@ -94,7 +116,17 @@ end
 ---  * $1 object
 
 module.bindHotKeys = function(self, table)
-  -- Code here
+  for feature,mapping in pairs(table) do
+    if feature == "f1" then
+       self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
+         function() self:feature1() end)
+    elseif feature == "f2" then
+       self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
+         function() self:feature2() end)
+     else
+       log.wf("Unrecognized key binding feature '%s'", feature)
+     end
+   end
   return self
 end
 
