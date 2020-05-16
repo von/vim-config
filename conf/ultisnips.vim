@@ -6,7 +6,8 @@ let g:UltiSnipsExpandTrigger="<S-Tab>"
 " C-Tab doesn't work for me.
 let g:UltiSnipsListSnippets="<C-l>"
 
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" Same as UtilisnipsExpandTrigger above
+let g:UltiSnipsJumpForwardTrigger="<S-Tab>"
 " let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:ultisnips_python_style="google"
