@@ -2,19 +2,19 @@ snippet spoon "Spoon init.lua file template" b
 -- ${1:Spoon} spoon
 -- Spoon names should use TitleCase
 -- https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md#how-do-i-create-a-spoon
-spoon = {}
+local s = {}
 
 -- Metadata
-spoon.name="$1"
-spoon.version="0.1"
-spoon.author="$2"
+s.name="$1"
+s.version="0.1"
+s.author="$2"
 -- https://opensource.org/licenses/Apache-2.0
-spoon.license="Apache-2.0"
-spoon.homepage=""
+s.license="Apache-2.0"
+s.homepage=""
 
 -- Set up logger for spoon
 local log = hs.logger.new("$1")
-spoon.log = log
+s.log = log
 
 -- Enable or disable debugging
 --
@@ -23,7 +23,7 @@ spoon.log = log
 ---
 --- Returns:
 ---  * Nothing
-spoon.debug = function(enable)
+s.debug = function(enable)
   if enable then
     log.setLogLevel('debug')
     log.d("Debugging enabled")
@@ -38,7 +38,7 @@ local function script_path()
     local str = debug.getinfo(2, "S").source:sub(2)
     return str:match("(.*/)")
 end
-spoon.path = script_path()
+s.path = script_path()
 
 -- Methods
 -- Spoon methods/variables/constants/etc. should use camelCase
@@ -47,7 +47,7 @@ spoon.path = script_path()
 --- Method
 --- Initializes a $1
 --- When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua
---- from the relevant Spoon.
+--- from the relevant s.
 --- Do generally not perform any work, map any hotkeys, start any timers/watchers/etc.
 --- in the main scope of your init.lua. Instead, it should simply prepare an object
 --- with methods to be used later, then return the object.
@@ -58,7 +58,7 @@ spoon.path = script_path()
 --- Returns:
 ---  * $1 object
 
-spoon.init = function(self)
+s.init = function(self)
   -- Code here
   return self
 end
@@ -77,7 +77,7 @@ end
 ---
 --- Returns:
 ---  * $1 object
-spoon.start = function(self)
+s.start = function(self)
   -- Code here
   return self
 end
@@ -91,7 +91,7 @@ end
 ---
 --- Returns:
 ---  * $1 object
-spoon.stop = function(self)
+s.stop = function(self)
   -- Code here
   return self
 end
@@ -115,7 +115,7 @@ end
 --- Returns:
 ---  * $1 object
 
-spoon.bindHotKeys = function(self, table)
+s.bindHotKeys = function(self, table)
   for feature,mapping in pairs(table) do
     if feature == "f1" then
        self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
@@ -130,5 +130,5 @@ spoon.bindHotKeys = function(self, table)
   return self
 end
 
-return spoon
+return s
 endsnippet
