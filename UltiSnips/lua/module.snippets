@@ -3,16 +3,15 @@ snippet module "Module file template" b
 local module = {}
 
 -- Set up logger for module
-local log = hs.logger.new("$1", "info")
-module.log = log
+module.log = hs.logger.new("$1", "info")
 
 module.debug = function(enable)
   if enable then
-    log.setLogLevel('debug')
-    log.d("Debugging enabled")
+    module.log.setLogLevel('debug')
+    module.log.d("Debugging enabled")
   else
-    log.d("Disabling debugging")
-    log.setLogLevel('info')
+    module.log.d("Disabling debugging")
+    module.log.setLogLevel('info')
   end
 end
 
