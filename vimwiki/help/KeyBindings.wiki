@@ -30,3 +30,10 @@ Kudos: https://apple.stackexchange.com/a/249075/104604
     Preferences doesn't seem to persist)
   * Hammerspoon (specifically hammerspoon/config/hotkeys.lua) then maps
     F7,F8,F9 to controlling Google Music
+
+Remapping F13-15 for my Code USB KeyBoard.
+  * Under System Preferences / Keyboard / Shortcuts / Display:
+    * Change De/Increase display brightness from F14/F15 to F13/F14 to free up
+      F15 for Mute (as marked on my Code keyboard).
+    * TODO: Not sure how to map F15 to Mute.  Karabinear-Elements doesn't see
+      to be able to work with these keys.
