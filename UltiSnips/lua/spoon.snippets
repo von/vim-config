@@ -1,8 +1,12 @@
 snippet spoon "Spoon init.lua file template" b
--- ${1:Spoon} spoon
+--- === ${1:Spoon} ===
 -- Spoon names should use TitleCase
+-- Soons are basically classes who loading creates a new instance.
 -- https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md#how-do-i-create-a-spoon
+--- Documentation is prefixed with thee dashes. Normal comments with two dashes.
+
 local s = {}
+
 
 -- Metadata
 s.name="$1"
@@ -16,30 +20,34 @@ s.homepage=""
 s.path = hs.spoons.scriptPath()
 
 -- Set up logger for spoon
-local log = hs.logger.new("$1")
-s.log = log
+s.log = hs.logger.new("$1")
 
--- Enable or disable debugging
---
+--- $1:debug(enable)
+--- Method
+--- Enable or disable debugging
+---
 --- Parameters:
 ---  * enable - Boolean indicating whether debugging should be on
 ---
 --- Returns:
 ---  * Nothing
-s.debug = function(enable)
+function s:debug(enable)
   if enable then
-    log.setLogLevel('debug')
-    log.d("Debugging enabled")
+    s.log.setLogLevel('debug')
+    s.log.d("Debugging enabled")
   else
-    log.d("Disabling debugging")
-    log.setLogLevel('info')
+    s.log.d("Disabling debugging")
+    s.log.setLogLevel('info')
   end
 end
+
+-- Constants
+s.path = hs.spoons.scriptPath()
 
 -- Methods
 -- Spoon methods/variables/constants/etc. should use camelCase
 
---- $1:init(self)
+--- $1:init()
 --- Method
 --- Initializes a $1
 --- When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua
@@ -54,9 +62,9 @@ end
 --- Returns:
 ---  * $1 object
 
-s.init = function(self)
+function s:init()
   -- Code here
-  return self
+  return s
 end
 
 --start() and stop()
@@ -64,7 +72,7 @@ end
 --spotlight searches, etc. you should generally activate them in a :start()
 --method, and de-activate them in a :stop() method
 
---- $1:start(self)
+--- $1:start()
 --- Method
 --- Start background activity.
 ---
@@ -73,12 +81,12 @@ end
 ---
 --- Returns:
 ---  * $1 object
-s.start = function(self)
+function s:start()
   -- Code here
-  return self
+  return s
 end
 
---- $1:stop(self)
+--- $1:stop()
 --- Method
 --- Stop background activity.
 ---
@@ -87,18 +95,18 @@ end
 ---
 --- Returns:
 ---  * $1 object
-s.stop = function(self)
+function s:stop()
   -- Code here
-  return self
+  return s
 end
 
---- $1:bindHotKey(self, table)
+--- $1:bindHotKey(table)
 --- Method
---- If your Spoon provides actions that a user can map to hotkeys, you should
---- expose a :bindHotKeys() method. The method should accept a single parameter,
---- which is a table. The keys of the table should be strings that describe the
---- action performed by the hotkeys, and the values of the table should be tables
---- containing modifiers and keynames/keycodes. E.g.
+-- If your Spoon provides actions that a user can map to hotkeys, you should
+-- expose a :bindHotKeys() method.
+--- The method accepts a single parameter, which is a table. The keys of the table
+--- are strings that describe the action performed, and the values of the table are
+--- tables containing modifiers and keynames/keycodes. E.g.
 ---   {
 ---     f1 = {{"cmd", "alt"}, "f"},
 ---     f2 = {{"cmd", "alt"}, "f"}
@@ -111,19 +119,19 @@ end
 --- Returns:
 ---  * $1 object
 
-s.bindHotKeys = function(self, table)
+function s:bindHotKeys(table)
   for feature,mapping in pairs(table) do
     if feature == "f1" then
-       self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
-         function() self:feature1() end)
+       s.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
+         function() s:feature1() end)
     elseif feature == "f2" then
-       self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
-         function() self:feature2() end)
+       s.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
+         function() s:feature2() end)
      else
-       log.wf("Unrecognized key binding feature '%s'", feature)
+       s.log.wf("Unrecognized key binding feature '%s'", feature)
      end
    end
-  return self
+  return s
 end
 
 return s
