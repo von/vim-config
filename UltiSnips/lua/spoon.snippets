@@ -5,7 +5,7 @@ snippet spoon "Spoon init.lua file template" b
 -- https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md#how-do-i-create-a-spoon
 --- Documentation is prefixed with thee dashes. Normal comments with two dashes.
 
-local s = {}
+local $1 = {}
 
 
 -- Metadata
@@ -17,10 +17,10 @@ s.license="Apache-2.0"
 s.homepage=""
 
 -- Constants
-s.path = hs.spoons.scriptPath()
+$1.path = hs.spoons.scriptPath()
 
 -- Set up logger for spoon
-s.log = hs.logger.new("$1")
+$1.log = hs.logger.new("$1")
 
 --- $1:debug(enable)
 --- Method
@@ -31,18 +31,18 @@ s.log = hs.logger.new("$1")
 ---
 --- Returns:
 ---  * Nothing
-function s:debug(enable)
+function $1:debug(enable)
   if enable then
-    s.log.setLogLevel('debug')
-    s.log.d("Debugging enabled")
+    self.log.setLogLevel('debug')
+    self.log.d("Debugging enabled")
   else
-    s.log.d("Disabling debugging")
-    s.log.setLogLevel('info')
+    self.log.d("Disabling debugging")
+    self.log.setLogLevel('info')
   end
 end
 
 -- Constants
-s.path = hs.spoons.scriptPath()
+$1.path = hs.spoons.scriptPath()
 
 -- Methods
 -- Spoon methods/variables/constants/etc. should use camelCase
@@ -62,9 +62,9 @@ s.path = hs.spoons.scriptPath()
 --- Returns:
 ---  * $1 object
 
-function s:init()
+function $1:init()
   -- Code here
-  return s
+  return self
 end
 
 --start() and stop()
@@ -81,9 +81,9 @@ end
 ---
 --- Returns:
 ---  * $1 object
-function s:start()
+function $1:start()
   -- Code here
-  return s
+  return self
 end
 
 --- $1:stop()
@@ -95,9 +95,9 @@ end
 ---
 --- Returns:
 ---  * $1 object
-function s:stop()
+function $1:stop()
   -- Code here
-  return s
+  return self
 end
 
 --- $1:bindHotKey(table)
@@ -119,20 +119,20 @@ end
 --- Returns:
 ---  * $1 object
 
-function s:bindHotKeys(table)
+function $1:bindHotKeys(table)
   for feature,mapping in pairs(table) do
     if feature == "f1" then
-       s.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
-         function() s:feature1() end)
+       self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
+         function() self:feature1() end)
     elseif feature == "f2" then
-       s.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
-         function() s:feature2() end)
+       self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
+         function() self:feature2() end)
      else
-       s.log.wf("Unrecognized key binding feature '%s'", feature)
+       self.log.wf("Unrecognized key binding feature '%s'", feature)
      end
    end
-  return s
+  return self
 end
 
-return s
+return $1
 endsnippet

@@ -25,11 +25,12 @@ function $1.new(init)
 end
 
 -- Examples methods
-function $1.set_value(self, newval)
+-- The colon syntax automatically causes 'self' to be available
+function $1:set_value(newval)
   self.value = newval
 end
 
-function $1.get_value(self)
+function $1:get_value()
   return self.value
 end
 
