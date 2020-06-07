@@ -16,12 +16,6 @@ s.author="$2"
 s.license="Apache-2.0"
 s.homepage=""
 
--- Constants
-$1.path = hs.spoons.scriptPath()
-
--- Set up logger for spoon
-$1.log = hs.logger.new("$1")
-
 --- $1:debug(enable)
 --- Method
 --- Enable or disable debugging
@@ -63,7 +57,15 @@ $1.path = hs.spoons.scriptPath()
 ---  * $1 object
 
 function $1:init()
-  -- Code here
+  -- Set up logger for spoon
+  self.log = hs.logger.new("$1")
+
+  -- Path to this file itself
+  -- See also http://www.hammerspoon.org/docs/hs.spoons.html#resourcePath
+  self.path = hs.spoons.scriptPath()
+
+  -- Other initialization code here
+
   return self
 end
 
