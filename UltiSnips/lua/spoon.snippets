@@ -1,9 +1,10 @@
 snippet spoon "Spoon init.lua file template" b
 --- === ${1:Spoon} ===
+-- Above line identifies spoon name to documentation generator.
 -- Spoon names should use TitleCase
 -- Soons are basically classes who loading creates a new instance.
 -- https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md#how-do-i-create-a-spoon
---- Documentation is prefixed with thee dashes. Normal comments with two dashes.
+--- Documentation is prefixed with three dashes. Normal comments with two dashes.
 
 local $1 = {}
 
@@ -124,11 +125,9 @@ end
 function $1:bindHotKeys(table)
   for feature,mapping in pairs(table) do
     if feature == "f1" then
-       self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
-         function() self:feature1() end)
+       hs.hotkey.bind(mapping[1], mapping[2], function() self:feature1() end)
     elseif feature == "f2" then
-       self.hotkey = hs.hotkey.bind(mapping[1], mapping[2],
-         function() self:feature2() end)
+       hs.hotkey.bind(mapping[1], mapping[2], function() self:feature2() end)
      else
        self.log.wf("Unrecognized key binding feature '%s'", feature)
      end
