@@ -29,7 +29,7 @@ endfunction
 
 function! HashFoldText()
   if foldexpr != 'HashFoldExpr()' then
-    " In cast foldexpr has been changed, then use standard foldtext()
+    " In case foldexpr has been changed, then use standard foldtext()
     return foldtext()
   endif
   let titleline = getline(v:foldstart + 1)
