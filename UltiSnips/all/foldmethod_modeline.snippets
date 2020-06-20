@@ -1,7 +1,9 @@
 # VIM modeline for foldmethod=marker
-# XXX How do I prefix with a comment?
 
 global !p
+
+from vimsnippets import get_comment_format
+
 def append_to_buffer_end(starting_text=''):
   del snip.buffer[snip.line]
   snip.buffer.append(starting_text)
@@ -10,5 +12,5 @@ endglobal
 
 pre_expand "append_to_buffer_end()"
 snippet modelinefoldmethod "Insert a VIM modeline specifying marker foldmethod"
-vim: foldmethod=marker:
+`!p snip.rv = get_comment_format()[0]` vim: foldmethod=marker: `!p snip.rv = get_comment_format()[2]`
 endsnippet
