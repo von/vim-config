@@ -77,17 +77,9 @@ Plug 'kana/vim-textobj-line'
 " to be after this plugin, namely securemodelines
 Plug 'klen/python-mode'
 
-" Enable faster folding
-" Required for neocomplete and foldtype=syntax or expr
-Plug 'Konfekt/FastFold'
-
 " Following requires ctags-exuberant from ctags.sourceforge.net
 "   (On mac: brew install ctags-exuberant)
 Plug 'majutsushi/tagbar'
-
-" Requires lau
-" E.g. brew install macvim --with-cscope --with-lua --HEAD
-Plug 'Shougo/neocomplete'
 
 " For BDelete
 Plug 'moll/vim-bbye'

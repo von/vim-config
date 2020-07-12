@@ -210,9 +210,6 @@ nnoremap <silent> <Leader>> 83<C-W><Bar>
 " Backslash bindings {{{ "
 " Used to set options
 
-" <leader>N toggles NeoComplete
-:map \N :NeoCompleteToggle<CR>
-
 " Turn on soft wrap
 :map \W :call WrapSoft()<cr>
 
@@ -288,14 +285,16 @@ noremap  j gj
 
 " Bindings for NeoComplete {{{
 
-" BTW, it is tempting to use escape to cancel Neocomplete menu, but it is part of the
-" sequence for arrow keystrokes, so will not have the desired results.
+if exists('*NeoCompleteToggle')
+  " BTW, it is tempting to use escape to cancel Neocomplete menu, but it is part of the
+  " sequence for arrow keystrokes, so will not have the desired results.
 
-" <Tab> completes NeoComplete popup if Open, otherwise acts normally
-inoremap <expr> <Tab> pumvisible() ? neocomplete#close_popup() : "<Tab>"
+  " <Tab> completes NeoComplete popup if Open, otherwise acts normally
+  inoremap <expr> <Tab> pumvisible() ? neocomplete#close_popup() : "<Tab>"
 
-" <CR> always inserts a <CR>, canceling NeoComplete popup if Open
-inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
+  " <CR> always inserts a <CR>, canceling NeoComplete popup if Open
+  inoremap <expr> <CR> pumvisible() ? neocomplete#cancel_popup() . "<CR>" : "<CR>"
+endif
 
 " }}}
 

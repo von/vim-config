@@ -9,8 +9,10 @@ setlocal colorcolumn=80
 " Have docstrings work as expected with DelimitMate
 let b:delimitMate_nesting_quotes = ['"']
 
-" Turn off automatic completion as its too distracting.
-:NeoCompleteLock
+if exists('*NeoCompleteLock')
+  " Turn off automatic completion as its too distracting.
+  :NeoCompleteLock
+endif
 
 " Keybindings using "<leader>m" prefix
 " See also ../conf/python-mode.vim

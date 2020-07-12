@@ -1,6 +1,5 @@
 " Configuration related to indentation
 
-" Note hack related to this in ../neobundle.vim
 filetype indent on
 
 " When opening a new line and no filetype-specific indenting is enabled, keep

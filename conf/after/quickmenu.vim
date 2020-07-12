@@ -39,7 +39,9 @@ call quickmenu#append("Gundo", "call GundoToggle()", "Toggle Gundo menu")
 " Options
 call quickmenu#append("# Options", '')
 call quickmenu#append("Turn spell %{&spell? 'off':'on'}", "set spell!", "Toggle spell check (:set spell!)")
-call quickmenu#append("Toggle Neocomplete", "NeoCompleteToggle", "Toggle NeoComplete")
+if exists('*NeoCompleteToggle')
+  call quickmenu#append("Toggle Neocomplete", "NeoCompleteToggle", "Toggle NeoComplete")
+endif
 call quickmenu#append("Soft Word Wrap", "call WrapSoft()", "Soft (virtual) word wrapping")
 call quickmenu#append("Hard Word Wrap", "call WrapHard()", "Hard word wrapping")
 call quickmenu#append("Word Wrap Off", "call WrapOff()", "Hard word wrapping")
