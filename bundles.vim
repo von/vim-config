@@ -178,6 +178,9 @@ Plug 'vimwiki/vimwiki'
 " run after modeline processing.
 Plug 'von-forks/securemodelines'
 
+" https://github.com/ycm-core/YouCompleteMe
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
 call plug#end()
 
 " }}} Misc Bundles
