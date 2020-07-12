@@ -2,9 +2,6 @@
 "
 " VimPlug setup {{{
 "
-" First time run ':NeoBundleInstall' to install bundles
-" Then run ':NeoBundleUpdate' to update.
-
 " Use ~/.vim-bundle to keep bundles out of git repo
 " This is needed in part because YCM used submodules
 let g:pluginInstallDir = expand('~/.vim-bundle')
