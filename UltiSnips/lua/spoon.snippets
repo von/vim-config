@@ -10,12 +10,12 @@ local $1 = {}
 
 
 -- Metadata
-s.name="$1"
-s.version="0.1"
-s.author="$2"
+$1.name="$1"
+$1.version="0.1"
+$1.author="$2"
 -- https://opensource.org/licenses/Apache-2.0
-s.license="Apache-2.0"
-s.homepage=""
+$1.license="Apache-2.0"
+$1.homepage=""
 
 --- $1:debug(enable)
 --- Method
@@ -35,9 +35,6 @@ function $1:debug(enable)
     self.log.setLogLevel('info')
   end
 end
-
--- Constants
-$1.path = hs.spoons.scriptPath()
 
 -- Methods
 -- Spoon methods/variables/constants/etc. should use camelCase
@@ -103,7 +100,7 @@ function $1:stop()
   return self
 end
 
---- $1:bindHotKey(table)
+--- $1:bindHotKeys(table)
 --- Method
 -- If your Spoon provides actions that a user can map to hotkeys, you should
 -- expose a :bindHotKeys() method.
