@@ -11,6 +11,9 @@ set ruler
 " Enable fugitive support with statline
 let g:statline_fugitive = 1
 
+" I'm seeing errors with the unite extension so disable it
+let g:airline#extensions#unite#enabled = 0
+
 " Airline Configuration {{{ "
 
 " Show whitespace errors
