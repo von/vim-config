@@ -37,3 +37,7 @@ Remapping F13-15 for my Code USB KeyBoard.
       F15 for Mute (as marked on my Code keyboard).
     * TODO: Not sure how to map F15 to Mute.  Karabinear-Elements doesn't see
       to be able to work with these keys.
+
+Caps lock is remapped to F19 by Karabiner-Elements and is then
+used as a hyper key by Hammerspoon.
+Kudos: http://evantravers.com/articles/2020/06/08/hammerspoon-a-better-better-hyper-key/
