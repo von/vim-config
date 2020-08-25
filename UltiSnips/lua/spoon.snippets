@@ -109,26 +109,22 @@ end
 --- tables containing modifiers and keynames/keycodes. E.g.
 ---   {
 ---     f1 = {{"cmd", "alt"}, "f"},
----     f2 = {{"cmd", "alt"}, "f"}
+---     f2 = {{"cmd", "alt"}, "g"}
 ---    }
 ---
 ---
 --- Parameters:
----  * table - Table of action to key mappings
+---  * mapping - Table of action to key mappings
 ---
 --- Returns:
 ---  * $1 object
 
-function $1:bindHotKeys(table)
-  for feature,mapping in pairs(table) do
-    if feature == "f1" then
-      hs.hotkey.bind(mapping[1], mapping[2], function() self:feature1() end)
-    elseif feature == "f2" then
-      hs.hotkey.bind(mapping[1], mapping[2], function() self:feature2() end)
-    else
-      self.log.wf("Unrecognized key binding feature '%s'", feature)
-    end
-  end
+function $1:bindHotKeys(mapping)
+  local spec = {
+    f1 = hs.fnutils.partial(self.feature1, self),
+    f2 = hs.fnutils.partial(self.feature2, self)
+  }
+  hs.spoons.bindHotkeysToSpec(spec, mapping)
   return self
 end
 
