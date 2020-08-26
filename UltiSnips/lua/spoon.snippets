@@ -47,8 +47,7 @@ end
 --- $1:init()
 --- Method
 --- Initializes a $1
---- When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua
---- from the relevant s.
+--- When a user calls hs.loadSpoon(), Hammerspoon will execute init()
 --- Do generally not perform any work, map any hotkeys, start any timers/watchers/etc.
 --- in the main scope of your init.lua. Instead, it should simply prepare an object
 --- with methods to be used later, then return the object.
@@ -105,10 +104,12 @@ function $1:stop()
   return self
 end
 
+-- bindHotKeys()
+-- If your Spoon provides actions that a user can map to hotkeys, you
+-- should expose a :bindHotKeys() method.
+
 --- $1:bindHotKeys(table)
 --- Method
--- If your Spoon provides actions that a user can map to hotkeys, you should
--- expose a :bindHotKeys() method.
 --- The method accepts a single parameter, which is a table. The keys of the table
 --- are strings that describe the action performed, and the values of the table are
 --- tables containing modifiers and keynames/keycodes. E.g.
