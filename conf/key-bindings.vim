@@ -38,8 +38,10 @@ let mapleader = "\<Space>"
 " Switch to previous buffer
 :map <leader>b :e #<cr>
 
-" Open buffer list
-:map <leader>B :Unite -start-insert buffer file<cr>
+" Open buffer or project file
+" ProjectDir is the top-level version control directory
+" (e.g. where .git/ is)
+:map <leader>B :UniteWithProjectDir -start-insert buffer file_rec/async<cr>
 
 " Toggle fold open/close
 :map <leader>f za
@@ -62,7 +64,7 @@ nnoremap <leader>gz :GitGutterFold<cr>
 nnoremap <leader>g! :GitGutterUndoHunk<cr>
 
 " <leader>G is grep via unite
-nnoremap <silent> <leader>G :Unite grep:.<cr>
+nnoremap <silent> <leader>G :UniteWithProjectDir grep:.<cr>
 
 " <leader>h is used by git-gutter
 
@@ -78,20 +80,10 @@ let vim_markdown_preview_hotkey='<leader>mP'
 " <leader>M toggle Quickmenu
 :map <leader>M :call quickmenu#toggle(0)<cr>
 
-if has("gui_running")
-  " Unite file searching
-  " ProjectDir is the top-level version control directory
-  " (e.g. where .git/ is)
-  :nmap <leader>o :UniteWithProjectDir -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
-else
+if !has("gui_running")
   " Open file explorer
   :map <leader>o :EditVifm<CR>
 endif
-
-" Unite file searching
-" ProjectDir is the top-level version control directory
-" (e.g. where .git/ is)
-:nmap <leader>O :UniteWithProjectDir -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
 
 " Close buffer without exiting (uses moll/vim-bbye)
 :map <leader>q :Bdelete<cr>
