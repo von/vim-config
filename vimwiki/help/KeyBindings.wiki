@@ -30,12 +30,16 @@ Kudos: https://apple.stackexchange.com/a/249075/104604
     Preferences doesn't seem to persist)
   * Hammerspoon (specifically hammerspoon/config/hotkeys.lua) then maps
     F7,F8,F9 to controlling Google Music
-
+ 
 Remapping F13-15 for my Code USB KeyBoard.
   * Under System Preferences / Keyboard / Shortcuts / Display:
     * Change De/Increase display brightness from F14/F15 to F13/F14 to free up
       F15 for Mute (as marked on my Code keyboard).
   * Hammerspoon handles mapping F15 to Mute
+
+Remapping Del and End for my Code USB KeyBoard
+  * Karabiner-Elements maps these keys to F7 and F9 respectively so that
+    Hammerspoon handles them.
 
 Caps lock is remapped to F19 by Karabiner-Elements and is then
 used as a hyper key by Hammerspoon.
