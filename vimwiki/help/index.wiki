@@ -1,6 +1,0 @@
-=Wiki Base=
-
- * [[VimHelp]] - Help on my VIM configurarion
- * [[KeyBindings]] - My key binding scheme
- * [[TitleScheme]] - My title scheme
- * [[ChromeSearchEngines]] - Configured search engines in Chrome

@@ -1,3 +1,0 @@
-=Help on my VIM Configuration=
-
-[[/index|Back to Index]]

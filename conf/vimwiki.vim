@@ -1,6 +1,6 @@
 " Configuration for vimwiki (https://github.com/vimwiki/vimwiki
 
-let g:vimwiki_list = [{'path': '~/.vim/vimwiki/help/'}]
+let g:vimwiki_list = [{'path': '~/.vimwiki/help/'}]
 
 " Don't treat markdown files outside of wiki directories as
 " vimwiki files
