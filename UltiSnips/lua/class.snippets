@@ -16,6 +16,16 @@ setmetatable($1, {
 -- Set up logger
 $1.log = hs.logger.new("$1")
 
+function $1:debug(enable)
+  if enable then
+    self.log.setLogLevel('debug')
+    self.log.d("Debugging enabled")
+  else
+    self.log.d("Disabling debugging")
+    self.log.setLogLevel('info')
+  end
+end
+
 -- syntax equivalent to "$1.new = function..."
 function $1.new(init)
   $1.log.d("new() called")
