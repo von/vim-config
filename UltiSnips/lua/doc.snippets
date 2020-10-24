@@ -15,13 +15,14 @@ def complete(t, opts):
   return "(" + '|'.join(opts) + ')'
 endglobal
 
-snippet docfunc "Function/method documentation"
+# Hammerspoon uses '---' as prefix for its documentation which is a form of markdown
+snippet hsdoc "Hammerspoon documentation"
 --- ${1:function}
---- $2`!p snip.rv=complete(t[2], ['Constructor', 'Method', 'Internal Function', 'Function'])`
+--- $2`!p snip.rv=complete(t[2], ['Constant', 'Constructor', 'Method', 'Internal Function', 'Function'])`
 --- ${3:Description}
 ---
 --- Parameters:
---- * ${4:param}: ${5:Parameter description}
+--- * \`${4:param}\`: ${5:Parameter description}
 ---
 --- Returns:
 --- * ${6:A description of what is returned}
