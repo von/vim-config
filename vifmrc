@@ -10,4 +10,9 @@ delbmarks!
 " XXX Right now this is specific to homestuff/
 bmark! ~/homestuff/ homestff
 bmark! ~/homestuff/hammerspoon/ hammerspoon
+bmark! ~/homestuff/hammerspoon/config/ hammerspoon-config
+bmark! ~/homestuff/hammerspoon/MySpoons/ MySpoons
 bmark! ~/homestuff/vim/ vim
+bmark! ~/homestuff/vim/conf/ vim-conf
+bmark! ~/homestuff/zsh/ zsh
+bmark! ~/homestuff/zsh/zsh.d/ zsh.d
