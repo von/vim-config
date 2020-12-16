@@ -3,5 +3,9 @@
 augroup TerminalOptions
   autocmd!
   " Disable line numbers as hey clutter normal mode
-  autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
+  if has("nvim")
+    autocmd TermOpen * if &buftype == 'terminal' | setlocal nonumber | endif
+  else
+    autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
+  endif
 augroup END

@@ -34,8 +34,10 @@ set nostartofline
 " Use C-] to jump to tag under cursor
 set tags=./tags;/
 
-" Use blowfish instead of zip with vim's native encryption (see ':X')
-set cryptmethod=blowfish
+if !has('nvim')
+  " Use blowfish instead of zip with vim's native encryption (see ':X')
+  set cryptmethod=blowfish
+endif
 
 " Don't give me an error if a swapfile is present when editing a file
 " Kudos: http://stackoverflow.com/a/1588848/197789
