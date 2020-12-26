@@ -142,7 +142,8 @@ Plug 'tpope/vim-rsi'
 Plug 'mhinz/vim-startify'
 
 " Allow toggling full screen windows
-Plug 'regedarek/ZoomWin'
+let g:maximizer_set_default_mapping = 0
+Plug 'szw/vim-maximizer'
 
 " Better indentation for lua
 Plug 'tbastos/vim-lua'
