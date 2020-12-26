@@ -51,7 +51,7 @@ let mapleader = "\<Space>"
 :map <leader>F :g//foldopen<CR>
 
 " <leader>g for git interactions
-" Followig are a mix of Fugitive, GitGutter, and Fzf
+" Following are a mix of Fugitive, GitGutter, and Fzf
 nnoremap <leader>ga :Gcommit --amend<cr>
 nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gc :Gcommit<cr>
