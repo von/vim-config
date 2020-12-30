@@ -169,6 +169,11 @@ hi clear CursorLineNr
 hi link CursorLineNr CursorLineNrNormal
 
 " }}} CursorLine "
+" Shell script {{{ "
+" Set to make background clear
+hi shDerefWordError guifg=red guibg=none
+hi shDerefOpError guifg=red guibg=none
+" }}} Shell script "
 " Misc {{{ "
 hi Scrollbar	  guifg=darkcyan guibg=cyan
 hi Menu			  guifg=black guibg=cyan
