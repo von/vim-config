@@ -11,7 +11,7 @@ function! PGNFoldExpr()
 endfunction
 
 function! PGNFoldText()
-  if foldexpr != 'PGNFoldExpr()' then
+  if &foldexpr != 'PGNFoldExpr()'
     " In case foldexpr has been changed, then use standard foldtext()
     return foldtext()
   endif
