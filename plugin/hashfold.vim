@@ -28,7 +28,7 @@ function! HashFoldExpr()
 endfunction
 
 function! HashFoldText()
-  if foldexpr != 'HashFoldExpr()' then
+  if &foldexpr != 'HashFoldExpr()'
     " In case foldexpr has been changed, then use standard foldtext()
     return foldtext()
   endif
