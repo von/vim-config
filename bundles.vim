@@ -87,6 +87,10 @@ Plug 'plasticboy/vim-markdown'
 " Quickfix commands
 Plug 'romainl/vim-qf'
 
+" Deoplete: https://github.com/Shougo/deoplete.nvim
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
+
 " Interative command execution (needed for unite)
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
@@ -175,9 +179,6 @@ Plug 'vimwiki/vimwiki'
 " to reset the filetypedetect autogroup which causes ftplugin to
 " run after modeline processing.
 Plug 'von-forks/securemodelines'
-
-" https://github.com/ycm-core/YouCompleteMe
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 call plug#end()
 
