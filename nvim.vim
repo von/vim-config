@@ -1,4 +1,4 @@
-" neovim configuration file (~/.config/nvim/init.el)
+" neovim configuration file (~/.config/nvim/init.vim)
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
