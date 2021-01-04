@@ -23,3 +23,20 @@ augroup GitGutterFix
   autocmd!
   autocmd BufEnter * silent! GitGutter
 augroup END
+
+" If current file is untracked, stage the whole file.
+" Otherwise add stage the current hunk.
+" Kudos: https://stackoverflow.com/a/21152503/197789
+function GitAddHunkOrFile()
+  let file = expand('%')
+  let message = system('git ls-files -- ' . file)
+  " Check for error. If none, a non-zero length string.
+  let is_tracked = (message =~ '^fatal: not a git repositiory') ? 0 : strlen(message)
+  if is_tracked
+    execute "GitGutterStageHunk"
+    echom "Hunk staged"
+  else
+    execute "Git add " . file
+    echom "File staged"
+  end
+endfunction
