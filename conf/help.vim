@@ -8,4 +8,7 @@ function! s:helptab()
     nnoremap <buffer> q :q<cr>
   endif
 endfunction
-autocmd BufEnter *.txt call s:helptab()
+augroup HelpToTab
+  autocmd!
+  autocmd BufEnter *.txt call s:helptab()
+augroup END
