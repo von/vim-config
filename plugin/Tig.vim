@@ -4,7 +4,9 @@
 "      and drops us to shell. See https://github.com/jonas/tig/issues/906
 
 function! Tig()
-  if has('terminal')
+  if has ('nvim')
+    :term tig status
+  elseif has('terminal')
     " Use Vim8 terminal with full-width splut at bottom
     " XXX The colors aren't right
     :bot split
