@@ -59,6 +59,7 @@ nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gc :tab Gcommit<cr>
 nnoremap <leader>gd :GitGutterPreviewHunk<cr>
 nnoremap <leader>gD :Git diff<cr>
+nnoremap <leader>gf :GitGutterFold<cr>
 nnoremap <leader>gl :BCommits<cr>
 nnoremap <leader>gp :Git pull<cr>
 nnoremap <leader>gP :Git push<cr>
