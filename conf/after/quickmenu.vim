@@ -19,11 +19,13 @@ call quickmenu#append("# Git", '')
 call quickmenu#append("git blame", 'Gblame', 'Toggle git blame mode')
 call quickmenu#append("git status", 'Gstatus', 'git status')
 call quickmenu#append("git diff", 'Git diff', 'Show git diff')
+call quickmenu#append("git log", 'Git log', 'Show git log')
 call quickmenu#append("git preview hunk", 'GitGutterPreviewHunk', 'Show preview of hunk')
 call quickmenu#append("git undo hunk", 'GitGutterUndoHunk', 'Undo changes in hunk')
 call quickmenu#append("git stage hunk", 'GitGutterStageHunk', 'Stage changes in hunk')
 call quickmenu#append("git commit", 'Gcommit', 'Commit staged changes')
 call quickmenu#append("git amend", 'Gcommit --amend', 'Amend staged changes')
+call quickmenu#append("Toggle fold", 'GitGutterFold', 'Toggle folding of non-changed text')
 
 " Utilities
 call quickmenu#append("# Utilities", '')
