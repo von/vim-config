@@ -87,11 +87,18 @@ Plug 'plasticboy/vim-markdown'
 " Quickfix commands
 Plug 'romainl/vim-qf'
 
+" If we are running on neovim use deoplete, otherwise YouCompleteMe
+" The latter has performance problems with large files, but the
+" former only works on neovim
 if has('nvim')
   " Deoplete: https://github.com/Shougo/deoplete.nvim
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   let g:deoplete#enable_at_startup = 1
+else
+  " https://github.com/ycm-core/YouCompleteMe
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 endif
+
 
 " Interative command execution (needed for unite)
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -181,11 +188,6 @@ Plug 'vimwiki/vimwiki'
 " to reset the filetypedetect autogroup which causes ftplugin to
 " run after modeline processing.
 Plug 'von-forks/securemodelines'
-
-if !has('nvim')
-  " https://github.com/ycm-core/YouCompleteMe
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-endif
 
 call plug#end()
 
