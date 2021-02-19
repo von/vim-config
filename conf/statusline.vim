@@ -51,9 +51,12 @@ let g:airline#extensions#taboo#enabled = 1
 " Turn on enhanced tabline
 let g:airline#extensions#tabline#enabled = 1
 
-" Add number to tab names
-let g:taboo_tab_format = " %N:%f%m "
-let g:taboo_renamed_tab_format = " %N:[%l]%m "
+" Let taboo show the tab numbers
+let g:airline#extensions#tabline#show_tab_nr = 0
+
+" Tab label format: <number>:<name><modified>
+let g:taboo_tab_format = "[%N] %f%m"
+let g:taboo_renamed_tab_format = "[%N] %l%m"
 
 " The `unique_tail_improved` - another algorithm, that will smartly uniquify
 " buffers names with similar filename, suppressing common parts of paths.
@@ -62,9 +65,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " Show tabs instead of buffers
 let g:airline#extensions#tabline#show_tabs = 1
 let g:airline#extensions#tabline#show_buffers = 0
-
-" Number tabs instead of showing splits
-let g:airline#extensions#tabline#tab_nr_type = 1
 
 " {{{ Clean up tabline
 let g:airline#extensions#tabline#left_alt_sep = ''
