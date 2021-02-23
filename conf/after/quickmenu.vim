@@ -23,8 +23,8 @@ call quickmenu#append("git log", 'Git log', 'Show git log')
 call quickmenu#append("git preview hunk", 'GitGutterPreviewHunk', 'Show preview of hunk')
 call quickmenu#append("git undo hunk", 'GitGutterUndoHunk', 'Undo changes in hunk')
 call quickmenu#append("git stage hunk", 'GitGutterStageHunk', 'Stage changes in hunk')
-call quickmenu#append("git commit", 'Gcommit', 'Commit staged changes')
-call quickmenu#append("git amend", 'Gcommit --amend', 'Amend staged changes')
+call quickmenu#append("git commit", 'Git commit', 'Commit staged changes')
+call quickmenu#append("git amend", 'Git commit --amend', 'Amend staged changes')
 call quickmenu#append("Toggle fold", 'GitGutterFold', 'Toggle folding of non-changed text')
 
 " Utilities

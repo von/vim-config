@@ -54,9 +54,9 @@ let mapleader = "\<Space>"
 " Following are a mix of Fugitive, GitGutter, and Fzf
 " Use ':tab <cmd>' to open some commands in new tab
 " kudos: https://github.com/tpope/vim-fugitive/issues/727
-nnoremap <leader>ga :tab Gcommit --amend<cr>
+nnoremap <leader>ga :tab Git commit --amend<cr>
 nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gc :tab Gcommit<cr>
+nnoremap <leader>gc :tab Git commit<cr>
 nnoremap <leader>gd :GitGutterPreviewHunk<cr>
 nnoremap <leader>gD :Git diff<cr>
 nnoremap <leader>gf :GitGutterFold<cr>
