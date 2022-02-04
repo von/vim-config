@@ -89,6 +89,7 @@ Plug 'romainl/vim-qf'
 " former only works on neovim
 if has('nvim')
   " Deoplete: https://github.com/Shougo/deoplete.nvim
+  " If deoplete isn't working, run ':UpdateRemotePlugins' and restart vim
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   let g:deoplete#enable_at_startup = 1
 else
