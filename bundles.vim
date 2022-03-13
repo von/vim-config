@@ -179,6 +179,8 @@ Plug 'vim-scripts/bats.vim'
 Plug 'vim-scripts/scratch.vim'
 
 " Wikis in ~/vimwiki by default
+" Disable table_mappings as they interfere with tab expansion
+let g:vimwiki_key_mappings = { 'table_mappings': 0 }
 Plug 'vimwiki/vimwiki'
 
 " Only allow certain things in modelines
